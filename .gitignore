@@ -218,3 +218,10 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+
+# Proyecto F1
+cache/
+data/raw/
+*.duckdb
+.DS_Store
