@@ -38,3 +38,21 @@ SELECT Team AS equipo,
 FROM laps
 GROUP BY Team
 ORDER BY ritmo_medio_s;
+
+-- 6. Ritmo por equipo (justo): distancia media en % al más rápido de cada carrera
+WITH ritmo AS (
+    SELECT Round, Team, MEDIAN(LapTimeSec) AS ritmo_equipo
+    FROM laps
+    GROUP BY Round, Team
+),
+gaps AS (
+    SELECT Team,
+           (ritmo_equipo / MIN(ritmo_equipo) OVER (PARTITION BY Round) - 1) * 100 AS gap_pct
+    FROM ritmo
+)
+SELECT Team AS equipo,
+       ROUND(AVG(gap_pct), 2) AS gap_medio_pct,
+       COUNT(*) AS carreras
+FROM gaps
+GROUP BY Team
+ORDER BY gap_medio_pct;
