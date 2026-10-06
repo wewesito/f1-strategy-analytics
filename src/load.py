@@ -1,6 +1,6 @@
 """
 load.py
-Carga las vueltas limpias y los resultados en una base de datos DuckDB.
+Carga en DuckDB las vueltas limpias y el resto de tablas de la temporada.
 
 Uso (desde la raíz del proyecto):
     python src/load.py
@@ -11,29 +11,35 @@ import os
 import duckdb
 import pandas as pd
 
+YEAR = 2024
 DB_PATH = os.path.join('data', 'f1.duckdb')
+
+# tabla en DuckDB -> archivo Parquet de origen
+TABLAS = {
+    'laps': os.path.join('data', 'processed', f'laps_clean_{YEAR}.parquet'),
+    'results': os.path.join('data', 'raw', f'results_{YEAR}.parquet'),
+    'weather': os.path.join('data', 'raw', f'weather_{YEAR}.parquet'),
+    'track_status': os.path.join('data', 'raw', f'track_status_{YEAR}.parquet'),
+    'race_control': os.path.join('data', 'raw', f'race_control_{YEAR}.parquet'),
+    'pit_stops': os.path.join('data', 'raw', f'pit_stops_{YEAR}.parquet'),
+}
 
 
 def cargar_en_duckdb():
-    laps_df = pd.read_parquet(os.path.join('data', 'processed', 'laps_clean_2024.parquet'))
-    results_df = pd.read_parquet(os.path.join('data', 'raw', 'results_2024.parquet'))
-
     con = duckdb.connect(DB_PATH)
 
-    # register: DuckDB puede consultar un DataFrame de pandas como si fuera una tabla
-    con.register('laps_df', laps_df)
-    con.register('results_df', results_df)
-
-    # CREATE OR REPLACE: si la tabla ya existe, la sustituye (podemos re-ejecutar sin errores)
-    con.execute('CREATE OR REPLACE TABLE laps AS SELECT * FROM laps_df')
-    con.execute('CREATE OR REPLACE TABLE results AS SELECT * FROM results_df')
-
-    for tabla in ('laps', 'results'):
-        n = con.execute(f'SELECT COUNT(*) FROM {tabla}').fetchone()[0]
-        print(f'Tabla {tabla}: {n} filas')
+    for tabla, ruta in TABLAS.items():
+        if not os.path.exists(ruta):
+            print(f'AVISO: no existe {ruta}, se omite la tabla {tabla}')
+            continue
+        df = pd.read_parquet(ruta)
+        con.register('df_temporal', df)
+        con.execute(f'CREATE OR REPLACE TABLE {tabla} AS SELECT * FROM df_temporal')
+        con.unregister('df_temporal')
+        print(f'Tabla {tabla:<13} {len(df):>7} filas')
 
     con.close()
-    print(f'Base de datos guardada en {DB_PATH}')
+    print(f'\nBase de datos guardada en {DB_PATH}')
 
 
 if __name__ == '__main__':
