@@ -52,3 +52,10 @@ pip install -r requirements.txt
 ## Agradecimientos
 
 Las técnicas de línea de tiempo común, repetición animada y telemetría en directo se inspiran en [f1-race-replay](https://github.com/IAmTomShaw/f1-race-replay) de Tom Shaw (licencia MIT).
+
+## Estado
+
+✅ Fase 1: obtención y limpieza de datos
+✅ Fase 1B: ampliación con f1-race-replay
+✅ Fase 2: telemetría
+🚧 Fase 3: degradación de neumáticos y estrategia
