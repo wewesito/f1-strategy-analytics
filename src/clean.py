@@ -22,6 +22,25 @@ def convertir_tiempos(df):
         df[f'Sector{s}Sec'] = df[f'Sector{s}Time'].dt.total_seconds()
     return df
 
+def anadir_meteorologia(vueltas, meteo):
+    """
+    Asigna a cada vuelta la última medición meteorológica anterior a su inicio.
+    Usa merge_asof: une por el valor más cercano hacia atrás, dentro de cada carrera.
+    """
+    meteo = meteo[['Round', 'Time', 'AirTemp', 'TrackTemp', 'Humidity', 'Rainfall']]
+    meteo = meteo.rename(columns={'Time': 'MeteoTime'}).sort_values('MeteoTime')
+
+    # merge_asof no admite vacíos en la columna de unión
+    vueltas = vueltas.dropna(subset=['LapStartTime']).sort_values('LapStartTime')
+
+    res = pd.merge_asof(
+        vueltas, meteo,
+        left_on='LapStartTime', right_on='MeteoTime',
+        by='Round',              # solo busca dentro de la misma carrera
+        direction='backward',    # la medición más reciente ANTES del inicio de la vuelta
+    )
+    res['Lluvia'] = res['Rainfall'].eq(True)
+    return res.drop(columns=['MeteoTime']).sort_values(['Round', 'Driver', 'LapNumber'])
 
 def limpiar_vueltas(df, verbose=True):
     """
@@ -58,6 +77,11 @@ def limpiar_vueltas(df, verbose=True):
 if __name__ == '__main__':
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     vueltas = pd.read_parquet(INPUT_PATH)
+    meteo = pd.read_parquet(os.path.join('data', 'raw', 'weather_2024.parquet'))
+
+    vueltas = anadir_meteorologia(vueltas, meteo)
     limpias = limpiar_vueltas(vueltas)
+
+    print(f"Vueltas limpias con lluvia: {limpias['Lluvia'].sum()}")
     limpias.to_parquet(os.path.join(OUTPUT_DIR, 'laps_clean_2024.parquet'))
     print('Guardado en data/processed/laps_clean_2024.parquet')

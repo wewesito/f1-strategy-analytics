@@ -56,3 +56,37 @@ SELECT Team AS equipo,
 FROM gaps
 GROUP BY Team
 ORDER BY gap_medio_pct;
+
+-- 7. Minutos de safety car, VSC y banderas rojas por carrera
+SELECT Round, Event,
+       ROUND(SUM(DuracionSec) FILTER (WHERE Status = '4') / 60, 1) AS min_safety_car,
+       ROUND(SUM(DuracionSec) FILTER (WHERE Status IN ('6', '7')) / 60, 1) AS min_vsc,
+       COUNT(*) FILTER (WHERE Status = '5') AS banderas_rojas
+FROM track_status
+GROUP BY Round, Event
+ORDER BY Round;
+
+-- 8. Sanciones de tiempo por piloto
+SELECT regexp_extract(Message, '\((\w{3})\)', 1) AS piloto,
+       COUNT(*) AS sanciones
+FROM race_control
+WHERE Message LIKE '%TIME PENALTY%'
+GROUP BY piloto
+ORDER BY sanciones DESC;
+
+-- 9. Lluvia y temperatura de pista por carrera
+SELECT Round, Event,
+       ROUND(100 * AVG(CAST(Rainfall AS INTEGER)), 1) AS pct_tiempo_lloviendo,
+       ROUND(AVG(TrackTemp), 1) AS temp_pista_media
+FROM weather
+GROUP BY Round, Event
+ORDER BY pct_tiempo_lloviendo DESC;
+
+-- 10. Tiempo en el pit lane por equipo
+SELECT Team AS equipo,
+       ROUND(MEDIAN(TiempoPitLaneSec), 2) AS pit_lane_mediana_s,
+       COUNT(*) AS paradas
+FROM pit_stops
+WHERE TiempoPitLaneSec BETWEEN 10 AND 60
+GROUP BY Team
+ORDER BY pit_lane_mediana_s;
