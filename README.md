@@ -47,3 +47,8 @@ pip install -r requirements.txt
 ## Autor
 
 Álvaro Ruiz
+
+
+## Agradecimientos
+
+Las técnicas de línea de tiempo común, repetición animada y telemetría en directo se inspiran en [f1-race-replay](https://github.com/IAmTomShaw/f1-race-replay) de Tom Shaw (licencia MIT).
