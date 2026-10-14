@@ -59,3 +59,4 @@ Las técnicas de línea de tiempo común, repetición animada y telemetría en d
 ✅ Fase 1B: ampliación con f1-race-replay
 ✅ Fase 2: telemetría
 🚧 Fase 3: degradación de neumáticos y estrategia
+🚧 Fase 4: predicción de resultados
