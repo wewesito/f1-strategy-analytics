@@ -3,14 +3,18 @@ clean.py
 Funciones para limpiar las vueltas descargadas con extract.py.
 
 Uso (desde la raíz del proyecto):
-    python src/clean.py
+    python src/clean.py              # temporada 2024 (como siempre)
+    python src/clean.py --year 2026
 """
 
+import argparse
 import os
 
 import pandas as pd
 
-INPUT_PATH = os.path.join('data', 'raw', 'laps_2024.parquet')
+YEAR = 2024
+RAW_DIR = os.path.join('data', 'raw')
+INPUT_PATH = os.path.join(RAW_DIR, f'laps_{YEAR}.parquet')
 OUTPUT_DIR = os.path.join('data', 'processed')
 
 
@@ -74,14 +78,23 @@ def limpiar_vueltas(df, verbose=True):
     return df.reset_index(drop=True)
 
 
-if __name__ == '__main__':
+def limpiar_temporada(year=YEAR):
+    """Lee las vueltas y la meteorología brutas de un año, las limpia y guarda laps_clean_{year}.parquet."""
     os.makedirs(OUTPUT_DIR, exist_ok=True)
-    vueltas = pd.read_parquet(INPUT_PATH)
-    meteo = pd.read_parquet(os.path.join('data', 'raw', 'weather_2024.parquet'))
+    vueltas = pd.read_parquet(os.path.join(RAW_DIR, f'laps_{year}.parquet'))
+    meteo = pd.read_parquet(os.path.join(RAW_DIR, f'weather_{year}.parquet'))
 
     vueltas = anadir_meteorologia(vueltas, meteo)
     limpias = limpiar_vueltas(vueltas)
 
     print(f"Vueltas limpias con lluvia: {limpias['Lluvia'].sum()}")
-    limpias.to_parquet(os.path.join(OUTPUT_DIR, 'laps_clean_2024.parquet'))
-    print('Guardado en data/processed/laps_clean_2024.parquet')
+    ruta = os.path.join(OUTPUT_DIR, f'laps_clean_{year}.parquet')
+    limpias.to_parquet(ruta)
+    print(f'Guardado en {ruta}')
+    return limpias
+
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser(description='Limpia las vueltas de una temporada.')
+    parser.add_argument('--year', type=int, default=YEAR, help=f'temporada (por defecto {YEAR})')
+    limpiar_temporada(parser.parse_args().year)

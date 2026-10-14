@@ -7,9 +7,11 @@ Las fuentes adicionales se inspiran en f1-race-replay (Tom Shaw, licencia MIT):
 https://github.com/IAmTomShaw/f1-race-replay
 
 Uso (desde la raíz del proyecto):
-    python src/extract.py
+    python src/extract.py                         # temporada 2024 completa (como siempre)
+    python src/extract.py --year 2026 --solo-nuevas   # solo las carreras disputadas que faltan
 """
 
+import argparse
 import os
 
 import fastf1
@@ -50,59 +52,109 @@ def columnas_texto_a_string(df):
     return df
 
 
-def descargar_temporada(year):
+TABLAS = ('laps', 'results', 'weather', 'track_status', 'race_control', 'pit_stops')
+
+
+def ruta_raw(nombre, year):
+    return os.path.join(OUTPUT_DIR, f'{nombre}_{year}.parquet')
+
+
+def rondas_descargadas(year):
+    """Rondas que ya están en data/raw/ (se miran en la tabla de vueltas). Vacío si no hay nada."""
+    ruta = ruta_raw('laps', year)
+    if not os.path.exists(ruta):
+        return set()
+    return set(pd.read_parquet(ruta, columns=['Round'])['Round'].unique())
+
+
+def rondas_pendientes(calendario, descargadas, ahora=None):
+    """
+    Rondas disputadas (la carrera terminó hace más de 3 horas) que todavía no se han descargado.
+    La fecha de la carrera es la de la sesión 5 del calendario de FastF1 (con zona horaria).
+    """
+    ahora = ahora or pd.Timestamp.now(tz='UTC')
+    fin_carrera = pd.to_datetime(calendario['Session5DateUtc'], utc=True) + pd.Timedelta(hours=3)
+    disputada = fin_carrera < ahora
+    ya = calendario['RoundNumber'].isin(descargadas)
+    return calendario[disputada & ~ya]
+
+
+def descargar_carrera(year, ronda):
+    """Descarga una carrera y devuelve un dict {tabla: DataFrame} con las 6 tablas (Year, Round y Event añadidos)."""
+    session = fastf1.get_session(year, ronda, 'R')
+    # También meteorología y mensajes (como f1-race-replay)
+    session.load(laps=True, telemetry=False, weather=True, messages=True)
+
+    vueltas = pd.DataFrame(session.laps)
+    tablas = {
+        'laps': vueltas,
+        'results': pd.DataFrame(session.results),
+        'weather': pd.DataFrame(session.weather_data),
+        'track_status': periodos_estado_pista(session.track_status),
+        'race_control': columnas_texto_a_string(pd.DataFrame(session.race_control_messages)),
+        'pit_stops': paradas_en_boxes(vueltas),
+    }
+    for nombre, df in tablas.items():
+        df = df.copy()
+        df['Year'] = year
+        df['Round'] = ronda
+        df['Event'] = session.event['EventName']
+        tablas[nombre] = df
+    return tablas
+
+
+def descargar_temporada(year=YEAR, solo_nuevas=False):
+    """
+    Descarga una temporada y la guarda en data/raw/.
+    - solo_nuevas=False (por defecto, como siempre): intenta todas las rondas del calendario y reescribe los archivos.
+    - solo_nuevas=True: descarga únicamente las carreras ya disputadas que aún no están en data/raw/ y las
+      AÑADE a lo que ya hay. Es lo que usa el pipeline semanal.
+    Devuelve la lista de rondas descargadas.
+    """
     os.makedirs(CACHE_DIR, exist_ok=True)
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     fastf1.Cache.enable_cache(CACHE_DIR)
     fastf1.set_log_level('WARNING')
 
     calendario = fastf1.get_event_schedule(year, include_testing=False)
+    previas = rondas_descargadas(year) if solo_nuevas else set()
+    pendientes = rondas_pendientes(calendario, previas) if solo_nuevas else calendario
     total = len(calendario)
 
-    datos = {nombre: [] for nombre in
-             ('laps', 'results', 'weather', 'track_status', 'race_control', 'pit_stops')}
+    if solo_nuevas:
+        print(f'{year}: {len(previas)} carreras ya descargadas, {len(pendientes)} nuevas por descargar')
 
-    for _, evento in calendario.iterrows():
+    datos = {nombre: [] for nombre in TABLAS}
+    nuevas = []
+
+    for _, evento in pendientes.iterrows():
         ronda = evento['RoundNumber']
-        nombre_gp = evento['EventName']
-        print(f'[{ronda}/{total}] {nombre_gp}...', end=' ', flush=True)
-
+        print(f'[{ronda}/{total}] {evento["EventName"]}...', end=' ', flush=True)
         try:
-            session = fastf1.get_session(year, ronda, 'R')
-            # Ahora también meteorología y mensajes (como f1-race-replay)
-            session.load(laps=True, telemetry=False, weather=True, messages=True)
-
-            vueltas = pd.DataFrame(session.laps)
-
-            tablas = {
-                'laps': vueltas,
-                'results': pd.DataFrame(session.results),
-                'weather': pd.DataFrame(session.weather_data),
-                'track_status': periodos_estado_pista(session.track_status),
-                'race_control': columnas_texto_a_string(pd.DataFrame(session.race_control_messages)),
-                'pit_stops': paradas_en_boxes(vueltas),
-            }
-
+            tablas = descargar_carrera(year, ronda)
             for nombre, df in tablas.items():
-                df = df.copy()
-                df['Year'] = year
-                df['Round'] = ronda
-                df['Event'] = nombre_gp
                 datos[nombre].append(df)
-
-            print(f'OK ({len(vueltas)} vueltas, {len(tablas["pit_stops"])} paradas)')
-
+            nuevas.append(int(ronda))
+            print(f'OK ({len(tablas["laps"])} vueltas, {len(tablas["pit_stops"])} paradas)')
         except Exception as error:
             print(f'ERROR: {error}')
 
     print()
     for nombre, lista in datos.items():
-        if lista:
-            df = pd.concat(lista, ignore_index=True)
-            ruta = os.path.join(OUTPUT_DIR, f'{nombre}_{year}.parquet')
-            df.to_parquet(ruta)
-            print(f'Guardado {ruta}: {len(df)} filas')
+        if not lista:
+            continue
+        df = pd.concat(lista, ignore_index=True)
+        ruta = ruta_raw(nombre, year)
+        if solo_nuevas and os.path.exists(ruta):
+            df = pd.concat([pd.read_parquet(ruta), df], ignore_index=True)   # añade a lo existente
+        df.to_parquet(ruta)
+        print(f'Guardado {ruta}: {len(df)} filas')
+    return nuevas
 
 
 if __name__ == '__main__':
-    descargar_temporada(YEAR)
+    parser = argparse.ArgumentParser(description='Descarga una temporada de F1 con FastF1 a data/raw/.')
+    parser.add_argument('--year', type=int, default=YEAR, help=f'temporada (por defecto {YEAR})')
+    parser.add_argument('--solo-nuevas', action='store_true', help='descarga solo las carreras disputadas que faltan')
+    args = parser.parse_args()
+    descargar_temporada(args.year, solo_nuevas=args.solo_nuevas)
