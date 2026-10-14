@@ -68,6 +68,8 @@ def base_fila(carrera, fila):
         'CircuitId': carrera['Circuit']['circuitId'],
         'DriverId': fila['Driver']['driverId'],
         'Abbreviation': fila['Driver'].get('code'),
+        'DriverName': f"{fila['Driver']['givenName']} {fila['Driver']['familyName']}",
+        'Nationality': fila['Driver'].get('nationality'),
         'TeamId': fila['Constructor']['constructorId'],
         'TeamName': fila['Constructor']['name'],
     }
