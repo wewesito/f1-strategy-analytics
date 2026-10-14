@@ -159,8 +159,25 @@ def fact_degradacion():
     }).reset_index(drop=True)
 
 
+def tiempo_oficial_duelo(carrera_id_, p1, p2):
+    """
+    Diferencia OFICIAL de vuelta entre dos pilotos (segundos; positivo = gana el piloto 1), calculada con su
+    mejor tiempo de clasificación (Jolpica). Es la referencia fiable: la telemetría integra la distancia de
+    cada piloto de forma ligeramente distinta y su suma de tramos no siempre coincide con el cronómetro.
+    """
+    q = pd.read_parquet(os.path.join(RAW, 'history_quali.parquet'))
+    q = q[(q['Year'] * 100 + q['Round']) == carrera_id_].set_index('DriverId')
+    mejor = q[['Q1', 'Q2', 'Q3']].apply(lambda c: c.map(ft.tiempo_a_segundos)).min(axis=1)
+    return round(mejor[p2] - mejor[p1], 3)
+
+
 def fact_telemetria():
-    """Tramos entre curvas de los duelos de clasificación de Mónaco, Monza y Suzuka (2024)."""
+    """
+    Tramos entre curvas de los duelos de clasificación de Mónaco, Monza y Suzuka (2024).
+    GanaP1CrudoSeg es lo que mide la telemetría; GanaP1Seg es esa medida AJUSTADA para que la suma de
+    los tramos coincida con la diferencia oficial de vuelta (DifOficialSeg). El residuo se reparte en
+    proporción a la longitud de cada tramo, suponiendo que el error de integración crece con la distancia.
+    """
     t = pd.read_csv(os.path.join(PROC, 'telemetria_tramos.csv'))
     t['GranPremio'] = t['gp'].map(GP_CORTO)
     t['CarreraId'] = _gp_a_carrera(t['GranPremio'])
@@ -170,11 +187,16 @@ def fact_telemetria():
                      left_on=['CarreraId', f'piloto_{n}'], right_on=['CarreraId', 'Abbreviation'])
              .drop(columns='Abbreviation'))
     t['OrdenTramo'] = t.groupby(['CarreraId', 'piloto_1', 'piloto_2']).cumcount() + 1
+    t['LongitudM'] = t['hasta_m'] - t['desde_m']
+    grupo = ['CarreraId', 'Piloto1Id', 'Piloto2Id']
+    t['DifOficialSeg'] = [tiempo_oficial_duelo(c, a, b) for c, a, b in zip(t['CarreraId'], t['Piloto1Id'], t['Piloto2Id'])]
+    residuo = t['DifOficialSeg'] - t.groupby(grupo)['gana_p1_s'].transform('sum')
+    t['GanaP1Seg'] = t['gana_p1_s'] + residuo * t['LongitudM'] / t.groupby(grupo)['LongitudM'].transform('sum')
     return pd.DataFrame({
         'CarreraId': t['CarreraId'], 'Sesion': 'Clasificación', 'Piloto1Id': t['Piloto1Id'], 'Piloto2Id': t['Piloto2Id'],
         'Duelo': t['piloto_1'] + ' vs ' + t['piloto_2'], 'OrdenTramo': t['OrdenTramo'], 'Tramo': t['tramo'],
-        'DesdeM': t['desde_m'], 'HastaM': t['hasta_m'], 'LongitudM': t['hasta_m'] - t['desde_m'],
-        'GanaP1Seg': t['gana_p1_s'],
+        'DesdeM': t['desde_m'], 'HastaM': t['hasta_m'], 'LongitudM': t['LongitudM'],
+        'GanaP1CrudoSeg': t['gana_p1_s'], 'GanaP1Seg': t['GanaP1Seg'].round(4), 'DifOficialSeg': t['DifOficialSeg'],
     }).reset_index(drop=True)
 
 

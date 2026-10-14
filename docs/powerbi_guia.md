@@ -205,6 +205,10 @@ La degradación es la media **ponderada por vueltas**: un stint de 30 vueltas pe
 ```dax
 Tiempo ganado por piloto 1 (s) = SUM(fact_telemetria_tramos[GanaP1Seg])
 
+Tiempo ganado (telemetría cruda) (s) = SUM(fact_telemetria_tramos[GanaP1CrudoSeg])
+
+Diferencia oficial de vuelta (s) = MAX(fact_telemetria_tramos[DifOficialSeg])
+
 Ventaja acumulada P1 (s) =
 VAR _orden = MAX(fact_telemetria_tramos[OrdenTramo])
 RETURN
@@ -223,15 +227,16 @@ CALCULATE(
 )
 ```
 
-`GanaP1Seg` positivo = el primer piloto del duelo gana tiempo en ese tramo; negativo = lo pierde. `Ventaja acumulada` es una suma acumulada tramo a tramo y, en el último tramo, coincide con la diferencia total de vuelta. `USERELATIONSHIP` activa solo dentro de esa medida la relación inactiva `Piloto2Id → dim_piloto`.
+`GanaP1Seg` positivo = el primer piloto del duelo gana tiempo en ese tramo; negativo = lo pierde. **Ojo con el ajuste:** la telemetría cruda no suma el tiempo oficial (en Mónaco ni siquiera tiene el mismo signo), así que `GanaP1Seg` ya viene repartida para que la suma de los tramos sea la diferencia oficial (`DifOficialSeg`); el detalle está en `data/processed/powerbi/README.md`. `Diferencia oficial` usa `MAX` porque es un valor constante por duelo: solo tiene sentido con **un duelo seleccionado**. `Ventaja acumulada` es una suma acumulada tramo a tramo y, en el último tramo, coincide con la diferencia oficial. `USERELATIONSHIP` activa solo dentro de esa medida la relación inactiva `Piloto2Id → dim_piloto`.
 
 Recuerda: el signo de cada duelo se refiere **al piloto 1 del duelo**. Por eso conviene filtrar con la columna `Duelo` (por ejemplo `NOR vs LEC`) y no solo con la dimensión de pilotos.
 
 | Medida | Filtro | Esperado |
 |---|---|---|
-| Tiempo ganado por piloto 1 (s) | Duelo = `NOR vs LEC` (Monza) | **+0,066** |
-| Tiempo ganado por piloto 1 (s) | Duelo = `VER vs NOR` (Suzuka) | **+0,276** |
-| Tiempo ganado por piloto 1 (s) | Duelo = `LEC vs PIA` (Mónaco) | **−0,253** |
+| Tiempo ganado por piloto 1 (s) | Duelo = `NOR vs LEC` (Monza) | **+0,134** |
+| Tiempo ganado por piloto 1 (s) | Duelo = `VER vs NOR` (Suzuka) | **+0,292** |
+| Tiempo ganado por piloto 1 (s) | Duelo = `LEC vs PIA` (Mónaco) | **+0,154** |
+| Tiempo ganado (telemetría cruda) (s) | Monza / Suzuka / Mónaco | **+0,066 / +0,276 / −0,253** |
 
 ### 4.5 Predicciones (tabla `fact_predicciones`, 2025-2026)
 
@@ -308,7 +313,7 @@ Por qué estos gráficos: las barras ordenadas comparan totales; la línea acumu
 | Zona | Elemento | Campos |
 |---|---|---|
 | Arriba izquierda | **Segmentación** de duelo | `fact_telemetria_tramos[Duelo]` |
-| Arriba | **2 tarjetas**: diferencia total y nº de tramos | `[Tiempo ganado por piloto 1 (s)]`, `COUNTROWS` |
+| Arriba | **2 tarjetas**: diferencia oficial de vuelta y nº de tramos | `[Diferencia oficial de vuelta (s)]`, `COUNTROWS` |
 | Centro izquierda | **Columnas**: tiempo ganado en cada tramo | eje `[Tramo]` ordenado por `OrdenTramo`, valor `[Tiempo ganado por piloto 1 (s)]`; formato condicional (azul positivo, rojo negativo) |
 | Centro derecha | **Líneas**: ventaja acumulada a lo largo de la vuelta | eje `[OrdenTramo]`, valor `[Ventaja acumulada P1 (s)]` |
 | Abajo | **Tabla** de tramos | `Tramo`, `LongitudM`, `GanaP1Seg` |
@@ -402,6 +407,7 @@ En Tableau se llaman **campos calculados** (*Análisis → Crear campo calculado
 | `Degradación (s/vuelta)` ponderada | `SUM([DegradacionSegVuelta] * [Vueltas]) / SUM([Vueltas])` |
 | `Pérdida vs óptima (s)` | `AVG([VsOptimaSeg])` |
 | `Ventaja acumulada P1 (s)` | `RUNNING_SUM(SUM([GanaP1Seg]))` calculado a lo largo de `OrdenTramo` |
+| `Diferencia oficial de vuelta (s)` | `MAX([DifOficialSeg])` |
 | `Tramos del piloto como piloto 2` (`USERELATIONSHIP`) | `COUNT([Piloto2Id])` usando la segunda copia de `dim_piloto` |
 | `% Acierto del modelo` | `SUM([Acierto]) / SUM([PredPodio])` |
 | `% Acierto trivial` | `SUM(IF [PredTrivial] = 1 AND [PodioReal] = 1 THEN 1 ELSE 0 END) / SUM([PredTrivial])` |

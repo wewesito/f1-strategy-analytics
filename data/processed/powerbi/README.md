@@ -37,7 +37,7 @@ erDiagram
 | `dim_carrera` | `Fecha` | `dim_calendario` | `Fecha` |
 | todos los `fact_*` | `CarreraId` | `dim_carrera` | `CarreraId` |
 | todos los `fact_*` salvo telemetría | `PilotoId` | `dim_piloto` | `PilotoId` |
-| `fact_telemetria_tramos` | `Piloto1Id` | `dim_piloto` | `PilotoId` (**activa**) |
+| `fact_telemetria_tramos` | 51 | **2024**, clasificación de Mónaco, Monza y Suzuka | tramo entre curvas × duelo | `Duelo`, `Tramo`, `OrdenTramo`, `DesdeM`, `HastaM`, `LongitudM`, `GanaP1Seg` (tiempo que gana el piloto 1 en el tramo, **ajustado**; negativo: lo gana el piloto 2), `GanaP1CrudoSeg` (dato de telemetría sin ajustar), `DifOficialSeg` (diferencia oficial de vuelta) |
 | `fact_telemetria_tramos` | `Piloto2Id` | `dim_piloto` | `PilotoId` (**inactiva**) |
 | todos los `fact_*` salvo telemetría | `EquipoId` | `dim_equipo` | `EquipoId` |
 | `fact_vueltas`, `fact_degradacion` | `Compuesto` | `dim_compuesto` | `Compuesto` |
@@ -73,6 +73,7 @@ La telemetría compara dos pilotos, así que hay dos columnas que apuntan a la m
 
 ## Cosas que conviene saber
 
+- **Telemetría ajustada al cronómetro.** La telemetría de cada piloto integra la distancia de forma algo distinta, y la suma de los tramos no coincide con la diferencia oficial de vuelta (Monza: +0,066 s frente a +0,134 s oficiales; en Mónaco incluso con signo contrario, −0,253 s frente a +0,154 s). Por eso `GanaP1Seg` reparte la discrepancia entre los tramos **en proporción a su longitud**, de modo que la suma de cada duelo es igual a `DifOficialSeg` (tiempo oficial calculado con el mejor tiempo de clasificación de cada piloto). Los valores sin ajustar siguen en `GanaP1CrudoSeg`. El reparto uniforme es un supuesto: asume que el error crece con la distancia.
 - **No todas las tablas cubren los mismos años.** Resultados, 2018-2026; predicciones, 2025-2026; vueltas, degradación, estrategia y telemetría, solo 2024. En los visuales de esas páginas hay que filtrar por la temporada 2024 o se verán carreras vacías.
 - **Puntos:** solo de carreras, no de *sprints*. Por eso, por ejemplo, Verstappen suma 399 en 2024 en lugar de los 437 oficiales.
 - **`Acierto`** vale 1 cuando el piloto estaba entre los 3 con más probabilidad y acabó en el podio. `PredTrivial` es la regla "los 3 primeros de la parrilla".
