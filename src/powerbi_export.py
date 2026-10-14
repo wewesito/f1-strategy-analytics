@@ -257,8 +257,10 @@ def exportar(tablas):
         df.to_csv(os.path.join(SALIDA, f'{nombre}.csv'), index=False, encoding='utf-8-sig')  # BOM: Excel/Power BI leen bien las tildes
     # Un solo Excel con cada tabla como "Tabla de Excel" (Power BI web solo importa tablas con nombre)
     ruta = os.path.join(SALIDA, 'modelo_f1.xlsx')
-    with pd.ExcelWriter(ruta, engine='xlsxwriter') as w:
+    # En el Excel las fechas se guardan como fechas reales: en Power BI web no siempre se puede cambiar el tipo después
+    with pd.ExcelWriter(ruta, engine='xlsxwriter', datetime_format='yyyy-mm-dd') as w:
         for nombre, df in tablas.items():
+            df = df.assign(**{c: pd.to_datetime(df[c]) for c in df.columns if c == 'Fecha'})
             df.to_excel(w, sheet_name=nombre, index=False, startrow=0)
             filas, cols = df.shape
             w.sheets[nombre].add_table(0, 0, max(filas, 1), cols - 1, {
