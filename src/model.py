@@ -11,10 +11,13 @@ Este módulo no se ejecuta solo: lo importan el notebook 04_prediccion.ipynb y, 
 
 import numpy as np
 import pandas as pd
+from scipy.stats import loguniform, randint, uniform
+from sklearn.ensemble import HistGradientBoostingClassifier, RandomForestClassifier
 from sklearn.impute import SimpleImputer
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import (accuracy_score, confusion_matrix, f1_score,
                              precision_score, recall_score, roc_auc_score)
+from sklearn.model_selection import RandomizedSearchCV, TimeSeriesSplit
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
 
@@ -37,6 +40,68 @@ def pipeline_logistico(C=1.0):
         ('escalar', StandardScaler()),
         ('logit', LogisticRegression(C=C, class_weight='balanced', max_iter=2000)),
     ])
+
+
+def pipeline_random_forest():
+    """
+    Random Forest: muchos árboles de decisión entrenados con muestras aleatorias de filas y variables;
+    la predicción es la media de los árboles. No necesita escalar, pero sí rellenar vacíos.
+    class_weight='balanced_subsample' reequilibra las clases en cada muestra de cada árbol.
+    """
+    return Pipeline([
+        ('imputar', SimpleImputer(strategy='median')),
+        ('rf', RandomForestClassifier(class_weight='balanced_subsample', n_jobs=-1, random_state=SEMILLA)),
+    ])
+
+
+def pipeline_gradient_boosting():
+    """
+    HistGradientBoostingClassifier: árboles pequeños entrenados EN SECUENCIA, cada uno corrige
+    los errores del anterior. Admite NaN de forma nativa, así que no lleva imputador.
+    """
+    return Pipeline([
+        ('hgb', HistGradientBoostingClassifier(class_weight='balanced', random_state=SEMILLA)),
+    ])
+
+
+# Espacios de búsqueda para RandomizedSearchCV: distribuciones de las que se sortean combinaciones
+ESPACIO_RF = {
+    'rf__n_estimators': randint(100, 500),
+    'rf__max_depth': randint(3, 12),
+    'rf__min_samples_leaf': randint(5, 60),      # hojas grandes = árboles más simples = menos sobreajuste
+    'rf__max_features': uniform(0.3, 0.7),       # fracción de variables que ve cada nodo
+}
+ESPACIO_HGB = {
+    'hgb__learning_rate': loguniform(0.01, 0.3),
+    'hgb__max_iter': randint(50, 400),
+    'hgb__max_depth': randint(2, 6),
+    'hgb__min_samples_leaf': randint(10, 80),
+    'hgb__l2_regularization': loguniform(1e-3, 10),
+}
+
+
+def cortes_temporales(df, n_splits=5):
+    """
+    Validación cruzada TEMPORAL por carreras. Aplica TimeSeriesSplit sobre la lista cronológica de
+    carreras (no de filas) para que ninguna carrera quede partida entre entrenamiento y validación.
+    Cada fold entrena con las carreras pasadas y valida con las siguientes (ventana creciente).
+    Devuelve una lista de (índices_train, índices_validación) que se pasa como cv= a scikit-learn.
+    """
+    carrera = (df['Year'] * 100 + df['Round']).to_numpy()
+    orden = np.unique(carrera)                       # carreras en orden cronológico
+    cortes = []
+    for tr, va in TimeSeriesSplit(n_splits=n_splits).split(orden):
+        cortes.append((np.where(np.isin(carrera, orden[tr]))[0],
+                       np.where(np.isin(carrera, orden[va]))[0]))
+    return cortes
+
+
+def buscar_hiperparametros(pipeline, espacio, X, y, df, n_iter=40, n_splits=5):
+    """RandomizedSearchCV con validación cruzada temporal, optimizando el AUC-ROC (no depende del umbral)."""
+    busqueda = RandomizedSearchCV(
+        pipeline, espacio, n_iter=n_iter, scoring='roc_auc',
+        cv=cortes_temporales(df, n_splits), random_state=SEMILLA, n_jobs=-1, refit=True)
+    return busqueda.fit(X, y)
 
 
 # ---------------------------------------------------------------------------
