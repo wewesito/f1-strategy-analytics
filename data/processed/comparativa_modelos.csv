@@ -1,0 +1,9 @@
+Modelo,Conjunto,Acierto top 3 (=F1),AUC-ROC,"F1 (umbral 0,5)"
+Regresión logística,Validación 2024,0.653,0.918,0.606
+Regresión logística,Test 2025,0.736,0.934,0.635
+Random Forest,Validación 2024,0.653,0.935,0.654
+Random Forest,Test 2025,0.778,0.951,0.663
+Gradient Boosting,Validación 2024,0.667,0.937,0.654
+Gradient Boosting,Test 2025,0.75,0.951,0.663
+Trivial (top 3 parrilla),Validación 2024,0.667,0.921,0.667
+Trivial (top 3 parrilla),Test 2025,0.75,0.93,0.75
