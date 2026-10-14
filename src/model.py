@@ -104,6 +104,25 @@ def buscar_hiperparametros(pipeline, espacio, X, y, df, n_iter=40, n_splits=5):
     return busqueda.fit(X, y)
 
 
+def probabilidades_fuera_de_muestra(pipeline, X, y, df, n_splits=5):
+    """
+    Probabilidades 'fuera de muestra' sobre el conjunto de entrenamiento: cada fold de la CV temporal
+    predice carreras que el modelo NO ha visto al ajustarse. Las filas de la primera ventana de
+    entrenamiento (sin pasado) quedan como NaN. Sirve para analizar errores con más muestra que un solo año.
+    """
+    from sklearn.base import clone
+    proba = pd.Series(np.nan, index=X.index)
+    for idx_tr, idx_va in cortes_temporales(df, n_splits):
+        m = clone(pipeline).fit(X.iloc[idx_tr], y.iloc[idx_tr])
+        proba.iloc[idx_va] = m.predict_proba(X.iloc[idx_va])[:, 1]
+    return proba
+
+
+def abandono(df):
+    """True si el piloto no vio la bandera a cuadros clasificado ('R' retirado, 'D' descalificado, 'W', 'N'...)."""
+    return ~df['PositionText'].astype(str).str.isdigit()
+
+
 # ---------------------------------------------------------------------------
 # Métricas
 # ---------------------------------------------------------------------------
