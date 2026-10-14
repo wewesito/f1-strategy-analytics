@@ -1,0 +1,31 @@
+﻿CarreraId,PilotoId,EquipoId,PosicionFinal,Estrategia,Paradas,VsOptimaSeg
+202416,leclerc,ferrari,1,M15 → H38,1,5.5
+202416,piastri,mclaren,2,M16 → H22 → H15,2,15.9
+202416,norris,mclaren,3,M14 → H18 → H21,2,15.4
+202416,sainz,ferrari,4,M19 → H34,1,2.5
+202416,hamilton,mercedes,5,M15 → H22 → H16,2,15.7
+202416,max_verstappen,red_bull,6,H22 → H19 → M12,2,15.6
+202416,russell,mercedes,7,M11 → H22 → H20,2,15.7
+202416,perez,red_bull,8,H23 → H12 → M18,2,17.0
+202416,albon,williams,9,M17 → H36,1,3.9
+202416,kevin_magnussen,haas,10,M14 → H39,1,6.5
+202401,max_verstappen,red_bull,1,S17 → H20 → S20,2,12.9
+202401,perez,red_bull,2,S12 → H24 → S21,2,13.5
+202401,sainz,ferrari,3,S14 → H21 → H22,2,0.0
+202401,leclerc,ferrari,4,S11 → H23 → H23,2,0.7
+202401,russell,mercedes,5,S11 → H20 → H26,2,1.5
+202401,norris,mclaren,6,S13 → H20 → H24,2,0.4
+202401,hamilton,mercedes,7,S12 → H21 → H24,2,0.5
+202401,piastri,mclaren,8,S12 → H22 → H23,2,0.3
+202401,alonso,aston_martin,9,S15 → H26 → H16,2,2.4
+202401,stroll,aston_martin,10,S9 → H18 → H30,2,5.3
+202413,piastri,mclaren,1,M18 → H29 → M23,2,19.4
+202413,norris,mclaren,2,M17 → H28 → M25,2,17.9
+202413,hamilton,mercedes,3,M16 → H24 → H30,2,47.9
+202413,leclerc,ferrari,4,M23 → H17 → M30,2,2.8
+202413,max_verstappen,red_bull,5,M21 → H28 → M21,2,17.0
+202413,sainz,ferrari,6,M21 → H26 → M23,2,13.3
+202413,perez,red_bull,7,H28 → M19 → M23,2,17.2
+202413,russell,mercedes,8,H33 → M20 → H17,2,44.9
+202413,tsunoda,rb,9,M29 → H41,1,44.3
+202413,stroll,aston_martin,10,S14 → M31 → H25,2,

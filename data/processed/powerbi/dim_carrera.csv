@@ -1,0 +1,191 @@
+﻿CarreraId,Anio,Ronda,GranPremio,Fecha,CircuitoId,Etiqueta
+201801,2018,1,Australian Grand Prix,2018-03-25,albert_park,2018 R01 · Australian Grand Prix
+201802,2018,2,Bahrain Grand Prix,2018-04-08,bahrain,2018 R02 · Bahrain Grand Prix
+201803,2018,3,Chinese Grand Prix,2018-04-15,shanghai,2018 R03 · Chinese Grand Prix
+201804,2018,4,Azerbaijan Grand Prix,2018-04-29,baku,2018 R04 · Azerbaijan Grand Prix
+201805,2018,5,Spanish Grand Prix,2018-05-13,catalunya,2018 R05 · Spanish Grand Prix
+201806,2018,6,Monaco Grand Prix,2018-05-27,monaco,2018 R06 · Monaco Grand Prix
+201807,2018,7,Canadian Grand Prix,2018-06-10,villeneuve,2018 R07 · Canadian Grand Prix
+201808,2018,8,French Grand Prix,2018-06-24,ricard,2018 R08 · French Grand Prix
+201809,2018,9,Austrian Grand Prix,2018-07-01,red_bull_ring,2018 R09 · Austrian Grand Prix
+201810,2018,10,British Grand Prix,2018-07-08,silverstone,2018 R10 · British Grand Prix
+201811,2018,11,German Grand Prix,2018-07-22,hockenheimring,2018 R11 · German Grand Prix
+201812,2018,12,Hungarian Grand Prix,2018-07-29,hungaroring,2018 R12 · Hungarian Grand Prix
+201813,2018,13,Belgian Grand Prix,2018-08-26,spa,2018 R13 · Belgian Grand Prix
+201814,2018,14,Italian Grand Prix,2018-09-02,monza,2018 R14 · Italian Grand Prix
+201815,2018,15,Singapore Grand Prix,2018-09-16,marina_bay,2018 R15 · Singapore Grand Prix
+201816,2018,16,Russian Grand Prix,2018-09-30,sochi,2018 R16 · Russian Grand Prix
+201817,2018,17,Japanese Grand Prix,2018-10-07,suzuka,2018 R17 · Japanese Grand Prix
+201818,2018,18,United States Grand Prix,2018-10-21,americas,2018 R18 · United States Grand Prix
+201819,2018,19,Mexican Grand Prix,2018-10-28,rodriguez,2018 R19 · Mexican Grand Prix
+201820,2018,20,Brazilian Grand Prix,2018-11-11,interlagos,2018 R20 · Brazilian Grand Prix
+201821,2018,21,Abu Dhabi Grand Prix,2018-11-25,yas_marina,2018 R21 · Abu Dhabi Grand Prix
+201901,2019,1,Australian Grand Prix,2019-03-17,albert_park,2019 R01 · Australian Grand Prix
+201902,2019,2,Bahrain Grand Prix,2019-03-31,bahrain,2019 R02 · Bahrain Grand Prix
+201903,2019,3,Chinese Grand Prix,2019-04-14,shanghai,2019 R03 · Chinese Grand Prix
+201904,2019,4,Azerbaijan Grand Prix,2019-04-28,baku,2019 R04 · Azerbaijan Grand Prix
+201905,2019,5,Spanish Grand Prix,2019-05-12,catalunya,2019 R05 · Spanish Grand Prix
+201906,2019,6,Monaco Grand Prix,2019-05-26,monaco,2019 R06 · Monaco Grand Prix
+201907,2019,7,Canadian Grand Prix,2019-06-09,villeneuve,2019 R07 · Canadian Grand Prix
+201908,2019,8,French Grand Prix,2019-06-23,ricard,2019 R08 · French Grand Prix
+201909,2019,9,Austrian Grand Prix,2019-06-30,red_bull_ring,2019 R09 · Austrian Grand Prix
+201910,2019,10,British Grand Prix,2019-07-14,silverstone,2019 R10 · British Grand Prix
+201911,2019,11,German Grand Prix,2019-07-28,hockenheimring,2019 R11 · German Grand Prix
+201912,2019,12,Hungarian Grand Prix,2019-08-04,hungaroring,2019 R12 · Hungarian Grand Prix
+201913,2019,13,Belgian Grand Prix,2019-09-01,spa,2019 R13 · Belgian Grand Prix
+201914,2019,14,Italian Grand Prix,2019-09-08,monza,2019 R14 · Italian Grand Prix
+201915,2019,15,Singapore Grand Prix,2019-09-22,marina_bay,2019 R15 · Singapore Grand Prix
+201916,2019,16,Russian Grand Prix,2019-09-29,sochi,2019 R16 · Russian Grand Prix
+201917,2019,17,Japanese Grand Prix,2019-10-13,suzuka,2019 R17 · Japanese Grand Prix
+201918,2019,18,Mexican Grand Prix,2019-10-27,rodriguez,2019 R18 · Mexican Grand Prix
+201919,2019,19,United States Grand Prix,2019-11-03,americas,2019 R19 · United States Grand Prix
+201920,2019,20,Brazilian Grand Prix,2019-11-17,interlagos,2019 R20 · Brazilian Grand Prix
+201921,2019,21,Abu Dhabi Grand Prix,2019-12-01,yas_marina,2019 R21 · Abu Dhabi Grand Prix
+202001,2020,1,Austrian Grand Prix,2020-07-05,red_bull_ring,2020 R01 · Austrian Grand Prix
+202002,2020,2,Styrian Grand Prix,2020-07-12,red_bull_ring,2020 R02 · Styrian Grand Prix
+202003,2020,3,Hungarian Grand Prix,2020-07-19,hungaroring,2020 R03 · Hungarian Grand Prix
+202004,2020,4,British Grand Prix,2020-08-02,silverstone,2020 R04 · British Grand Prix
+202005,2020,5,70th Anniversary Grand Prix,2020-08-09,silverstone,2020 R05 · 70th Anniversary Grand Prix
+202006,2020,6,Spanish Grand Prix,2020-08-16,catalunya,2020 R06 · Spanish Grand Prix
+202007,2020,7,Belgian Grand Prix,2020-08-30,spa,2020 R07 · Belgian Grand Prix
+202008,2020,8,Italian Grand Prix,2020-09-06,monza,2020 R08 · Italian Grand Prix
+202009,2020,9,Tuscan Grand Prix,2020-09-13,mugello,2020 R09 · Tuscan Grand Prix
+202010,2020,10,Russian Grand Prix,2020-09-27,sochi,2020 R10 · Russian Grand Prix
+202011,2020,11,Eifel Grand Prix,2020-10-11,nurburgring,2020 R11 · Eifel Grand Prix
+202012,2020,12,Portuguese Grand Prix,2020-10-25,portimao,2020 R12 · Portuguese Grand Prix
+202013,2020,13,Emilia Romagna Grand Prix,2020-11-01,imola,2020 R13 · Emilia Romagna Grand Prix
+202014,2020,14,Turkish Grand Prix,2020-11-15,istanbul,2020 R14 · Turkish Grand Prix
+202015,2020,15,Bahrain Grand Prix,2020-11-29,bahrain,2020 R15 · Bahrain Grand Prix
+202016,2020,16,Sakhir Grand Prix,2020-12-06,bahrain,2020 R16 · Sakhir Grand Prix
+202017,2020,17,Abu Dhabi Grand Prix,2020-12-13,yas_marina,2020 R17 · Abu Dhabi Grand Prix
+202101,2021,1,Bahrain Grand Prix,2021-03-28,bahrain,2021 R01 · Bahrain Grand Prix
+202102,2021,2,Emilia Romagna Grand Prix,2021-04-18,imola,2021 R02 · Emilia Romagna Grand Prix
+202103,2021,3,Portuguese Grand Prix,2021-05-02,portimao,2021 R03 · Portuguese Grand Prix
+202104,2021,4,Spanish Grand Prix,2021-05-09,catalunya,2021 R04 · Spanish Grand Prix
+202105,2021,5,Monaco Grand Prix,2021-05-23,monaco,2021 R05 · Monaco Grand Prix
+202106,2021,6,Azerbaijan Grand Prix,2021-06-06,baku,2021 R06 · Azerbaijan Grand Prix
+202107,2021,7,French Grand Prix,2021-06-20,ricard,2021 R07 · French Grand Prix
+202108,2021,8,Styrian Grand Prix,2021-06-27,red_bull_ring,2021 R08 · Styrian Grand Prix
+202109,2021,9,Austrian Grand Prix,2021-07-04,red_bull_ring,2021 R09 · Austrian Grand Prix
+202110,2021,10,British Grand Prix,2021-07-18,silverstone,2021 R10 · British Grand Prix
+202111,2021,11,Hungarian Grand Prix,2021-08-01,hungaroring,2021 R11 · Hungarian Grand Prix
+202112,2021,12,Belgian Grand Prix,2021-08-29,spa,2021 R12 · Belgian Grand Prix
+202113,2021,13,Dutch Grand Prix,2021-09-05,zandvoort,2021 R13 · Dutch Grand Prix
+202114,2021,14,Italian Grand Prix,2021-09-12,monza,2021 R14 · Italian Grand Prix
+202115,2021,15,Russian Grand Prix,2021-09-26,sochi,2021 R15 · Russian Grand Prix
+202116,2021,16,Turkish Grand Prix,2021-10-10,istanbul,2021 R16 · Turkish Grand Prix
+202117,2021,17,United States Grand Prix,2021-10-24,americas,2021 R17 · United States Grand Prix
+202118,2021,18,Mexico City Grand Prix,2021-11-07,rodriguez,2021 R18 · Mexico City Grand Prix
+202119,2021,19,São Paulo Grand Prix,2021-11-14,interlagos,2021 R19 · São Paulo Grand Prix
+202120,2021,20,Qatar Grand Prix,2021-11-21,losail,2021 R20 · Qatar Grand Prix
+202121,2021,21,Saudi Arabian Grand Prix,2021-12-05,jeddah,2021 R21 · Saudi Arabian Grand Prix
+202122,2021,22,Abu Dhabi Grand Prix,2021-12-12,yas_marina,2021 R22 · Abu Dhabi Grand Prix
+202201,2022,1,Bahrain Grand Prix,2022-03-20,bahrain,2022 R01 · Bahrain Grand Prix
+202202,2022,2,Saudi Arabian Grand Prix,2022-03-27,jeddah,2022 R02 · Saudi Arabian Grand Prix
+202203,2022,3,Australian Grand Prix,2022-04-10,albert_park,2022 R03 · Australian Grand Prix
+202204,2022,4,Emilia Romagna Grand Prix,2022-04-24,imola,2022 R04 · Emilia Romagna Grand Prix
+202205,2022,5,Miami Grand Prix,2022-05-08,miami,2022 R05 · Miami Grand Prix
+202206,2022,6,Spanish Grand Prix,2022-05-22,catalunya,2022 R06 · Spanish Grand Prix
+202207,2022,7,Monaco Grand Prix,2022-05-29,monaco,2022 R07 · Monaco Grand Prix
+202208,2022,8,Azerbaijan Grand Prix,2022-06-12,baku,2022 R08 · Azerbaijan Grand Prix
+202209,2022,9,Canadian Grand Prix,2022-06-19,villeneuve,2022 R09 · Canadian Grand Prix
+202210,2022,10,British Grand Prix,2022-07-03,silverstone,2022 R10 · British Grand Prix
+202211,2022,11,Austrian Grand Prix,2022-07-10,red_bull_ring,2022 R11 · Austrian Grand Prix
+202212,2022,12,French Grand Prix,2022-07-24,ricard,2022 R12 · French Grand Prix
+202213,2022,13,Hungarian Grand Prix,2022-07-31,hungaroring,2022 R13 · Hungarian Grand Prix
+202214,2022,14,Belgian Grand Prix,2022-08-28,spa,2022 R14 · Belgian Grand Prix
+202215,2022,15,Dutch Grand Prix,2022-09-04,zandvoort,2022 R15 · Dutch Grand Prix
+202216,2022,16,Italian Grand Prix,2022-09-11,monza,2022 R16 · Italian Grand Prix
+202217,2022,17,Singapore Grand Prix,2022-10-02,marina_bay,2022 R17 · Singapore Grand Prix
+202218,2022,18,Japanese Grand Prix,2022-10-09,suzuka,2022 R18 · Japanese Grand Prix
+202219,2022,19,United States Grand Prix,2022-10-23,americas,2022 R19 · United States Grand Prix
+202220,2022,20,Mexico City Grand Prix,2022-10-30,rodriguez,2022 R20 · Mexico City Grand Prix
+202221,2022,21,São Paulo Grand Prix,2022-11-13,interlagos,2022 R21 · São Paulo Grand Prix
+202222,2022,22,Abu Dhabi Grand Prix,2022-11-20,yas_marina,2022 R22 · Abu Dhabi Grand Prix
+202301,2023,1,Bahrain Grand Prix,2023-03-05,bahrain,2023 R01 · Bahrain Grand Prix
+202302,2023,2,Saudi Arabian Grand Prix,2023-03-19,jeddah,2023 R02 · Saudi Arabian Grand Prix
+202303,2023,3,Australian Grand Prix,2023-04-02,albert_park,2023 R03 · Australian Grand Prix
+202304,2023,4,Azerbaijan Grand Prix,2023-04-30,baku,2023 R04 · Azerbaijan Grand Prix
+202305,2023,5,Miami Grand Prix,2023-05-07,miami,2023 R05 · Miami Grand Prix
+202306,2023,6,Monaco Grand Prix,2023-05-28,monaco,2023 R06 · Monaco Grand Prix
+202307,2023,7,Spanish Grand Prix,2023-06-04,catalunya,2023 R07 · Spanish Grand Prix
+202308,2023,8,Canadian Grand Prix,2023-06-18,villeneuve,2023 R08 · Canadian Grand Prix
+202309,2023,9,Austrian Grand Prix,2023-07-02,red_bull_ring,2023 R09 · Austrian Grand Prix
+202310,2023,10,British Grand Prix,2023-07-09,silverstone,2023 R10 · British Grand Prix
+202311,2023,11,Hungarian Grand Prix,2023-07-23,hungaroring,2023 R11 · Hungarian Grand Prix
+202312,2023,12,Belgian Grand Prix,2023-07-30,spa,2023 R12 · Belgian Grand Prix
+202313,2023,13,Dutch Grand Prix,2023-08-27,zandvoort,2023 R13 · Dutch Grand Prix
+202314,2023,14,Italian Grand Prix,2023-09-03,monza,2023 R14 · Italian Grand Prix
+202315,2023,15,Singapore Grand Prix,2023-09-17,marina_bay,2023 R15 · Singapore Grand Prix
+202316,2023,16,Japanese Grand Prix,2023-09-24,suzuka,2023 R16 · Japanese Grand Prix
+202317,2023,17,Qatar Grand Prix,2023-10-08,losail,2023 R17 · Qatar Grand Prix
+202318,2023,18,United States Grand Prix,2023-10-22,americas,2023 R18 · United States Grand Prix
+202319,2023,19,Mexico City Grand Prix,2023-10-29,rodriguez,2023 R19 · Mexico City Grand Prix
+202320,2023,20,São Paulo Grand Prix,2023-11-05,interlagos,2023 R20 · São Paulo Grand Prix
+202321,2023,21,Las Vegas Grand Prix,2023-11-19,vegas,2023 R21 · Las Vegas Grand Prix
+202322,2023,22,Abu Dhabi Grand Prix,2023-11-26,yas_marina,2023 R22 · Abu Dhabi Grand Prix
+202401,2024,1,Bahrain Grand Prix,2024-03-02,bahrain,2024 R01 · Bahrain Grand Prix
+202402,2024,2,Saudi Arabian Grand Prix,2024-03-09,jeddah,2024 R02 · Saudi Arabian Grand Prix
+202403,2024,3,Australian Grand Prix,2024-03-24,albert_park,2024 R03 · Australian Grand Prix
+202404,2024,4,Japanese Grand Prix,2024-04-07,suzuka,2024 R04 · Japanese Grand Prix
+202405,2024,5,Chinese Grand Prix,2024-04-21,shanghai,2024 R05 · Chinese Grand Prix
+202406,2024,6,Miami Grand Prix,2024-05-05,miami,2024 R06 · Miami Grand Prix
+202407,2024,7,Emilia Romagna Grand Prix,2024-05-19,imola,2024 R07 · Emilia Romagna Grand Prix
+202408,2024,8,Monaco Grand Prix,2024-05-26,monaco,2024 R08 · Monaco Grand Prix
+202409,2024,9,Canadian Grand Prix,2024-06-09,villeneuve,2024 R09 · Canadian Grand Prix
+202410,2024,10,Spanish Grand Prix,2024-06-23,catalunya,2024 R10 · Spanish Grand Prix
+202411,2024,11,Austrian Grand Prix,2024-06-30,red_bull_ring,2024 R11 · Austrian Grand Prix
+202412,2024,12,British Grand Prix,2024-07-07,silverstone,2024 R12 · British Grand Prix
+202413,2024,13,Hungarian Grand Prix,2024-07-21,hungaroring,2024 R13 · Hungarian Grand Prix
+202414,2024,14,Belgian Grand Prix,2024-07-28,spa,2024 R14 · Belgian Grand Prix
+202415,2024,15,Dutch Grand Prix,2024-08-25,zandvoort,2024 R15 · Dutch Grand Prix
+202416,2024,16,Italian Grand Prix,2024-09-01,monza,2024 R16 · Italian Grand Prix
+202417,2024,17,Azerbaijan Grand Prix,2024-09-15,baku,2024 R17 · Azerbaijan Grand Prix
+202418,2024,18,Singapore Grand Prix,2024-09-22,marina_bay,2024 R18 · Singapore Grand Prix
+202419,2024,19,United States Grand Prix,2024-10-20,americas,2024 R19 · United States Grand Prix
+202420,2024,20,Mexico City Grand Prix,2024-10-27,rodriguez,2024 R20 · Mexico City Grand Prix
+202421,2024,21,São Paulo Grand Prix,2024-11-03,interlagos,2024 R21 · São Paulo Grand Prix
+202422,2024,22,Las Vegas Grand Prix,2024-11-23,vegas,2024 R22 · Las Vegas Grand Prix
+202423,2024,23,Qatar Grand Prix,2024-12-01,losail,2024 R23 · Qatar Grand Prix
+202424,2024,24,Abu Dhabi Grand Prix,2024-12-08,yas_marina,2024 R24 · Abu Dhabi Grand Prix
+202501,2025,1,Australian Grand Prix,2025-03-16,albert_park,2025 R01 · Australian Grand Prix
+202502,2025,2,Chinese Grand Prix,2025-03-23,shanghai,2025 R02 · Chinese Grand Prix
+202503,2025,3,Japanese Grand Prix,2025-04-06,suzuka,2025 R03 · Japanese Grand Prix
+202504,2025,4,Bahrain Grand Prix,2025-04-13,bahrain,2025 R04 · Bahrain Grand Prix
+202505,2025,5,Saudi Arabian Grand Prix,2025-04-20,jeddah,2025 R05 · Saudi Arabian Grand Prix
+202506,2025,6,Miami Grand Prix,2025-05-04,miami,2025 R06 · Miami Grand Prix
+202507,2025,7,Emilia Romagna Grand Prix,2025-05-18,imola,2025 R07 · Emilia Romagna Grand Prix
+202508,2025,8,Monaco Grand Prix,2025-05-25,monaco,2025 R08 · Monaco Grand Prix
+202509,2025,9,Spanish Grand Prix,2025-06-01,catalunya,2025 R09 · Spanish Grand Prix
+202510,2025,10,Canadian Grand Prix,2025-06-15,villeneuve,2025 R10 · Canadian Grand Prix
+202511,2025,11,Austrian Grand Prix,2025-06-29,red_bull_ring,2025 R11 · Austrian Grand Prix
+202512,2025,12,British Grand Prix,2025-07-06,silverstone,2025 R12 · British Grand Prix
+202513,2025,13,Belgian Grand Prix,2025-07-27,spa,2025 R13 · Belgian Grand Prix
+202514,2025,14,Hungarian Grand Prix,2025-08-03,hungaroring,2025 R14 · Hungarian Grand Prix
+202515,2025,15,Dutch Grand Prix,2025-08-31,zandvoort,2025 R15 · Dutch Grand Prix
+202516,2025,16,Italian Grand Prix,2025-09-07,monza,2025 R16 · Italian Grand Prix
+202517,2025,17,Azerbaijan Grand Prix,2025-09-21,baku,2025 R17 · Azerbaijan Grand Prix
+202518,2025,18,Singapore Grand Prix,2025-10-05,marina_bay,2025 R18 · Singapore Grand Prix
+202519,2025,19,United States Grand Prix,2025-10-19,americas,2025 R19 · United States Grand Prix
+202520,2025,20,Mexico City Grand Prix,2025-10-26,rodriguez,2025 R20 · Mexico City Grand Prix
+202521,2025,21,São Paulo Grand Prix,2025-11-09,interlagos,2025 R21 · São Paulo Grand Prix
+202522,2025,22,Las Vegas Grand Prix,2025-11-23,vegas,2025 R22 · Las Vegas Grand Prix
+202523,2025,23,Qatar Grand Prix,2025-11-30,losail,2025 R23 · Qatar Grand Prix
+202524,2025,24,Abu Dhabi Grand Prix,2025-12-07,yas_marina,2025 R24 · Abu Dhabi Grand Prix
+202601,2026,1,Australian Grand Prix,2026-03-08,albert_park,2026 R01 · Australian Grand Prix
+202602,2026,2,Chinese Grand Prix,2026-03-15,shanghai,2026 R02 · Chinese Grand Prix
+202603,2026,3,Japanese Grand Prix,2026-03-29,suzuka,2026 R03 · Japanese Grand Prix
+202604,2026,4,Miami Grand Prix,2026-05-03,miami,2026 R04 · Miami Grand Prix
+202605,2026,5,Canadian Grand Prix,2026-05-24,villeneuve,2026 R05 · Canadian Grand Prix
+202606,2026,6,Monaco Grand Prix,2026-06-07,monaco,2026 R06 · Monaco Grand Prix
+202607,2026,7,Barcelona Grand Prix,2026-06-14,catalunya,2026 R07 · Barcelona Grand Prix
+202608,2026,8,Austrian Grand Prix,2026-06-28,red_bull_ring,2026 R08 · Austrian Grand Prix
+202609,2026,9,British Grand Prix,2026-07-05,silverstone,2026 R09 · British Grand Prix
+202610,2026,10,Belgian Grand Prix,2026-07-19,spa,2026 R10 · Belgian Grand Prix
+202611,2026,11,Hungarian Grand Prix,2026-07-26,hungaroring,2026 R11 · Hungarian Grand Prix
+202612,2026,12,Dutch Grand Prix,2026-08-23,zandvoort,2026 R12 · Dutch Grand Prix
+202613,2026,13,Italian Grand Prix,2026-09-06,monza,2026 R13 · Italian Grand Prix
+202614,2026,14,Spanish Grand Prix,2026-09-13,madring,2026 R14 · Spanish Grand Prix
+202615,2026,15,Azerbaijan Grand Prix,2026-09-26,baku,2026 R15 · Azerbaijan Grand Prix
+202616,2026,16,Bahrain Grand Prix in Malaysia,2026-10-04,sepang,2026 R16 · Bahrain Grand Prix in Malaysia
+202617,2026,17,Singapore Grand Prix,2026-10-11,marina_bay,2026 R17 · Singapore Grand Prix
