@@ -40,11 +40,15 @@ def ajuste(g):
 def modelo_neumaticos(limpias_gp):
     """Mediana del ritmo base y la degradación de cada compuesto de seco."""
     secos = limpias_gp[limpias_gp['Compound'].isin(SECOS) & ~limpias_gp['Lluvia']]
-    return (secos.groupby(['Driver', 'Stint', 'Compound'])
-            .apply(ajuste, include_groups=False)
-            .dropna()
-            .groupby('Compound')[['base', 'deg']]
-            .median())
+    modelo = (secos.groupby(['Driver', 'Stint', 'Compound'])
+              .apply(ajuste, include_groups=False)
+              .dropna()
+              .groupby('Compound')[['base', 'deg']]
+              .median())
+    # Un neumático no mejora con las vueltas: si la degradación mediana es <= 0 (pocos stints
+    # útiles, ajuste poco fiable) el compuesto se excluye. Si no, el simulador lo vería como
+    # "gratis" y recomendaría stints absurdos (p. ej. 65 vueltas con blandos en Hungría 2024).
+    return modelo[modelo['deg'] > 0]
 
 
 def stints_carrera(vueltas_gp):
