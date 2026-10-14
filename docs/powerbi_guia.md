@@ -146,7 +146,7 @@ RETURN
 | Posición media | Verstappen, 2024 | **3,625** |
 | Puntos acumulados | Verstappen, 2024, última carrera (R24) | **399** |
 
-### 4.2 Ritmo de carrera (tabla `fact_vueltas`, solo 2024)
+### 4.2 Ritmo de carrera (tabla `fact_vueltas`, 2024 y 2026)
 
 ```dax
 Ritmo medio (s) = AVERAGE(fact_vueltas[TiempoCorregidoSeg])
@@ -166,14 +166,14 @@ VAR _campo =
 RETURN _propio - _campo
 ```
 
-`TiempoCorregidoSeg` es el tiempo por vuelta sin el efecto del combustible (100 kg y 0,03 s/kg; mismo supuesto que la Fase 3). `Ritmo vs campo` resta al ritmo del piloto o equipo seleccionado el ritmo medio de **todos** en esa carrera: un valor negativo significa "más rápido que la media". Siempre se compara dentro de la carrera seleccionada: no mezcles circuitos en una misma media, porque Mónaco y Spa no son comparables.
+`TiempoCorregidoSeg` es el tiempo por vuelta sin el efecto del combustible (100 kg y 0,03 s/kg; mismo supuesto que la Fase 3). `Ritmo vs campo` resta al ritmo del piloto o equipo seleccionado el ritmo medio de **todos** en esa carrera: un valor negativo significa "más rápido que la media". Se actualiza con cada carrera nueva de 2026 (pipeline semanal), así que filtra siempre por año. Compara siempre dentro de la carrera seleccionada: no mezcles circuitos en una misma media, porque Mónaco y Spa no son comparables.
 
 | Medida | Filtro | Esperado |
 |---|---|---|
-| Ritmo medio (s) | toda la tabla (2024) | **87,404** |
-| Ritmo medio (s) | Verstappen | **86,668** |
+| Ritmo medio (s) | Anio = 2024 | **87,404** |
+| Ritmo medio (s) | Verstappen, Anio = 2024 | **86,668** |
 | Ritmo medio (s) | GP de Italia | **83,341** |
-| Mejor vuelta (s) | toda la tabla | **67,694** |
+| Mejor vuelta (s) | Anio = 2024 | **67,694** |
 
 ### 4.3 Estrategia y degradación (tablas `fact_estrategias` y `fact_degradacion`, solo 2024)
 
@@ -291,7 +291,7 @@ Selecciona la medida → pestaña **Herramientas de medida**: `% ...` en formato
 
 Cada página responde a **una pregunta**. Usa el mismo estilo en las cuatro: fondo oscuro o blanco liso, un solo color de acento (rojo F1 `#E10600`), títulos que digan la conclusión y no el nombre del gráfico, y los **colores Pirelli** de `dim_compuesto[ColorHex]` en todo lo que sea neumáticos.
 
-> **Alcance temporal:** resultados y predicciones cubren varios años; vueltas, estrategia, degradación y telemetría son solo 2024. Pon un filtro de página `dim_carrera[Anio] = 2024` en las páginas 2 y 3, y avisa con un texto cuando una página sea de un solo año.
+> **Alcance temporal:** resultados cubren 2018-2026, predicciones 2025-2026 y vueltas 2024 y 2026; estrategia, degradación y telemetría son solo de 2024. Pon un filtro de página `dim_carrera[Anio] = 2024` en las páginas 2 y 3, y avisa con un texto cuando una página sea de un solo año.
 
 ### Página 1 · Resumen de temporada
 *¿Quién ganó la temporada y cómo se fue construyendo?* · datos: `fact_resultados` (2018-2026)

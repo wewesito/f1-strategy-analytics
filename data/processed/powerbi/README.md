@@ -59,13 +59,13 @@ La telemetría compara dos pilotos, así que hay dos columnas que apuntan a la m
 | `dim_carrera` | 190 | `CarreraId`, `Anio`, `Ronda`, `GranPremio`, `Fecha`, `CircuitoId`, `Etiqueta` (ej. `2024 R16 · Italian Grand Prix`). |
 | `dim_piloto` | 44 | `PilotoId`, `Abreviatura`, `Piloto`, `Nacionalidad` (valores más recientes). |
 | `dim_equipo` | 18 | `EquipoId`, `Equipo` (nombre más reciente). Un cambio de nombre (Alfa Romeo → Sauber) es otro `EquipoId`. |
-| `dim_compuesto` | 5 | `Compuesto`, `OrdenCompuesto`, `TipoNeumatico` (Seco/Mojado), `ColorHex` (colores Pirelli). |
+| `dim_compuesto` | 6 | `Compuesto`, `OrdenCompuesto`, `TipoNeumatico` (Seco/Mojado/Desconocido), `ColorHex` (colores Pirelli). `DESCONOCIDO` agrupa las vueltas a las que FastF1 no asigna compuesto. |
 
 ### Hechos
 | Tabla | Filas | Alcance | Granularidad | Columnas principales |
 |---|---|---|---|---|
 | `fact_resultados` | 3.832 | 2018-2026 | piloto × carrera | `Posicion`, `Parrilla`, `ParrillaAj` (pit lane = 20), `Puntos`, `Podio`, `Victoria`, `Abandono`, `Estado`, `PosicionesGanadas`, `DifPolePct` |
-| `fact_vueltas` | 22.537 | **2024** | vuelta limpia | `Vuelta`, `Stint`, `Compuesto`, `VidaNeumatico`, `TiempoVueltaSeg`, `TiempoCorregidoSeg` (sin efecto del combustible), `Sector1-3Seg`, `Lluvia`, `TempPista`, `TempAire` |
+| `fact_vueltas` | 37.966 | **2024 y 2026** (crece con cada carrera nueva) | vuelta limpia | `Vuelta`, `Stint`, `Compuesto`, `VidaNeumatico`, `TiempoVueltaSeg`, `TiempoCorregidoSeg` (sin efecto del combustible), `Sector1-3Seg`, `Lluvia`, `TempPista`, `TempAire` |
 | `fact_estrategias` | 30 | **2024**, 3 GP (Baréin, Hungría, Italia) | piloto × carrera (top 10) | `PosicionFinal`, `Estrategia`, `Paradas`, `VsOptimaSeg` (segundos perdidos frente a la estrategia óptima simulada) |
 | `fact_degradacion` | 989 | **2024** | stint | `Stint`, `Compuesto`, `Vueltas`, `DegradacionSegVuelta` |
 | `fact_telemetria_tramos` | 51 | **2024**, clasificación de Mónaco, Monza y Suzuka | tramo entre curvas × duelo | `Duelo`, `Tramo`, `OrdenTramo`, `DesdeM`, `HastaM`, `LongitudM`, `GanaP1Seg` (positivo: el piloto 1 gana tiempo) |
@@ -74,7 +74,7 @@ La telemetría compara dos pilotos, así que hay dos columnas que apuntan a la m
 ## Cosas que conviene saber
 
 - **Telemetría ajustada al cronómetro.** La telemetría de cada piloto integra la distancia de forma algo distinta, y la suma de los tramos no coincide con la diferencia oficial de vuelta (Monza: +0,066 s frente a +0,134 s oficiales; en Mónaco incluso con signo contrario, −0,253 s frente a +0,154 s). Por eso `GanaP1Seg` reparte la discrepancia entre los tramos **en proporción a su longitud**, de modo que la suma de cada duelo es igual a `DifOficialSeg` (tiempo oficial calculado con el mejor tiempo de clasificación de cada piloto). Los valores sin ajustar siguen en `GanaP1CrudoSeg`. El reparto uniforme es un supuesto: asume que el error crece con la distancia.
-- **No todas las tablas cubren los mismos años.** Resultados, 2018-2026; predicciones, 2025-2026; vueltas, degradación, estrategia y telemetría, solo 2024. En los visuales de esas páginas hay que filtrar por la temporada 2024 o se verán carreras vacías.
+- **No todas las tablas cubren los mismos años.** Resultados, 2018-2026; predicciones, 2025-2026; vueltas, 2024 y 2026; degradación, estrategia y telemetría, solo 2024. En los visuales de esas páginas hay que filtrar por la temporada 2024 o se verán carreras vacías.
 - **Puntos:** solo de carreras, no de *sprints*. Por eso, por ejemplo, Verstappen suma 399 en 2024 en lugar de los 437 oficiales.
 - **`Acierto`** vale 1 cuando el piloto estaba entre los 3 con más probabilidad y acabó en el podio. `PredTrivial` es la regla "los 3 primeros de la parrilla".
 - **Carga en Power BI:** al importar los CSV, fija la configuración regional en *Inglés (Estados Unidos)* para que los decimales con punto no se lean como miles.

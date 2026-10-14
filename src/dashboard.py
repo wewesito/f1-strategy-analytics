@@ -90,7 +90,8 @@ def construir_datos():
     }
 
 
-if __name__ == '__main__':
+def generar():
+    """Escribe reports/dashboard.html a partir de la plantilla y de las tablas del modelo en estrella."""
     datos = construir_datos()
     html = open(PLANTILLA, encoding='utf-8').read()
     html = html.replace('/*PLOTLY*/', get_plotlyjs())
@@ -99,3 +100,7 @@ if __name__ == '__main__':
     with open(SALIDA, 'w', encoding='utf-8') as f:
         f.write(html)
     print(f'Guardado {SALIDA}: {os.path.getsize(SALIDA) / 1e6:.1f} MB')
+
+
+if __name__ == '__main__':
+    generar()

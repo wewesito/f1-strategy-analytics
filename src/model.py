@@ -274,3 +274,28 @@ def tabla_predicciones(df, proba, conjunto, nombre_modelo):
     t['Conjunto'] = conjunto
     t['Modelo'] = nombre_modelo
     return t.rename(columns={'Position': 'PosicionReal', 'Podio': 'PodioReal'})
+
+
+def actualizar_predicciones(ruta_csv=os.path.join('data', 'processed', 'predicciones_podio.csv'),
+                            ruta_modelo=os.path.join('models', 'modelo_podio.joblib'), ultimo_anio_entrenamiento=2025):
+    """
+    Añade (o actualiza) las predicciones de las carreras posteriores al entrenamiento ("en vivo") con el modelo
+    guardado. Las filas de años <= ultimo_anio_entrenamiento (test 2025) se conservan tal cual.
+    Devuelve el número de carreras en vivo predichas.
+    """
+    import features as ft          # import local: evita un ciclo si features importara model algún día
+
+    datos = ft.cargar_datos()
+    vivo = datos[datos['Year'] > ultimo_anio_entrenamiento]
+    if vivo.empty:
+        return 0
+    modelo = cargar_modelo(ruta_modelo)
+    nuevas = []
+    for year, g in vivo.groupby('Year'):
+        proba = modelo.predict_proba(g[ft.FEATURES])[:, 1]
+        nuevas.append(tabla_predicciones(g, proba, f'En vivo {year} (modelo hasta {ultimo_anio_entrenamiento})', 'Gradient Boosting'))
+
+    previas = pd.read_csv(ruta_csv)
+    previas = previas[previas['Year'] <= ultimo_anio_entrenamiento]
+    pd.concat([previas] + nuevas, ignore_index=True).to_csv(ruta_csv, index=False)
+    return int(vivo.groupby(['Year', 'Round']).ngroups)

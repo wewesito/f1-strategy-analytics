@@ -73,7 +73,7 @@ def rondas_pendientes(calendario, descargadas, ahora=None):
     La fecha de la carrera es la de la sesión 5 del calendario de FastF1 (con zona horaria).
     """
     ahora = ahora or pd.Timestamp.now(tz='UTC')
-    fin_carrera = pd.to_datetime(calendario['Session5DateUtc'], utc=True) + pd.Timedelta(hours=3)
+    fin_carrera = pd.to_datetime(calendario['Session5DateUtc'], utc=True) + pd.Timedelta(3, unit='h')
     disputada = fin_carrera < ahora
     ya = calendario['RoundNumber'].isin(descargadas)
     return calendario[disputada & ~ya]
