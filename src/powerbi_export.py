@@ -21,6 +21,7 @@ Uso (desde la raíz del proyecto):
 import glob
 import os
 import sys
+from datetime import datetime
 
 import numpy as np
 import pandas as pd
@@ -297,6 +298,8 @@ def exportar(tablas):
     ruta = os.path.join(SALIDA, 'modelo_f1.xlsx')
     # En el Excel las fechas se guardan como fechas reales: en Power BI web no siempre se puede cambiar el tipo después
     with pd.ExcelWriter(ruta, engine='xlsxwriter', datetime_format='yyyy-mm-dd') as w:
+        # Fecha de creación fija: así el archivo es idéntico byte a byte si los datos no cambian y Git no lo ve modificado
+        w.book.set_properties({'created': datetime(2026, 1, 1)})
         for nombre, df in tablas.items():
             df = df.assign(**{c: pd.to_datetime(df[c]) for c in df.columns if c == 'Fecha'})
             df.to_excel(w, sheet_name=nombre, index=False, startrow=0)
