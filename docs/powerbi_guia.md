@@ -353,3 +353,65 @@ Por qué: la tarjeta doble modelo-vs-trivial cuenta la historia honesta del proy
 3. **Ver → Sincronizar segmentaciones** si quieres que el año se mantenga entre páginas.
 4. Guarda el informe y **Compartir → Copiar vínculo**, o **Archivo → Insertar en el sitio web (público)** si tu licencia lo permite (puede estar desactivado por tu universidad).
 5. Haz capturas de cada página para el README del repositorio.
+
+---
+
+## 6. Equivalencias con Tableau Public
+
+Si Power BI web no funciona con tu cuenta, **Tableau Public** es gratuito y tiene aplicación de escritorio para Mac. Los mismos archivos sirven: el Excel `modelo_f1.xlsx` o los CSV.
+
+**Limitación a tener en cuenta:** todo lo que publiques en Tableau Public es **público** (también los datos). Aquí no hay problema: son datos públicos de F1.
+
+### Conexión y modelo
+
+1. Abre Tableau Public → **Conectar → Archivo de Microsoft Excel** → `modelo_f1.xlsx`. (Con CSV, **Archivo de texto**, uno por tabla; en ese caso añade las demás tablas arrastrándolas.)
+2. En la pestaña de origen de datos (**capa lógica**) arrastra `fact_resultados` al lienzo y después las dimensiones. Tableau crea **relaciones** (líneas) por columnas con el mismo nombre; haz clic en cada línea y comprueba las claves de la tabla de la sección 3. Equivale al modelo de Power BI y no hace combinaciones (*joins*) hasta que las pides en una hoja.
+3. Cada tabla de hechos con sus dimensiones forma una "estrella" distinta. Si en una misma hoja combinas resultados y vueltas, Tableau lo resuelve porque comparten `dim_carrera` y `dim_piloto`. Pero lo más sencillo es **un libro de trabajo (workbook) por fuente de hechos**, o trabajar con una fuente de datos por página.
+4. **Piloto 1 y piloto 2 (doble rol):** añade `dim_piloto` **dos veces** al lienzo y relaciona cada copia con `Piloto1Id` y con `Piloto2Id`. Es el equivalente a la relación inactiva + `USERELATIONSHIP` de Power BI.
+
+### Conceptos
+
+| Power BI | Tableau Public |
+|---|---|
+| Informe / página | Libro de trabajo / **panel (dashboard)**; cada gráfico es una **hoja (worksheet)** |
+| Visual | Hoja con "Marcas" (tarjeta de marcas) |
+| Segmentación (slicer) | **Filtro** → clic derecho → *Mostrar filtro*; para propagarlo, *Aplicar a las hojas → Todas las que usan esta fuente* |
+| Sincronizar segmentaciones | El mismo filtro aplicado a varias hojas |
+| Tarjeta (KPI) | Hoja con un texto grande (el campo en *Texto*) |
+| Top N en un visual | Filtro → pestaña **Principal** → *Por campo* |
+| Formato condicional | Arrastrar la medida a **Color** y editar la paleta (divergente centrada en 0) |
+| Información sobre herramientas | **Descripción emergente (tooltip)** |
+| Ordenar por columna | Clic derecho en el campo → *Ordenar* → manual o por campo |
+| Colores por `ColorHex` | Editar colores a mano (**Color → Editar colores**) con los hex de `dim_compuesto` |
+
+### Medidas DAX → campos calculados
+
+En Tableau se llaman **campos calculados** (*Análisis → Crear campo calculado*). Las expresiones de LOD (`{ FIXED ... }`) hacen el trabajo de `CALCULATE`.
+
+| Medida (DAX) | Campo calculado en Tableau |
+|---|---|
+| `Puntos = SUM(Puntos)` | `SUM([Puntos])` |
+| `Victorias`, `Podios`, `Abandonos` | `SUM([Victoria])`, `SUM([Podio])`, `SUM([Abandono])` |
+| `Carreras = DISTINCTCOUNT(CarreraId)` | `COUNTD([CarreraId])` |
+| `% Abandonos = DIVIDE(a, b)` | `SUM([Abandono]) / COUNT([Abandono])` (con `IF COUNT(...) > 0 THEN ... END` si puede haber 0) |
+| `Posición media = AVERAGE(Posicion)` | `AVG([Posicion])` |
+| `Puntos acumulados` (`CALCULATE` + `ALL`) | `RUNNING_SUM(SUM([Puntos]))` como **cálculo de tabla**: *calcular con* → `Etiqueta` (en el eje) y reiniciar por `Piloto` |
+| `Ritmo medio (s)` | `AVG([TiempoCorregidoSeg])` |
+| `Ritmo vs campo (s)` (`REMOVEFILTERS`) | `AVG([TiempoCorregidoSeg]) - { FIXED [CarreraId] : AVG([TiempoCorregidoSeg]) }` |
+| `Mejor vuelta (s)` | `MIN([TiempoVueltaSeg])` |
+| `Degradación (s/vuelta)` ponderada | `SUM([DegradacionSegVuelta] * [Vueltas]) / SUM([Vueltas])` |
+| `Pérdida vs óptima (s)` | `AVG([VsOptimaSeg])` |
+| `Ventaja acumulada P1 (s)` | `RUNNING_SUM(SUM([GanaP1Seg]))` calculado a lo largo de `OrdenTramo` |
+| `Tramos del piloto como piloto 2` (`USERELATIONSHIP`) | `COUNT([Piloto2Id])` usando la segunda copia de `dim_piloto` |
+| `% Acierto del modelo` | `SUM([Acierto]) / SUM([PredPodio])` |
+| `% Acierto trivial` | `SUM(IF [PredTrivial] = 1 AND [PodioReal] = 1 THEN 1 ELSE 0 END) / SUM([PredTrivial])` |
+| `Podios sorpresa` | `SUM(IF [PodioReal] = 1 AND [PredPodio] = 0 THEN 1 ELSE 0 END)` |
+| `Probabilidad de podio` | `AVG([ProbaPodioNorm])` |
+
+Los valores **esperados** de la sección 4 son los mismos en Tableau: úsalos para comprobar cada campo calculado.
+
+### Diferencias prácticas
+
+- Tableau pide los tipos de campo: comprueba que `Fecha` es **Fecha**, que las claves están como **Dimensión** y las columnas numéricas como **Medida**.
+- Un gráfico de **dispersión** necesita que ambas medidas estén en *columnas* y *filas* y que el nivel de detalle (`Vuelta`, `Piloto`) esté en **Detalle**; si no, verás un único punto.
+- Para publicar: *Archivo → Guardar en Tableau Public* (requiere cuenta gratuita). El enlace resultante sirve para el portfolio y el CV.
