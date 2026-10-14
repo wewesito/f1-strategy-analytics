@@ -1,0 +1,854 @@
+Year,Round,Event,Date,Abbreviation,DriverId,TeamName,GridAdj,PosicionReal,PodioReal,Proba,ProbaNorm,RankProba,PredPodio,Conjunto,Modelo
+2025,1,Australian Grand Prix,2025-03-16,NOR,norris,McLaren,1,1,1,0.915615811854608,0.5192879144079916,1,1,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,1,Australian Grand Prix,2025-03-16,VER,max_verstappen,Red Bull,3,2,1,0.8191094936702785,0.46455473478364034,3,1,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,1,Australian Grand Prix,2025-03-16,RUS,russell,Mercedes,4,3,1,0.7252659930730161,0.4113317617037087,4,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,1,Australian Grand Prix,2025-03-16,ANT,antonelli,Mercedes,16,4,0,0.025499466373755726,0.01446192228258174,14,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,1,Australian Grand Prix,2025-03-16,ALB,albon,Williams,6,5,0,0.2354463132143477,0.1335324525430366,7,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,1,Australian Grand Prix,2025-03-16,STR,stroll,Aston Martin,13,6,0,0.022948864118989228,0.013015358223493237,17,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,1,Australian Grand Prix,2025-03-16,HUL,hulkenberg,Sauber,17,7,0,0.022302858536611438,0.012648978692662079,18,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,1,Australian Grand Prix,2025-03-16,LEC,leclerc,Ferrari,7,8,0,0.469797074817942,0.2664435672894682,5,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,1,Australian Grand Prix,2025-03-16,PIA,piastri,McLaren,2,9,0,0.9106560691273963,0.516475015784499,2,1,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,1,Australian Grand Prix,2025-03-16,HAM,hamilton,Ferrari,8,10,0,0.17573255599719112,0.09966602948077705,9,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,1,Australian Grand Prix,2025-03-16,GAS,gasly,Alpine F1 Team,9,11,0,0.07714309483517152,0.043751403491812176,11,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,1,Australian Grand Prix,2025-03-16,TSU,tsunoda,RB F1 Team,5,12,0,0.3459675969892804,0.19621416490111462,6,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,1,Australian Grand Prix,2025-03-16,OCO,ocon,Haas F1 Team,19,13,0,0.022302858536611438,0.012648978692662079,19,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,1,Australian Grand Prix,2025-03-16,BEA,bearman,Haas F1 Team,20,14,0,0.12648018567821626,0.07173274094266713,10,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,1,Australian Grand Prix,2025-03-16,LAW,lawson,Red Bull,18,15,0,0.022302858536611438,0.012648978692662079,20,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,1,Australian Grand Prix,2025-03-16,BOR,bortoleto,Sauber,15,16,0,0.025499466373755726,0.01446192228258174,15,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,1,Australian Grand Prix,2025-03-16,ALO,alonso,Aston Martin,12,17,0,0.03169703590651765,0.017976849521057055,13,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,1,Australian Grand Prix,2025-03-16,SAI,sainz,Williams,10,18,0,0.22589256582733297,0.12811408220566253,8,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,1,Australian Grand Prix,2025-03-16,DOO,doohan,Alpine F1 Team,14,19,0,0.02333582810903213,0.013234823331826557,16,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,1,Australian Grand Prix,2025-03-16,HAD,hadjar,RB F1 Team,11,20,0,0.06664653494994706,0.03779832074609575,12,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,2,Chinese Grand Prix,2025-03-23,PIA,piastri,McLaren,1,1,1,0.9069351356728393,0.46745325437135277,2,1,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,2,Chinese Grand Prix,2025-03-23,NOR,norris,McLaren,3,2,1,0.8707545976281645,0.44880505166240986,3,1,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,2,Chinese Grand Prix,2025-03-23,RUS,russell,Mercedes,2,3,1,0.9167344859648865,0.47250404356736725,1,1,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,2,Chinese Grand Prix,2025-03-23,VER,max_verstappen,Red Bull,4,4,0,0.8602498138627763,0.44339066736473337,4,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,2,Chinese Grand Prix,2025-03-23,OCO,ocon,Haas F1 Team,11,5,0,0.052978366887463026,0.027306153481915167,15,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,2,Chinese Grand Prix,2025-03-23,ANT,antonelli,Mercedes,8,6,0,0.42802290769085943,0.220611919503091,7,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,2,Chinese Grand Prix,2025-03-23,ALB,albon,Williams,10,7,0,0.18856708753453358,0.09719140351746465,9,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,2,Chinese Grand Prix,2025-03-23,BEA,bearman,Haas F1 Team,17,8,0,0.028938139252380594,0.01491531956024736,17,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,2,Chinese Grand Prix,2025-03-23,STR,stroll,Aston Martin,14,9,0,0.06331494779315137,0.032633842523151976,13,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,2,Chinese Grand Prix,2025-03-23,SAI,sainz,Williams,15,10,0,0.06842273674670328,0.03526650331119006,11,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,2,Chinese Grand Prix,2025-03-23,HAD,hadjar,RB F1 Team,7,11,0,0.19195108085482362,0.09893558414088591,8,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,2,Chinese Grand Prix,2025-03-23,LAW,lawson,Red Bull,20,12,0,0.022248495384317016,0.011467337809720354,19,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,2,Chinese Grand Prix,2025-03-23,DOO,doohan,Alpine F1 Team,18,13,0,0.02333582810903213,0.012027771737969775,18,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,2,Chinese Grand Prix,2025-03-23,BOR,bortoleto,Sauber,19,14,0,0.022248495384317016,0.011467337809720354,20,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,2,Chinese Grand Prix,2025-03-23,HUL,hulkenberg,Sauber,12,15,0,0.06550884587233347,0.03376462327751308,12,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,2,Chinese Grand Prix,2025-03-23,TSU,tsunoda,RB F1 Team,9,16,0,0.09745020415363514,0.050227864462406326,10,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,2,Chinese Grand Prix,2025-03-23,ALO,alonso,Aston Martin,13,17,0,0.06331494779315137,0.032633842523151976,14,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,2,Chinese Grand Prix,2025-03-23,LEC,leclerc,Ferrari,6,18,0,0.43670694902385193,0.225087855237118,6,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,2,Chinese Grand Prix,2025-03-23,HAM,hamilton,Ferrari,5,19,0,0.4738666819346952,0.24424075537022083,5,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,2,Chinese Grand Prix,2025-03-23,GAS,gasly,Alpine F1 Team,16,20,0,0.03893686063587151,0.020068868768369896,16,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,3,Japanese Grand Prix,2025-04-06,VER,max_verstappen,Red Bull,1,1,1,0.9209250732564817,0.5020092223107057,2,1,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,3,Japanese Grand Prix,2025-04-06,NOR,norris,McLaren,2,2,1,0.9412480079886117,0.5130875401415707,1,1,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,3,Japanese Grand Prix,2025-04-06,PIA,piastri,McLaren,3,3,1,0.8737429612239194,0.4762895888070944,3,1,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,3,Japanese Grand Prix,2025-04-06,LEC,leclerc,Ferrari,4,4,0,0.6977760458515592,0.3803675459571544,4,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,3,Japanese Grand Prix,2025-04-06,RUS,russell,Mercedes,5,5,0,0.6161017915949093,0.3358457601432409,5,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,3,Japanese Grand Prix,2025-04-06,ANT,antonelli,Mercedes,6,6,0,0.3836128801359773,0.20911278150399357,6,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,3,Japanese Grand Prix,2025-04-06,HAM,hamilton,Ferrari,8,7,0,0.11242250754755337,0.0612830915598806,10,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,3,Japanese Grand Prix,2025-04-06,HAD,hadjar,RB F1 Team,7,8,0,0.11769016961513387,0.0641545683116111,9,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,3,Japanese Grand Prix,2025-04-06,ALB,albon,Williams,9,9,0,0.18856708753453358,0.10279057408206985,7,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,3,Japanese Grand Prix,2025-04-06,BEA,bearman,Haas F1 Team,10,10,0,0.08029867254995295,0.04377193686001119,12,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,3,Japanese Grand Prix,2025-04-06,ALO,alonso,Aston Martin,12,11,0,0.06331494779315137,0.034513869396441854,14,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,3,Japanese Grand Prix,2025-04-06,TSU,tsunoda,Red Bull,14,12,0,0.06331494779315137,0.034513869396441854,15,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,3,Japanese Grand Prix,2025-04-06,GAS,gasly,Alpine F1 Team,11,13,0,0.08267191368370659,0.04506562401275487,11,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,3,Japanese Grand Prix,2025-04-06,SAI,sainz,Williams,15,14,0,0.1241522666949049,0.0676771484038665,8,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,3,Japanese Grand Prix,2025-04-06,DOO,doohan,Alpine F1 Team,19,15,0,0.022302858536611438,0.012157602170260155,19,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,3,Japanese Grand Prix,2025-04-06,HUL,hulkenberg,Sauber,16,16,0,0.024723226341179527,0.013476978734718943,18,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,3,Japanese Grand Prix,2025-04-06,LAW,lawson,RB F1 Team,13,17,0,0.06522182894371158,0.03555333715688262,13,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,3,Japanese Grand Prix,2025-04-06,OCO,ocon,Haas F1 Team,18,18,0,0.055401415906940366,0.030200091757746423,16,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,3,Japanese Grand Prix,2025-04-06,BOR,bortoleto,Sauber,17,19,0,0.022248495384317016,0.012127968050614373,20,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,3,Japanese Grand Prix,2025-04-06,STR,stroll,Aston Martin,20,20,0,0.04769809162404009,0.02600090124294009,17,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,4,Bahrain Grand Prix,2025-04-13,PIA,piastri,McLaren,1,1,1,0.9200720990895312,0.48350554262710776,1,1,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,4,Bahrain Grand Prix,2025-04-13,RUS,russell,Mercedes,3,2,1,0.8915399935994764,0.4685116838187446,3,1,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,4,Bahrain Grand Prix,2025-04-13,NOR,norris,McLaren,6,3,1,0.6882733140964723,0.36169335265930047,5,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,4,Bahrain Grand Prix,2025-04-13,LEC,leclerc,Ferrari,2,4,0,0.8979668636178005,0.47188905748182886,2,1,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,4,Bahrain Grand Prix,2025-04-13,HAM,hamilton,Ferrari,9,5,0,0.08421268450064089,0.0442544663139553,9,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,4,Bahrain Grand Prix,2025-04-13,VER,max_verstappen,Red Bull,7,6,0,0.5185601331237282,0.27250766412641264,6,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,4,Bahrain Grand Prix,2025-04-13,GAS,gasly,Alpine F1 Team,4,7,0,0.6936244002782468,0.36450539296627593,4,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,4,Bahrain Grand Prix,2025-04-13,OCO,ocon,Haas F1 Team,14,8,0,0.055401415906940366,0.029113904972124016,11,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,4,Bahrain Grand Prix,2025-04-13,TSU,tsunoda,Red Bull,10,9,0,0.028060235276643086,0.01474588708548308,13,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,4,Bahrain Grand Prix,2025-04-13,BEA,bearman,Haas F1 Team,20,10,0,0.021621768740485305,0.011362419355799739,16,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,4,Bahrain Grand Prix,2025-04-13,ANT,antonelli,Mercedes,5,11,0,0.49461397770516113,0.2599237602335063,7,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,4,Bahrain Grand Prix,2025-04-13,ALB,albon,Williams,15,12,0,0.06375320190300579,0.03350283799588278,10,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,4,Bahrain Grand Prix,2025-04-13,HAD,hadjar,RB F1 Team,12,13,0,0.028060235276643086,0.01474588708548308,14,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,4,Bahrain Grand Prix,2025-04-13,DOO,doohan,Alpine F1 Team,11,14,0,0.02333582810903213,0.012263171814117317,15,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,4,Bahrain Grand Prix,2025-04-13,ALO,alonso,Aston Martin,13,15,0,0.021621768740485305,0.011362419355799739,17,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,4,Bahrain Grand Prix,2025-04-13,LAW,lawson,RB F1 Team,17,16,0,0.021621768740485305,0.011362419355799739,18,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,4,Bahrain Grand Prix,2025-04-13,STR,stroll,Aston Martin,19,17,0,0.04769809162404009,0.02506574397352184,12,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,4,Bahrain Grand Prix,2025-04-13,BOR,bortoleto,Sauber,18,18,0,0.021621768740485305,0.011362419355799739,19,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,4,Bahrain Grand Prix,2025-04-13,SAI,sainz,Williams,8,19,0,0.16547701879804042,0.08695955006725734,8,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,4,Bahrain Grand Prix,2025-04-13,HUL,hulkenberg,Sauber,16,20,0,0.021621768740485305,0.011362419355799739,20,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,5,Saudi Arabian Grand Prix,2025-04-20,PIA,piastri,McLaren,2,1,1,0.9412480079886117,0.48097306439404697,1,1,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,5,Saudi Arabian Grand Prix,2025-04-20,VER,max_verstappen,Red Bull,1,2,1,0.9345839358092561,0.47756775655780814,2,1,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,5,Saudi Arabian Grand Prix,2025-04-20,LEC,leclerc,Ferrari,4,3,1,0.6960115670255607,0.3556584591996681,5,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,5,Saudi Arabian Grand Prix,2025-04-20,NOR,norris,McLaren,10,4,0,0.7694728114406466,0.3931967907984017,4,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,5,Saudi Arabian Grand Prix,2025-04-20,RUS,russell,Mercedes,3,5,0,0.900436214219809,0.46011844016557646,3,1,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,5,Saudi Arabian Grand Prix,2025-04-20,ANT,antonelli,Mercedes,5,6,0,0.38225267637602134,0.19532922202117997,6,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,5,Saudi Arabian Grand Prix,2025-04-20,HAM,hamilton,Ferrari,7,7,0,0.1757144041614256,0.08978918915142874,9,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,5,Saudi Arabian Grand Prix,2025-04-20,SAI,sainz,Williams,6,8,0,0.26037680600713575,0.13305125665020434,7,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,5,Saudi Arabian Grand Prix,2025-04-20,ALB,albon,Williams,11,9,0,0.18856708753453358,0.09635684661809393,8,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,5,Saudi Arabian Grand Prix,2025-04-20,HAD,hadjar,RB F1 Team,14,10,0,0.06331494779315137,0.032353624340833206,13,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,5,Saudi Arabian Grand Prix,2025-04-20,ALO,alonso,Aston Martin,13,11,0,0.06331494779315137,0.032353624340833206,14,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,5,Saudi Arabian Grand Prix,2025-04-20,LAW,lawson,RB F1 Team,12,12,0,0.06542306225251923,0.033430860375342646,12,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,5,Saudi Arabian Grand Prix,2025-04-20,BEA,bearman,Haas F1 Team,15,13,0,0.05593844826410978,0.02858426966186181,15,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,5,Saudi Arabian Grand Prix,2025-04-20,OCO,ocon,Haas F1 Team,19,14,0,0.04769809162404009,0.024373488283058502,17,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,5,Saudi Arabian Grand Prix,2025-04-20,HUL,hulkenberg,Sauber,18,15,0,0.022248495384317016,0.01136887081016934,19,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,5,Saudi Arabian Grand Prix,2025-04-20,STR,stroll,Aston Martin,16,16,0,0.05083293483651114,0.02597537761881296,16,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,5,Saudi Arabian Grand Prix,2025-04-20,DOO,doohan,Alpine F1 Team,17,17,0,0.024723226341179527,0.012633446056832039,18,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,5,Saudi Arabian Grand Prix,2025-04-20,BOR,bortoleto,Sauber,20,18,0,0.021621768740485305,0.011048616603134906,20,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,5,Saudi Arabian Grand Prix,2025-04-20,TSU,tsunoda,Red Bull,8,19,0,0.11242250754755337,0.057447343848895396,10,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,5,Saudi Arabian Grand Prix,2025-04-20,GAS,gasly,Alpine F1 Team,9,20,0,0.09469652075893198,0.04838945250381775,11,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,6,Miami Grand Prix,2025-05-04,PIA,piastri,McLaren,4,1,1,0.7936148812071969,0.34780467491252454,4,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,6,Miami Grand Prix,2025-05-04,NOR,norris,McLaren,2,2,1,0.90335562451784,0.39589896403895536,1,1,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,6,Miami Grand Prix,2025-05-04,RUS,russell,Mercedes,5,3,1,0.5864130535291728,0.2569977028869821,5,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,6,Miami Grand Prix,2025-05-04,VER,max_verstappen,Red Bull,1,4,0,0.887962910922299,0.3891530500258826,2,1,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,6,Miami Grand Prix,2025-05-04,ALB,albon,Williams,7,5,0,0.26685492635158764,0.11695016450212946,9,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,6,Miami Grand Prix,2025-05-04,ANT,antonelli,Mercedes,3,6,0,0.8293449027066682,0.3634634897942941,3,1,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,6,Miami Grand Prix,2025-05-04,LEC,leclerc,Ferrari,8,7,0,0.49677617403388286,0.21771400688873,6,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,6,Miami Grand Prix,2025-05-04,HAM,hamilton,Ferrari,12,8,0,0.3388526736349137,0.14850344516922115,7,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,6,Miami Grand Prix,2025-05-04,SAI,sainz,Williams,6,9,0,0.2516694009237875,0.11029505147456391,10,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,6,Miami Grand Prix,2025-05-04,TSU,tsunoda,Red Bull,10,10,0,0.1191436705435839,0.05221515697672168,13,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,6,Miami Grand Prix,2025-05-04,HAD,hadjar,RB F1 Team,11,11,0,0.12301800094824827,0.053913096693840215,12,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,6,Miami Grand Prix,2025-05-04,OCO,ocon,Haas F1 Team,9,12,0,0.29260508102151594,0.1282352656084725,8,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,6,Miami Grand Prix,2025-05-04,GAS,gasly,Alpine F1 Team,20,13,0,0.1191436705435839,0.05221515697672168,14,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,6,Miami Grand Prix,2025-05-04,HUL,hulkenberg,Sauber,16,14,0,0.0909866133322002,0.03987522187494798,17,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,6,Miami Grand Prix,2025-05-04,ALO,alonso,Aston Martin,17,15,0,0.1191436705435839,0.05221515697672168,15,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,6,Miami Grand Prix,2025-05-04,STR,stroll,Aston Martin,18,16,0,0.2343609822854928,0.1027095725977253,11,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,6,Miami Grand Prix,2025-05-04,LAW,lawson,RB F1 Team,15,17,0,0.0909866133322002,0.03987522187494798,18,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,6,Miami Grand Prix,2025-05-04,BOR,bortoleto,Sauber,13,18,0,0.0909866133322002,0.03987522187494798,19,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,6,Miami Grand Prix,2025-05-04,BEA,bearman,Haas F1 Team,19,19,0,0.1191436705435839,0.05221515697672168,16,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,6,Miami Grand Prix,2025-05-04,DOO,doohan,Alpine F1 Team,14,20,0,0.0909866133322002,0.03987522187494798,20,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,7,Emilia Romagna Grand Prix,2025-05-18,VER,max_verstappen,Red Bull,2,1,1,0.9209250732564817,0.516169455076924,2,1,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,7,Emilia Romagna Grand Prix,2025-05-18,NOR,norris,McLaren,4,2,1,0.8393268993624902,0.47043448034635393,4,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,7,Emilia Romagna Grand Prix,2025-05-18,PIA,piastri,McLaren,1,3,1,0.9412480079886117,0.5275602603127436,1,1,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,7,Emilia Romagna Grand Prix,2025-05-18,HAM,hamilton,Ferrari,12,4,0,0.06418629768615329,0.03597578919521919,13,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,7,Emilia Romagna Grand Prix,2025-05-18,ALB,albon,Williams,7,5,0,0.15936676992125595,0.08932350869408284,8,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,7,Emilia Romagna Grand Prix,2025-05-18,LEC,leclerc,Ferrari,11,6,0,0.2801896207352152,0.15704352943904185,6,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,7,Emilia Romagna Grand Prix,2025-05-18,RUS,russell,Mercedes,3,7,0,0.900436214219809,0.5046856508986858,3,1,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,7,Emilia Romagna Grand Prix,2025-05-18,SAI,sainz,Williams,6,8,0,0.26037680600713575,0.1459386414533451,7,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,7,Emilia Romagna Grand Prix,2025-05-18,HAD,hadjar,RB F1 Team,9,9,0,0.0749156063106749,0.04198946125921029,12,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,7,Emilia Romagna Grand Prix,2025-05-18,TSU,tsunoda,Red Bull,20,10,0,0.1191436705435839,0.06677885670207909,11,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,7,Emilia Romagna Grand Prix,2025-05-18,ALO,alonso,Aston Martin,5,11,0,0.3102879362576331,0.1739133395605141,5,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,7,Emilia Romagna Grand Prix,2025-05-18,HUL,hulkenberg,Sauber,17,12,0,0.021621768740485305,0.0121187889359022,16,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,7,Emilia Romagna Grand Prix,2025-05-18,GAS,gasly,Alpine F1 Team,10,13,0,0.06331494779315137,0.03548740614157757,14,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,7,Emilia Romagna Grand Prix,2025-05-18,LAW,lawson,RB F1 Team,15,14,0,0.021621768740485305,0.0121187889359022,17,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,7,Emilia Romagna Grand Prix,2025-05-18,STR,stroll,Aston Martin,8,15,0,0.12210886991307356,0.06844082181432405,10,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,7,Emilia Romagna Grand Prix,2025-05-18,COL,colapinto,Alpine F1 Team,16,16,0,0.021621768740485305,0.0121187889359022,18,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,7,Emilia Romagna Grand Prix,2025-05-18,BEA,bearman,Haas F1 Team,19,17,0,0.021621768740485305,0.0121187889359022,19,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,7,Emilia Romagna Grand Prix,2025-05-18,BOR,bortoleto,Sauber,14,18,0,0.021621768740485305,0.0121187889359022,20,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,7,Emilia Romagna Grand Prix,2025-05-18,ANT,antonelli,Mercedes,13,19,0,0.14082413270780178,0.07893054272529536,9,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,7,Emilia Romagna Grand Prix,2025-05-18,OCO,ocon,Haas F1 Team,18,20,0,0.04769809162404009,0.02673431170109222,15,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,8,Monaco Grand Prix,2025-05-25,NOR,norris,McLaren,1,1,1,0.9386511281495704,0.541863979774101,1,1,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,8,Monaco Grand Prix,2025-05-25,LEC,leclerc,Ferrari,2,2,1,0.9113958993414796,0.5261300970686912,3,1,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,8,Monaco Grand Prix,2025-05-25,PIA,piastri,McLaren,3,3,1,0.9136237944527017,0.5274162150685342,2,1,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,8,Monaco Grand Prix,2025-05-25,VER,max_verstappen,Red Bull,4,4,0,0.785457759137791,0.45342860041077065,4,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,8,Monaco Grand Prix,2025-05-25,HAM,hamilton,Ferrari,7,5,0,0.26630103690615087,0.1537301083954412,5,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,8,Monaco Grand Prix,2025-05-25,HAD,hadjar,RB F1 Team,5,6,0,0.2578317994979229,0.14884099192815367,6,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,8,Monaco Grand Prix,2025-05-25,OCO,ocon,Haas F1 Team,8,7,0,0.100889958285755,0.0582416967033688,11,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,8,Monaco Grand Prix,2025-05-25,LAW,lawson,RB F1 Team,9,8,0,0.0294755570812636,0.017015632525364782,15,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,8,Monaco Grand Prix,2025-05-25,ALB,albon,Williams,10,9,0,0.2009703678930236,0.11601605761435403,8,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,8,Monaco Grand Prix,2025-05-25,SAI,sainz,Williams,11,10,0,0.1820202397250566,0.10507653859777681,9,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,8,Monaco Grand Prix,2025-05-25,RUS,russell,Mercedes,14,11,0,0.17164992059544618,0.0990899667751062,10,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,8,Monaco Grand Prix,2025-05-25,BEA,bearman,Haas F1 Team,20,12,0,0.021621768740485305,0.012481802139386242,16,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,8,Monaco Grand Prix,2025-05-25,COL,colapinto,Alpine F1 Team,18,13,0,0.021621768740485305,0.012481802139386242,17,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,8,Monaco Grand Prix,2025-05-25,BOR,bortoleto,Sauber,16,14,0,0.021621768740485305,0.012481802139386242,18,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,8,Monaco Grand Prix,2025-05-25,STR,stroll,Aston Martin,19,15,0,0.04769809162404009,0.027535126715272674,13,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,8,Monaco Grand Prix,2025-05-25,HUL,hulkenberg,Sauber,13,16,0,0.021621768740485305,0.012481802139386242,19,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,8,Monaco Grand Prix,2025-05-25,TSU,tsunoda,Red Bull,12,17,0,0.030316570160823876,0.017501132068982215,14,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,8,Monaco Grand Prix,2025-05-25,ANT,antonelli,Mercedes,15,18,0,0.050800596448445465,0.029326138903938325,12,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,8,Monaco Grand Prix,2025-05-25,ALO,alonso,Aston Martin,6,19,0,0.2015985717154194,0.11637870675321325,7,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,8,Monaco Grand Prix,2025-05-25,GAS,gasly,Alpine F1 Team,17,20,0,0.021621768740485305,0.012481802139386242,20,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,9,Spanish Grand Prix,2025-06-01,PIA,piastri,McLaren,1,1,1,0.9408351835656005,0.5214644994832262,1,1,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,9,Spanish Grand Prix,2025-06-01,NOR,norris,McLaren,2,2,1,0.9342553746572826,0.517817594245193,2,1,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,9,Spanish Grand Prix,2025-06-01,LEC,leclerc,Ferrari,7,3,1,0.3476799001752755,0.1927040232893635,7,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,9,Spanish Grand Prix,2025-06-01,RUS,russell,Mercedes,4,4,0,0.7152181714603486,0.39641468805239877,4,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,9,Spanish Grand Prix,2025-06-01,HUL,hulkenberg,Sauber,15,5,0,0.021621768740485305,0.011984016978902744,17,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,9,Spanish Grand Prix,2025-06-01,HAM,hamilton,Ferrari,5,6,0,0.533776822443955,0.29584954773545197,5,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,9,Spanish Grand Prix,2025-06-01,HAD,hadjar,RB F1 Team,9,7,0,0.18856708753453358,0.10451463087035906,8,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,9,Spanish Grand Prix,2025-06-01,GAS,gasly,Alpine F1 Team,8,8,0,0.09219238774295492,0.05109827754139408,10,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,9,Spanish Grand Prix,2025-06-01,ALO,alonso,Aston Martin,10,9,0,0.06542306225251923,0.03626119112901047,11,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,9,Spanish Grand Prix,2025-06-01,VER,max_verstappen,Red Bull,3,10,0,0.8758790378368445,0.485462100112451,3,1,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,9,Spanish Grand Prix,2025-06-01,LAW,lawson,RB F1 Team,13,11,0,0.024723226341179527,0.013703021607625463,15,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,9,Spanish Grand Prix,2025-06-01,BOR,bortoleto,Sauber,12,12,0,0.022248495384317016,0.012331384617089838,16,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,9,Spanish Grand Prix,2025-06-01,TSU,tsunoda,Red Bull,19,13,0,0.030316570160823876,0.01680317165122241,14,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,9,Spanish Grand Prix,2025-06-01,SAI,sainz,Williams,17,14,0,0.052149469163968475,0.028904209059065895,12,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,9,Spanish Grand Prix,2025-06-01,COL,colapinto,Alpine F1 Team,18,15,0,0.021621768740485305,0.011984016978902744,18,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,9,Spanish Grand Prix,2025-06-01,OCO,ocon,Haas F1 Team,16,16,0,0.0364518133710403,0.020203673232911286,13,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,9,Spanish Grand Prix,2025-06-01,BEA,bearman,Haas F1 Team,14,17,0,0.021621768740485305,0.011984016978902744,19,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,9,Spanish Grand Prix,2025-06-01,ANT,antonelli,Mercedes,6,18,0,0.39100257060845367,0.21671591724096637,6,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,9,Spanish Grand Prix,2025-06-01,ALB,albon,Williams,11,19,0,0.09706691632096047,0.05380001919556247,9,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,10,Canadian Grand Prix,2025-06-15,RUS,russell,Mercedes,1,1,1,0.9200720990895312,0.46338806919051356,1,1,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,10,Canadian Grand Prix,2025-06-15,VER,max_verstappen,Red Bull,2,2,1,0.9113958993414796,0.4590183600632187,3,1,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,10,Canadian Grand Prix,2025-06-15,ANT,antonelli,Mercedes,4,3,1,0.6153097220073075,0.30989656605962623,5,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,10,Canadian Grand Prix,2025-06-15,PIA,piastri,McLaren,3,4,0,0.9121048381155479,0.4593754122659916,2,1,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,10,Canadian Grand Prix,2025-06-15,LEC,leclerc,Ferrari,8,5,0,0.517019318499609,0.26039327132168116,7,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,10,Canadian Grand Prix,2025-06-15,HAM,hamilton,Ferrari,5,6,0,0.5720712987595653,0.2881198276024548,6,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,10,Canadian Grand Prix,2025-06-15,ALO,alonso,Aston Martin,6,7,0,0.25323560604796175,0.1275403945549225,8,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,10,Canadian Grand Prix,2025-06-15,HUL,hulkenberg,Sauber,11,8,0,0.055401415906940366,0.027902547173142302,11,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,10,Canadian Grand Prix,2025-06-15,OCO,ocon,Haas F1 Team,14,9,0,0.0364518133710403,0.01835870844601672,15,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,10,Canadian Grand Prix,2025-06-15,SAI,sainz,Williams,16,10,0,0.04769809162404009,0.024022820172036705,12,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,10,Canadian Grand Prix,2025-06-15,BEA,bearman,Haas F1 Team,13,11,0,0.021621768740485305,0.010889657103016146,18,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,10,Canadian Grand Prix,2025-06-15,TSU,tsunoda,Red Bull,18,12,0,0.030116133954026035,0.015167786500915294,16,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,10,Canadian Grand Prix,2025-06-15,COL,colapinto,Alpine F1 Team,10,13,0,0.024723226341179527,0.012451685177429134,17,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,10,Canadian Grand Prix,2025-06-15,BOR,bortoleto,Sauber,15,14,0,0.021621768740485305,0.010889657103016146,19,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,10,Canadian Grand Prix,2025-06-15,GAS,gasly,Alpine F1 Team,20,15,0,0.04769809162404009,0.024022820172036705,13,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,10,Canadian Grand Prix,2025-06-15,HAD,hadjar,RB F1 Team,12,16,0,0.11966050197471821,0.06026619981553924,9,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,10,Canadian Grand Prix,2025-06-15,STR,stroll,Aston Martin,17,17,0,0.04769809162404009,0.024022820172036705,14,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,10,Canadian Grand Prix,2025-06-15,NOR,norris,McLaren,7,18,0,0.6809711396232878,0.34296649347019575,4,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,10,Canadian Grand Prix,2025-06-15,LAW,lawson,RB F1 Team,19,19,0,0.021621768740485305,0.010889657103016146,20,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,10,Canadian Grand Prix,2025-06-15,ALB,albon,Williams,9,20,0,0.10010508455503427,0.05041724653319426,10,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,11,Austrian Grand Prix,2025-06-29,NOR,norris,McLaren,1,1,1,0.9156173399545486,0.5309845846192667,1,1,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,11,Austrian Grand Prix,2025-06-29,PIA,piastri,McLaren,3,2,1,0.8687711423704364,0.5038175491343044,3,1,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,11,Austrian Grand Prix,2025-06-29,LEC,leclerc,Ferrari,2,3,1,0.8971493925829476,0.5202746570807965,2,1,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,11,Austrian Grand Prix,2025-06-29,HAM,hamilton,Ferrari,4,4,0,0.7386088172932568,0.42833384530054464,4,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,11,Austrian Grand Prix,2025-06-29,RUS,russell,Mercedes,5,5,0,0.6326029878802303,0.3668589705445785,5,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,11,Austrian Grand Prix,2025-06-29,LAW,lawson,RB F1 Team,6,6,0,0.11938442905497412,0.06923338899950332,8,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,11,Austrian Grand Prix,2025-06-29,ALO,alonso,Aston Martin,11,7,0,0.024723226341179527,0.014337487393883325,18,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,11,Austrian Grand Prix,2025-06-29,BOR,bortoleto,Sauber,8,8,0,0.07330967127301305,0.04251372669657843,10,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,11,Austrian Grand Prix,2025-06-29,HUL,hulkenberg,Sauber,20,9,0,0.0364518133710403,0.021139126725583494,16,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,11,Austrian Grand Prix,2025-06-29,OCO,ocon,Haas F1 Team,17,10,0,0.0364518133710403,0.021139126725583494,17,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,11,Austrian Grand Prix,2025-06-29,BEA,bearman,Haas F1 Team,15,11,0,0.024723226341179527,0.014337487393883325,19,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,11,Austrian Grand Prix,2025-06-29,HAD,hadjar,RB F1 Team,13,12,0,0.04241975002945584,0.024600051097942117,14,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,11,Austrian Grand Prix,2025-06-29,GAS,gasly,Alpine F1 Team,10,13,0,0.12277051038788334,0.07119704446078053,7,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,11,Austrian Grand Prix,2025-06-29,STR,stroll,Aston Martin,16,14,0,0.04769809162404009,0.027661065668961538,12,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,11,Austrian Grand Prix,2025-06-29,COL,colapinto,Alpine F1 Team,14,15,0,0.021621768740485305,0.012538890858019734,20,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,11,Austrian Grand Prix,2025-06-29,TSU,tsunoda,Red Bull,18,16,0,0.04611226665434093,0.026741414439053233,13,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,11,Austrian Grand Prix,2025-06-29,ALB,albon,Williams,12,17,0,0.03824310306491461,0.02217793100825669,15,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,11,Austrian Grand Prix,2025-06-29,VER,max_verstappen,Red Bull,7,18,0,0.33680712028915794,0.19532110310670558,6,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,11,Austrian Grand Prix,2025-06-29,ANT,antonelli,Mercedes,9,19,0,0.07085651518866383,0.041091093018060444,11,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,11,Austrian Grand Prix,2025-06-29,SAI,sainz,Williams,19,20,0,0.07880651630492093,0.045701455727713836,9,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,12,British Grand Prix,2025-07-06,NOR,norris,McLaren,3,1,1,0.8686381011637805,0.3821360006175397,3,1,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,12,British Grand Prix,2025-07-06,PIA,piastri,McLaren,2,2,1,0.9335321685422213,0.4106845518940474,1,1,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,12,British Grand Prix,2025-07-06,HUL,hulkenberg,Sauber,19,3,1,0.04891588709945594,0.021519343254459374,18,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,12,British Grand Prix,2025-07-06,HAM,hamilton,Ferrari,5,4,0,0.6925006933126338,0.3046486736108157,6,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,12,British Grand Prix,2025-07-06,VER,max_verstappen,Red Bull,1,5,0,0.9159016742750762,0.4029284489103873,2,1,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,12,British Grand Prix,2025-07-06,GAS,gasly,Alpine F1 Team,8,6,0,0.18305927244962197,0.08053243134987176,10,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,12,British Grand Prix,2025-07-06,STR,stroll,Aston Martin,17,7,0,0.050013352241408265,0.022002146092143956,17,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,12,British Grand Prix,2025-07-06,ALB,albon,Williams,13,8,0,0.09955173158373441,0.043795339521707506,14,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,12,British Grand Prix,2025-07-06,ALO,alonso,Aston Martin,7,9,0,0.18759051071694824,0.08252583834756311,9,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,12,British Grand Prix,2025-07-06,RUS,russell,Mercedes,4,10,0,0.8313856362625711,0.36574769352921255,4,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,12,British Grand Prix,2025-07-06,BEA,bearman,Haas F1 Team,18,11,0,0.08029867254995295,0.03532542901586448,15,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,12,British Grand Prix,2025-07-06,SAI,sainz,Williams,9,12,0,0.18305927244962197,0.08053243134987176,11,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,12,British Grand Prix,2025-07-06,OCO,ocon,Haas F1 Team,14,13,0,0.11585036768560285,0.05096552421328865,12,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,12,British Grand Prix,2025-07-06,LEC,leclerc,Ferrari,6,14,0,0.7690752411606672,0.3383357654210178,5,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,12,British Grand Prix,2025-07-06,TSU,tsunoda,Red Bull,11,15,0,0.19527095958690732,0.08590466321165952,8,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,12,British Grand Prix,2025-07-06,ANT,antonelli,Mercedes,10,16,0,0.44709703469565326,0.1966893606182541,7,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,12,British Grand Prix,2025-07-06,HAD,hadjar,RB F1 Team,12,17,0,0.11585036768560285,0.05096552421328865,13,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,12,British Grand Prix,2025-07-06,BOR,bortoleto,Sauber,16,18,0,0.024723226341179527,0.010876376276521648,19,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,12,British Grand Prix,2025-07-06,LAW,lawson,RB F1 Team,15,19,0,0.055401415906940366,0.024372492381882518,16,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,12,British Grand Prix,2025-07-06,COL,colapinto,Alpine F1 Team,20,20,0,0.021621768740485305,0.00951196617060264,20,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,13,Belgian Grand Prix,2025-07-27,PIA,piastri,McLaren,2,1,1,0.9342235153516314,0.44118932900639557,1,1,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,13,Belgian Grand Prix,2025-07-27,NOR,norris,McLaren,1,2,1,0.9200720990895312,0.434506288232351,2,1,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,13,Belgian Grand Prix,2025-07-27,LEC,leclerc,Ferrari,3,3,1,0.8519494483515522,0.4023352006121538,3,1,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,13,Belgian Grand Prix,2025-07-27,VER,max_verstappen,Red Bull,4,4,0,0.7439253134740474,0.3513205399876411,4,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,13,Belgian Grand Prix,2025-07-27,RUS,russell,Mercedes,6,5,0,0.6157005109421038,0.2907660648952935,5,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,13,Belgian Grand Prix,2025-07-27,ALB,albon,Williams,5,6,0,0.34786288034204843,0.16427909193291365,7,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,13,Belgian Grand Prix,2025-07-27,HAM,hamilton,Ferrari,18,7,0,0.35614588015882254,0.16819075875704323,6,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,13,Belgian Grand Prix,2025-07-27,LAW,lawson,RB F1 Team,9,8,0,0.18305927244962197,0.08645018697698813,9,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,13,Belgian Grand Prix,2025-07-27,BOR,bortoleto,Sauber,10,9,0,0.08029867254995295,0.037921243557098555,16,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,13,Belgian Grand Prix,2025-07-27,GAS,gasly,Alpine F1 Team,13,10,0,0.14783462937736844,0.06981526355003076,10,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,13,Belgian Grand Prix,2025-07-27,BEA,bearman,Haas F1 Team,12,11,0,0.06331494779315137,0.02990063820264834,18,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,13,Belgian Grand Prix,2025-07-27,HUL,hulkenberg,Sauber,14,12,0,0.12463241331080088,0.058857960538858514,13,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,13,Belgian Grand Prix,2025-07-27,TSU,tsunoda,Red Bull,7,13,0,0.3130895788553824,0.14785731566830648,8,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,13,Belgian Grand Prix,2025-07-27,STR,stroll,Aston Martin,16,14,0,0.055401415906940366,0.026163453508004857,19,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,13,Belgian Grand Prix,2025-07-27,OCO,ocon,Haas F1 Team,11,15,0,0.1447485876854612,0.06835787284966303,12,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,13,Belgian Grand Prix,2025-07-27,ANT,antonelli,Mercedes,19,16,0,0.08721798153838356,0.04118890406834635,15,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,13,Belgian Grand Prix,2025-07-27,ALO,alonso,Aston Martin,20,17,0,0.07384837985782251,0.03487507713335493,17,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,13,Belgian Grand Prix,2025-07-27,SAI,sainz,Williams,17,18,0,0.14783462937736844,0.06981526355003076,11,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,13,Belgian Grand Prix,2025-07-27,COL,colapinto,Alpine F1 Team,15,19,0,0.041890043930222436,0.01978267520558724,20,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,13,Belgian Grand Prix,2025-07-27,HAD,hadjar,RB F1 Team,8,20,0,0.11948455467282904,0.05642687176729005,14,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,14,Hungarian Grand Prix,2025-08-03,NOR,norris,McLaren,3,1,1,0.9280182516111866,0.42313970407720525,2,1,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,14,Hungarian Grand Prix,2025-08-03,PIA,piastri,McLaren,2,2,1,0.9416183436708592,0.4293408094105988,1,1,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,14,Hungarian Grand Prix,2025-08-03,RUS,russell,Mercedes,4,3,1,0.7273086601400764,0.3316240501629708,4,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,14,Hungarian Grand Prix,2025-08-03,LEC,leclerc,Ferrari,1,4,0,0.8894277721124839,0.4055439681669164,3,1,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,14,Hungarian Grand Prix,2025-08-03,ALO,alonso,Aston Martin,5,5,0,0.38255823231790204,0.17443145857773185,8,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,14,Hungarian Grand Prix,2025-08-03,BOR,bortoleto,Sauber,7,6,0,0.12807271041972446,0.05839610233234185,12,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,14,Hungarian Grand Prix,2025-08-03,STR,stroll,Aston Martin,6,7,0,0.45735795764910714,0.20853718180758393,6,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,14,Hungarian Grand Prix,2025-08-03,LAW,lawson,RB F1 Team,9,8,0,0.18305927244962197,0.08346780490409465,10,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,14,Hungarian Grand Prix,2025-08-03,VER,max_verstappen,Red Bull,8,9,0,0.4124536775467394,0.18806260195818178,7,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,14,Hungarian Grand Prix,2025-08-03,ANT,antonelli,Mercedes,15,10,0,0.27325266987671487,0.1245924351910081,9,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,14,Hungarian Grand Prix,2025-08-03,HAD,hadjar,RB F1 Team,10,11,0,0.11948455467282904,0.054480242191659166,13,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,14,Hungarian Grand Prix,2025-08-03,HAM,hamilton,Ferrari,12,12,0,0.5134220121964649,0.2341001784505384,5,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,14,Hungarian Grand Prix,2025-08-03,HUL,hulkenberg,Sauber,18,13,0,0.06418629768615329,0.029266419018781846,16,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,14,Hungarian Grand Prix,2025-08-03,SAI,sainz,Williams,13,14,0,0.1522993221711276,0.06944248133349219,11,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,14,Hungarian Grand Prix,2025-08-03,ALB,albon,Williams,19,15,0,0.04241975002945584,0.01934173217318714,20,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,14,Hungarian Grand Prix,2025-08-03,OCO,ocon,Haas F1 Team,17,16,0,0.048027714893174346,0.02189874286644602,19,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,14,Hungarian Grand Prix,2025-08-03,TSU,tsunoda,Red Bull,20,17,0,0.10527140272556529,0.047999605740244526,14,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,14,Hungarian Grand Prix,2025-08-03,COL,colapinto,Alpine F1 Team,14,18,0,0.04916797704194722,0.022418657412700375,18,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,14,Hungarian Grand Prix,2025-08-03,GAS,gasly,Alpine F1 Team,16,19,0,0.09879518581542772,0.045046706374162304,15,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,14,Hungarian Grand Prix,2025-08-03,BEA,bearman,Haas F1 Team,11,20,0,0.06331494779315137,0.028869117850154606,17,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,15,Dutch Grand Prix,2025-08-31,PIA,piastri,McLaren,1,1,1,0.9455771856385846,0.4414080643330888,2,1,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,15,Dutch Grand Prix,2025-08-31,VER,max_verstappen,Red Bull,3,2,1,0.853413588862896,0.3983848659389164,3,1,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,15,Dutch Grand Prix,2025-08-31,HAD,hadjar,RB F1 Team,4,3,1,0.5803443743700843,0.2709125080723006,5,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,15,Dutch Grand Prix,2025-08-31,RUS,russell,Mercedes,5,4,0,0.5697345731866311,0.2659597111198401,6,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,15,Dutch Grand Prix,2025-08-31,ALB,albon,Williams,15,5,0,0.10343301224049938,0.04828391210643068,14,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,15,Dutch Grand Prix,2025-08-31,BEA,bearman,Haas F1 Team,20,6,0,0.021621768740485305,0.010093330541546285,19,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,15,Dutch Grand Prix,2025-08-31,STR,stroll,Aston Martin,19,7,0,0.2611930709364939,0.1219284153746067,9,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,15,Dutch Grand Prix,2025-08-31,ALO,alonso,Aston Martin,10,8,0,0.1493144037782838,0.06970195870822635,10,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,15,Dutch Grand Prix,2025-08-31,TSU,tsunoda,Red Bull,12,9,0,0.08620312605733647,0.04024077102360819,16,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,15,Dutch Grand Prix,2025-08-31,OCO,ocon,Haas F1 Team,18,10,0,0.0364518133710403,0.017016193522769507,18,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,15,Dutch Grand Prix,2025-08-31,COL,colapinto,Alpine F1 Team,16,11,0,0.021621768740485305,0.010093330541546285,20,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,15,Dutch Grand Prix,2025-08-31,LAW,lawson,RB F1 Team,8,12,0,0.11585036768560285,0.05408049953938303,13,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,15,Dutch Grand Prix,2025-08-31,SAI,sainz,Williams,9,13,0,0.14783462937736844,0.06901118024626864,11,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,15,Dutch Grand Prix,2025-08-31,HUL,hulkenberg,Sauber,17,14,0,0.03740113261050477,0.017459348427826975,17,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,15,Dutch Grand Prix,2025-08-31,BOR,bortoleto,Sauber,13,15,0,0.12277051038788334,0.057310914614445874,12,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,15,Dutch Grand Prix,2025-08-31,ANT,antonelli,Mercedes,11,16,0,0.3192417217493129,0.1490263011755734,8,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,15,Dutch Grand Prix,2025-08-31,GAS,gasly,Alpine F1 Team,14,17,0,0.0956005675269803,0.044627622263042024,15,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,15,Dutch Grand Prix,2025-08-31,NOR,norris,McLaren,2,18,0,0.9457967057924144,0.44151053927395645,1,1,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,15,Dutch Grand Prix,2025-08-31,LEC,leclerc,Ferrari,6,19,0,0.5852210153445271,0.27318898923710633,4,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,15,Dutch Grand Prix,2025-08-31,HAM,hamilton,Ferrari,7,20,0,0.4279259347074591,0.19976154393951737,7,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,16,Italian Grand Prix,2025-09-07,VER,max_verstappen,Red Bull,1,1,1,0.9200720990895312,0.4100617410739299,1,1,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,16,Italian Grand Prix,2025-09-07,NOR,norris,McLaren,2,2,1,0.9171375589214271,0.4087538624285771,3,1,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,16,Italian Grand Prix,2025-09-07,PIA,piastri,McLaren,3,3,1,0.9200684806184558,0.4100601283779785,2,1,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,16,Italian Grand Prix,2025-09-07,LEC,leclerc,Ferrari,4,4,0,0.7795319161055024,0.34742518011060086,4,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,16,Italian Grand Prix,2025-09-07,RUS,russell,Mercedes,5,5,0,0.6329959629912516,0.2821163981972931,5,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,16,Italian Grand Prix,2025-09-07,HAM,hamilton,Ferrari,10,6,0,0.4744303739746782,0.2114461957524061,7,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,16,Italian Grand Prix,2025-09-07,ALB,albon,Williams,14,7,0,0.1559135024500411,0.06948820895108669,11,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,16,Italian Grand Prix,2025-09-07,BOR,bortoleto,Sauber,7,8,0,0.1757144041614256,0.07831316108107622,10,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,16,Italian Grand Prix,2025-09-07,ANT,antonelli,Mercedes,6,9,0,0.5300390968354209,0.2362301335956891,6,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,16,Italian Grand Prix,2025-09-07,HAD,hadjar,RB F1 Team,19,10,0,0.0956005675269803,0.04260767738372059,16,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,16,Italian Grand Prix,2025-09-07,SAI,sainz,Williams,13,11,0,0.1522993221711276,0.06787742534054911,12,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,16,Italian Grand Prix,2025-09-07,BEA,bearman,Haas F1 Team,11,12,0,0.18305927244962197,0.08158665397494498,9,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,16,Italian Grand Prix,2025-09-07,TSU,tsunoda,Red Bull,9,13,0,0.23079772064853518,0.10286293352302099,8,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,16,Italian Grand Prix,2025-09-07,LAW,lawson,RB F1 Team,18,14,0,0.043517473484157417,0.01939505715009809,18,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,16,Italian Grand Prix,2025-09-07,OCO,ocon,Haas F1 Team,15,15,0,0.11585036768560285,0.051632696529134194,15,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,16,Italian Grand Prix,2025-09-07,GAS,gasly,Alpine F1 Team,20,16,0,0.03824310306491461,0.017044352765818005,19,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,16,Italian Grand Prix,2025-09-07,COL,colapinto,Alpine F1 Team,17,17,0,0.02262392320487548,0.010083128646651165,20,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,16,Italian Grand Prix,2025-09-07,STR,stroll,Aston Martin,16,18,0,0.049263093496540726,0.02195579010587251,17,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,16,Italian Grand Prix,2025-09-07,ALO,alonso,Aston Martin,8,19,0,0.1493144037782838,0.06654709390854031,13,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,16,Italian Grand Prix,2025-09-07,HUL,hulkenberg,Sauber,12,20,0,0.1447485876854612,0.06451218110301243,14,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,17,Azerbaijan Grand Prix,2025-09-21,VER,max_verstappen,Red Bull,1,1,1,0.9200720990895312,0.34892103952492576,1,1,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,17,Azerbaijan Grand Prix,2025-09-21,RUS,russell,Mercedes,5,2,1,0.7020465374307707,0.2662387087681729,5,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,17,Azerbaijan Grand Prix,2025-09-21,SAI,sainz,Williams,2,3,1,0.8669176548636982,0.32876315847082094,2,1,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,17,Azerbaijan Grand Prix,2025-09-21,ANT,antonelli,Mercedes,4,4,0,0.6980402768726076,0.264719405444069,6,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,17,Azerbaijan Grand Prix,2025-09-21,LAW,lawson,RB F1 Team,3,5,0,0.832401401660645,0.3156734810857197,3,1,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,17,Azerbaijan Grand Prix,2025-09-21,TSU,tsunoda,Red Bull,6,6,0,0.35148458039725483,0.13329429866480336,10,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,17,Azerbaijan Grand Prix,2025-09-21,NOR,norris,McLaren,7,7,0,0.66392505095226,0.251781810549566,7,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,17,Azerbaijan Grand Prix,2025-09-21,HAM,hamilton,Ferrari,12,8,0,0.38524597577380487,0.1460977095955934,9,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,17,Azerbaijan Grand Prix,2025-09-21,LEC,leclerc,Ferrari,10,9,0,0.571414298463185,0.21669874699654315,8,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,17,Azerbaijan Grand Prix,2025-09-21,HAD,hadjar,RB F1 Team,8,10,0,0.23814387914404042,0.09031184615821194,12,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,17,Azerbaijan Grand Prix,2025-09-21,BOR,bortoleto,Sauber,13,11,0,0.15248043366344838,0.05782550245106901,13,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,17,Azerbaijan Grand Prix,2025-09-21,BEA,bearman,Haas F1 Team,15,12,0,0.0626133624119483,0.023745008160281137,16,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,17,Azerbaijan Grand Prix,2025-09-21,ALB,albon,Williams,19,13,0,0.058339244364917595,0.022124124630068707,17,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,17,Azerbaijan Grand Prix,2025-09-21,OCO,ocon,Haas F1 Team,20,14,0,0.2454870096859903,0.09309659829296292,11,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,17,Azerbaijan Grand Prix,2025-09-21,ALO,alonso,Aston Martin,11,15,0,0.1447485876854612,0.054893336875397776,14,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,17,Azerbaijan Grand Prix,2025-09-21,HUL,hulkenberg,Sauber,17,16,0,0.03824310306491461,0.014503019153904817,18,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,17,Azerbaijan Grand Prix,2025-09-21,STR,stroll,Aston Martin,14,17,0,0.1447485876854612,0.054893336875397776,15,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,17,Azerbaijan Grand Prix,2025-09-21,GAS,gasly,Alpine F1 Team,18,18,0,0.0364518133710403,0.013823704279890698,19,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,17,Azerbaijan Grand Prix,2025-09-21,COL,colapinto,Alpine F1 Team,16,19,0,0.022248495384317016,0.00843734762204326,20,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,17,Azerbaijan Grand Prix,2025-09-21,PIA,piastri,McLaren,9,20,0,0.775666609178263,0.2941578164005575,4,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,18,Singapore Grand Prix,2025-10-05,RUS,russell,Mercedes,1,1,1,0.9338677182025477,0.41563071573555044,2,1,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,18,Singapore Grand Prix,2025-10-05,VER,max_verstappen,Red Bull,2,2,1,0.9400998394797819,0.4184044073157597,1,1,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,18,Singapore Grand Prix,2025-10-05,NOR,norris,McLaren,5,3,1,0.640374850622642,0.28500766469968847,5,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,18,Singapore Grand Prix,2025-10-05,PIA,piastri,McLaren,3,4,0,0.8571001692653778,0.38146425865806155,3,1,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,18,Singapore Grand Prix,2025-10-05,ANT,antonelli,Mercedes,4,5,0,0.6773838004819372,0.30147900857293686,4,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,18,Singapore Grand Prix,2025-10-05,LEC,leclerc,Ferrari,7,6,0,0.4417509723739028,0.19660736659580968,7,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,18,Singapore Grand Prix,2025-10-05,ALO,alonso,Aston Martin,10,7,0,0.1447485876854612,0.0644223565380485,13,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,18,Singapore Grand Prix,2025-10-05,HAM,hamilton,Ferrari,6,8,0,0.5263619716382392,0.23426465948416803,6,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,18,Singapore Grand Prix,2025-10-05,BEA,bearman,Haas F1 Team,9,9,0,0.18856708753453358,0.08392438460877143,11,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,18,Singapore Grand Prix,2025-10-05,SAI,sainz,Williams,18,10,0,0.2611930709364939,0.11624758078954785,10,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,18,Singapore Grand Prix,2025-10-05,HAD,hadjar,RB F1 Team,8,11,0,0.1493144037782838,0.06645443600025468,12,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,18,Singapore Grand Prix,2025-10-05,TSU,tsunoda,Red Bull,13,12,0,0.29041269443789935,0.12925217747138582,9,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,18,Singapore Grand Prix,2025-10-05,STR,stroll,Aston Martin,15,13,0,0.0364518133710403,0.01622338259044326,17,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,18,Singapore Grand Prix,2025-10-05,ALB,albon,Williams,20,14,0,0.29320794282530493,0.13049624134175086,8,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,18,Singapore Grand Prix,2025-10-05,LAW,lawson,RB F1 Team,12,15,0,0.11477540379332081,0.051082377404877935,14,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,18,Singapore Grand Prix,2025-10-05,COL,colapinto,Alpine F1 Team,16,16,0,0.021621768740485305,0.009623066567043844,20,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,18,Singapore Grand Prix,2025-10-05,BOR,bortoleto,Sauber,14,17,0,0.055401415906940366,0.024657164711169813,16,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,18,Singapore Grand Prix,2025-10-05,OCO,ocon,Haas F1 Team,17,18,0,0.0364518133710403,0.01622338259044326,18,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,18,Singapore Grand Prix,2025-10-05,GAS,gasly,Alpine F1 Team,19,19,0,0.0364518133710403,0.01622338259044326,19,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,18,Singapore Grand Prix,2025-10-05,HUL,hulkenberg,Sauber,11,20,0,0.09506948373619564,0.04231198573384467,15,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,19,United States Grand Prix,2025-10-19,VER,max_verstappen,Red Bull,1,1,1,0.9455771856385846,0.3975805068119883,1,1,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,19,United States Grand Prix,2025-10-19,NOR,norris,McLaren,2,2,1,0.9176695663949638,0.3858463770430879,2,1,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,19,United States Grand Prix,2025-10-19,LEC,leclerc,Ferrari,3,3,1,0.8699623910714314,0.3657872605248642,3,1,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,19,United States Grand Prix,2025-10-19,HAM,hamilton,Ferrari,5,4,0,0.5556852157074671,0.23364524128160047,7,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,19,United States Grand Prix,2025-10-19,PIA,piastri,McLaren,6,5,0,0.6114364904301433,0.25708660640367315,5,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,19,United States Grand Prix,2025-10-19,RUS,russell,Mercedes,4,6,0,0.8465379627599404,0.3559381480237265,4,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,19,United States Grand Prix,2025-10-19,TSU,tsunoda,Red Bull,13,7,0,0.42309391063798646,0.17789546318941213,8,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,19,United States Grand Prix,2025-10-19,HUL,hulkenberg,Sauber,11,8,0,0.11948455467282904,0.05023887052747188,14,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,19,United States Grand Prix,2025-10-19,BEA,bearman,Haas F1 Team,8,9,0,0.18305927244962197,0.07696970635771302,11,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,19,United States Grand Prix,2025-10-19,ALO,alonso,Aston Martin,10,10,0,0.1447485876854612,0.06086146929765442,12,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,19,United States Grand Prix,2025-10-19,LAW,lawson,RB F1 Team,12,11,0,0.1447485876854612,0.06086146929765442,13,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,19,United States Grand Prix,2025-10-19,STR,stroll,Aston Martin,19,12,0,0.0364518133710403,0.015326649854064374,19,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,19,United States Grand Prix,2025-10-19,ANT,antonelli,Mercedes,7,13,0,0.6003512445464187,0.2524256673036987,6,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,19,United States Grand Prix,2025-10-19,ALB,albon,Williams,18,14,0,0.05622269078339043,0.023639578276096203,16,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,19,United States Grand Prix,2025-10-19,OCO,ocon,Haas F1 Team,17,15,0,0.03824310306491461,0.016079821435564277,18,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,19,United States Grand Prix,2025-10-19,HAD,hadjar,RB F1 Team,20,16,0,0.2522930564615705,0.10607997186966366,9,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,19,United States Grand Prix,2025-10-19,COL,colapinto,Alpine F1 Team,15,17,0,0.022248495384317016,0.009354675858351204,20,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,19,United States Grand Prix,2025-10-19,BOR,bortoleto,Sauber,16,18,0,0.055401415906940366,0.02329426232878889,17,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,19,United States Grand Prix,2025-10-19,GAS,gasly,Alpine F1 Team,14,19,0,0.09506948373619564,0.03997322915597256,15,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,19,United States Grand Prix,2025-10-19,SAI,sainz,Williams,9,20,0,0.21670149210794915,0.09111502515895395,10,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,20,Mexico City Grand Prix,2025-10-26,NOR,norris,McLaren,1,1,1,0.9261316133027191,0.4449660986541944,1,1,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,20,Mexico City Grand Prix,2025-10-26,LEC,leclerc,Ferrari,2,2,1,0.897810070142771,0.4313588247130669,2,1,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,20,Mexico City Grand Prix,2025-10-26,VER,max_verstappen,Red Bull,5,3,1,0.7721560758620093,0.3709875267114388,5,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,20,Mexico City Grand Prix,2025-10-26,BEA,bearman,Haas F1 Team,9,4,0,0.15248043366344838,0.07326023938041196,9,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,20,Mexico City Grand Prix,2025-10-26,PIA,piastri,McLaren,7,5,0,0.4777267027282431,0.22952697444141368,7,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,20,Mexico City Grand Prix,2025-10-26,ANT,antonelli,Mercedes,6,6,0,0.5586248578904967,0.26839503160933537,6,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,20,Mexico City Grand Prix,2025-10-26,RUS,russell,Mercedes,4,7,0,0.7882039173503462,0.37869781898126137,4,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,20,Mexico City Grand Prix,2025-10-26,HAM,hamilton,Ferrari,3,8,0,0.8406452466707011,0.403893604742967,3,1,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,20,Mexico City Grand Prix,2025-10-26,OCO,ocon,Haas F1 Team,11,9,0,0.03824310306491461,0.018374153442987064,16,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,20,Mexico City Grand Prix,2025-10-26,BOR,bortoleto,Sauber,16,10,0,0.04769809162404009,0.022916865635880256,13,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,20,Mexico City Grand Prix,2025-10-26,TSU,tsunoda,Red Bull,10,11,0,0.11696632652741513,0.056197250197747586,11,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,20,Mexico City Grand Prix,2025-10-26,ALB,albon,Williams,17,12,0,0.05622269078339043,0.027012566048265487,12,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,20,Mexico City Grand Prix,2025-10-26,HAD,hadjar,RB F1 Team,8,13,0,0.1447485876854612,0.06954542251118634,10,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,20,Mexico City Grand Prix,2025-10-26,STR,stroll,Aston Martin,19,14,0,0.0364518133710403,0.017513516385365982,17,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,20,Mexico City Grand Prix,2025-10-26,GAS,gasly,Alpine F1 Team,18,15,0,0.0364518133710403,0.017513516385365982,18,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,20,Mexico City Grand Prix,2025-10-26,COL,colapinto,Alpine F1 Team,20,16,0,0.021621768740485305,0.010388322722455452,20,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,20,Mexico City Grand Prix,2025-10-26,SAI,sainz,Williams,12,17,0,0.2105851736384523,0.1011770484911522,8,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,20,Mexico City Grand Prix,2025-10-26,ALO,alonso,Aston Martin,14,18,0,0.0364518133710403,0.017513516385365982,19,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,20,Mexico City Grand Prix,2025-10-26,HUL,hulkenberg,Sauber,13,19,0,0.04241975002945584,0.020380851280069025,14,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,20,Mexico City Grand Prix,2025-10-26,LAW,lawson,RB F1 Team,15,20,0,0.04241975002945584,0.020380851280069025,15,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,21,São Paulo Grand Prix,2025-11-09,NOR,norris,McLaren,1,1,1,0.9451930091931081,0.39477334990519086,1,1,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,21,São Paulo Grand Prix,2025-11-09,ANT,antonelli,Mercedes,2,2,1,0.8994524528456775,0.37566915374612564,2,1,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,21,São Paulo Grand Prix,2025-11-09,VER,max_verstappen,Red Bull,19,3,1,0.44968112497541846,0.18781573960986842,6,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,21,São Paulo Grand Prix,2025-11-09,RUS,russell,Mercedes,6,4,0,0.6444180601047566,0.26915039981530825,5,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,21,São Paulo Grand Prix,2025-11-09,PIA,piastri,McLaren,4,5,0,0.7471317952753024,0.31205025722026997,4,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,21,São Paulo Grand Prix,2025-11-09,BEA,bearman,Haas F1 Team,8,6,0,0.29372317485104027,0.12267767593808265,9,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,21,São Paulo Grand Prix,2025-11-09,LAW,lawson,RB F1 Team,7,7,0,0.12788922266198186,0.05341475905555138,16,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,21,São Paulo Grand Prix,2025-11-09,HAD,hadjar,RB F1 Team,5,8,0,0.35205124038738733,0.14703922495644706,8,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,21,São Paulo Grand Prix,2025-11-09,HUL,hulkenberg,Sauber,10,9,0,0.1249589500588253,0.0521908888825472,17,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,21,São Paulo Grand Prix,2025-11-09,GAS,gasly,Alpine F1 Team,9,10,0,0.25292700388224293,0.10563857289773565,10,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,21,São Paulo Grand Prix,2025-11-09,ALB,albon,Williams,12,11,0,0.15118175733461364,0.0631432185882213,13,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,21,São Paulo Grand Prix,2025-11-09,OCO,ocon,Haas F1 Team,20,12,0,0.176947793445197,0.07390477129779595,12,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,21,São Paulo Grand Prix,2025-11-09,SAI,sainz,Williams,15,13,0,0.11948455467282904,0.04990442952005129,18,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,21,São Paulo Grand Prix,2025-11-09,ALO,alonso,Aston Martin,11,14,0,0.1447485876854612,0.06045631347127344,14,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,21,São Paulo Grand Prix,2025-11-09,COL,colapinto,Alpine F1 Team,16,15,0,0.02262392320487548,0.009449204410865206,20,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,21,São Paulo Grand Prix,2025-11-09,STR,stroll,Aston Martin,14,16,0,0.1447485876854612,0.06045631347127344,15,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,21,São Paulo Grand Prix,2025-11-09,TSU,tsunoda,Red Bull,17,17,0,0.07740604304406028,0.03232973860174408,19,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,21,São Paulo Grand Prix,2025-11-09,HAM,hamilton,Ferrari,13,18,0,0.4357695308233882,0.18200536376863488,7,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,21,São Paulo Grand Prix,2025-11-09,LEC,leclerc,Ferrari,3,19,0,0.8784166203724492,0.36688323809426315,3,1,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,21,São Paulo Grand Prix,2025-11-09,BOR,bortoleto,Sauber,18,20,0,0.19404912562280707,0.08104738674875012,11,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,22,Las Vegas Grand Prix,2025-11-23,VER,max_verstappen,Red Bull,2,1,1,0.9390153955356496,0.4409158899992689,2,1,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,22,Las Vegas Grand Prix,2025-11-23,RUS,russell,Mercedes,4,2,1,0.7692655896983553,0.3612096497461375,4,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,22,Las Vegas Grand Prix,2025-11-23,ANT,antonelli,Mercedes,17,3,1,0.3849631559273221,0.1807599463433702,6,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,22,Las Vegas Grand Prix,2025-11-23,LEC,leclerc,Ferrari,9,4,0,0.17730550938292144,0.08325403059738924,10,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,22,Las Vegas Grand Prix,2025-11-23,SAI,sainz,Williams,3,5,0,0.7983153113734371,0.37484998402339753,3,1,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,22,Las Vegas Grand Prix,2025-11-23,HAD,hadjar,RB F1 Team,8,6,0,0.048672334356866756,0.02285415736880233,15,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,22,Las Vegas Grand Prix,2025-11-23,HUL,hulkenberg,Sauber,11,7,0,0.04132839987727017,0.019405803462612604,16,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,22,Las Vegas Grand Prix,2025-11-23,HAM,hamilton,Ferrari,19,8,0,0.350977951207377,0.16480214963722126,7,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,22,Las Vegas Grand Prix,2025-11-23,OCO,ocon,Haas F1 Team,13,9,0,0.04132839987727017,0.019405803462612604,17,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,22,Las Vegas Grand Prix,2025-11-23,BEA,bearman,Haas F1 Team,14,10,0,0.1503766224551852,0.0706095370109348,13,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,22,Las Vegas Grand Prix,2025-11-23,ALO,alonso,Aston Martin,7,11,0,0.11499767261097213,0.053997305484206344,14,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,22,Las Vegas Grand Prix,2025-11-23,TSU,tsunoda,Red Bull,20,12,0,0.2809035592030414,0.13189862849833242,8,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,22,Las Vegas Grand Prix,2025-11-23,GAS,gasly,Alpine F1 Team,10,13,0,0.0364518133710403,0.017115995979396385,19,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,22,Las Vegas Grand Prix,2025-11-23,LAW,lawson,RB F1 Team,6,14,0,0.2740511562964467,0.12868107387616215,9,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,22,Las Vegas Grand Prix,2025-11-23,COL,colapinto,Alpine F1 Team,15,15,0,0.022385941875104027,0.010511347878064337,20,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,22,Las Vegas Grand Prix,2025-11-23,ALB,albon,Williams,16,16,0,0.1761529323292165,0.08271283655537126,11,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,22,Las Vegas Grand Prix,2025-11-23,BOR,bortoleto,Sauber,18,17,0,0.16952803293731666,0.07960210650193175,12,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,22,Las Vegas Grand Prix,2025-11-23,STR,stroll,Aston Martin,12,18,0,0.04132839987727017,0.019405803462612604,18,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,22,Las Vegas Grand Prix,2025-11-23,NOR,norris,McLaren,1,19,0,0.9455771856385846,0.44399698700468443,1,1,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,22,Las Vegas Grand Prix,2025-11-23,PIA,piastri,McLaren,5,20,0,0.626153030716711,0.2940109631074913,5,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,23,Qatar Grand Prix,2025-11-30,VER,max_verstappen,Red Bull,3,1,1,0.9118495494554621,0.4324985769247302,3,1,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,23,Qatar Grand Prix,2025-11-30,PIA,piastri,McLaren,1,2,1,0.9211007016850118,0.4368864829960592,1,1,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,23,Qatar Grand Prix,2025-11-30,SAI,sainz,Williams,7,3,1,0.15792483414045616,0.0749051924932244,9,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,23,Qatar Grand Prix,2025-11-30,NOR,norris,McLaren,2,4,0,0.9171375589214271,0.43500672815445895,2,1,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,23,Qatar Grand Prix,2025-11-30,ANT,antonelli,Mercedes,5,5,0,0.6744954124475422,0.31991933998325617,5,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,23,Qatar Grand Prix,2025-11-30,RUS,russell,Mercedes,4,6,0,0.7860791593171845,0.37284453115966176,4,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,23,Qatar Grand Prix,2025-11-30,ALO,alonso,Aston Martin,8,7,0,0.11585036768560285,0.05494888843247411,12,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,23,Qatar Grand Prix,2025-11-30,LEC,leclerc,Ferrari,10,8,0,0.44982818675962805,0.2133576210575003,6,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,23,Qatar Grand Prix,2025-11-30,LAW,lawson,RB F1 Team,12,9,0,0.11112777128977713,0.05270891779060208,14,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,23,Qatar Grand Prix,2025-11-30,TSU,tsunoda,Red Bull,15,10,0,0.07740604304406028,0.03671439381850093,17,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,23,Qatar Grand Prix,2025-11-30,ALB,albon,Williams,14,11,0,0.08868213136272274,0.042062745587728066,15,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,23,Qatar Grand Prix,2025-11-30,HAM,hamilton,Ferrari,17,12,0,0.15914804564016494,0.07548537288945088,8,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,23,Qatar Grand Prix,2025-11-30,BOR,bortoleto,Sauber,19,13,0,0.07813104533123766,0.03705826903087412,16,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,23,Qatar Grand Prix,2025-11-30,COL,colapinto,Alpine F1 Team,20,14,0,0.021621768740485305,0.010255402567715219,20,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,23,Qatar Grand Prix,2025-11-30,OCO,ocon,Haas F1 Team,16,15,0,0.04241975002945584,0.020120075216573365,18,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,23,Qatar Grand Prix,2025-11-30,GAS,gasly,Alpine F1 Team,9,16,0,0.11585036768560285,0.05494888843247411,13,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,23,Qatar Grand Prix,2025-11-30,STR,stroll,Aston Martin,18,17,0,0.0364518133710403,0.0172894283039516,19,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,23,Qatar Grand Prix,2025-11-30,HAD,hadjar,RB F1 Team,6,18,0,0.41910285877927306,0.19878431712267375,7,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,23,Qatar Grand Prix,2025-11-30,BEA,bearman,Haas F1 Team,13,19,0,0.11960024690813012,0.05672749042701497,11,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,23,Qatar Grand Prix,2025-11-30,HUL,hulkenberg,Sauber,11,20,0,0.12118117191789086,0.057477337611075714,10,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,24,Abu Dhabi Grand Prix,2025-12-07,VER,max_verstappen,Red Bull,1,1,1,0.9455771856385846,0.41318532868705743,1,1,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,24,Abu Dhabi Grand Prix,2025-12-07,PIA,piastri,McLaren,3,2,1,0.8714525257226705,0.3807953530866102,3,1,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,24,Abu Dhabi Grand Prix,2025-12-07,NOR,norris,McLaren,2,3,1,0.9122393345644728,0.3986178125043627,2,1,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,24,Abu Dhabi Grand Prix,2025-12-07,LEC,leclerc,Ferrari,5,4,0,0.5858474193753741,0.2559955572231827,5,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,24,Abu Dhabi Grand Prix,2025-12-07,RUS,russell,Mercedes,4,5,0,0.7629342373440596,0.33337652220397607,4,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,24,Abu Dhabi Grand Prix,2025-12-07,ALO,alonso,Aston Martin,6,6,0,0.3527094699601627,0.15412213882688763,7,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,24,Abu Dhabi Grand Prix,2025-12-07,OCO,ocon,Haas F1 Team,8,7,0,0.1447485876854612,0.06325024935898174,12,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,24,Abu Dhabi Grand Prix,2025-12-07,HAM,hamilton,Ferrari,16,8,0,0.24540942992917036,0.10723564137147473,10,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,24,Abu Dhabi Grand Prix,2025-12-07,HUL,hulkenberg,Sauber,18,9,0,0.048027714893174346,0.020986491071929656,18,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,24,Abu Dhabi Grand Prix,2025-12-07,STR,stroll,Aston Martin,15,10,0,0.09506948373619564,0.04154215698332514,16,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,24,Abu Dhabi Grand Prix,2025-12-07,BOR,bortoleto,Sauber,7,11,0,0.12788922266198186,0.05588327563702485,14,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,24,Abu Dhabi Grand Prix,2025-12-07,BEA,bearman,Haas F1 Team,11,12,0,0.1447485876854612,0.06325024935898174,13,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,24,Abu Dhabi Grand Prix,2025-12-07,SAI,sainz,Williams,12,13,0,0.2673956605473671,0.11684288239055031,9,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,24,Abu Dhabi Grand Prix,2025-12-07,TSU,tsunoda,Red Bull,10,14,0,0.3481605466739323,0.15213441282023277,8,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,24,Abu Dhabi Grand Prix,2025-12-07,ANT,antonelli,Mercedes,14,15,0,0.5841636648065965,0.2552598132823442,6,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,24,Abu Dhabi Grand Prix,2025-12-07,ALB,albon,Williams,17,16,0,0.08868213136272274,0.03875109948959856,17,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,24,Abu Dhabi Grand Prix,2025-12-07,HAD,hadjar,RB F1 Team,9,17,0,0.15118175733461364,0.06606132745641864,11,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,24,Abu Dhabi Grand Prix,2025-12-07,LAW,lawson,RB F1 Team,13,18,0,0.11963215055750728,0.052275213700572774,15,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,24,Abu Dhabi Grand Prix,2025-12-07,GAS,gasly,Alpine F1 Team,19,19,0,0.048027714893174346,0.020986491071929656,19,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2025,24,Abu Dhabi Grand Prix,2025-12-07,COL,colapinto,Alpine F1 Team,20,20,0,0.021621768740485305,0.009447983474558587,20,0,Test 2025 (modelo hasta 2024),Gradient Boosting
+2026,1,Australian Grand Prix,2026-03-08,RUS,russell,Mercedes,1,1,1,0.9184089359690806,0.5707826762482782,1,1,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,1,Australian Grand Prix,2026-03-08,ANT,antonelli,Mercedes,2,2,1,0.8988679153656157,0.5586381123183776,2,1,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,1,Australian Grand Prix,2026-03-08,LEC,leclerc,Ferrari,4,3,1,0.6769844572966517,0.4207395912437856,4,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,1,Australian Grand Prix,2026-03-08,HAM,hamilton,Ferrari,7,4,0,0.11399985959432381,0.07084986045188778,8,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,1,Australian Grand Prix,2026-03-08,NOR,norris,McLaren,6,5,0,0.25442752521757006,0.15812435840650405,7,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,1,Australian Grand Prix,2026-03-08,VER,max_verstappen,Red Bull,20,6,0,0.2927633398930336,0.18194971336511015,6,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,1,Australian Grand Prix,2026-03-08,BEA,bearman,Haas F1 Team,12,7,0,0.022264377372962503,0.013837105023953059,16,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,1,Australian Grand Prix,2026-03-08,LIN,arvid_lindblad,RB F1 Team,9,8,0,0.027244796099980713,0.016932389290590683,14,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,1,Australian Grand Prix,2026-03-08,BOR,bortoleto,Audi,10,9,0,0.022264377372962503,0.013837105023953059,17,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,1,Australian Grand Prix,2026-03-08,GAS,gasly,Alpine F1 Team,14,10,0,0.022264377372962503,0.013837105023953059,18,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,1,Australian Grand Prix,2026-03-08,OCO,ocon,Haas F1 Team,13,11,0,0.022264377372962503,0.013837105023953059,19,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,1,Australian Grand Prix,2026-03-08,ALB,albon,Williams,15,12,0,0.022264377372962503,0.013837105023953059,20,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,1,Australian Grand Prix,2026-03-08,LAW,lawson,RB F1 Team,8,13,0,0.03142668719230559,0.019531396003147742,13,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,1,Australian Grand Prix,2026-03-08,COL,colapinto,Alpine F1 Team,16,14,0,0.022264377372962503,0.013837105023953059,21,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,1,Australian Grand Prix,2026-03-08,SAI,sainz,Williams,21,15,0,0.08172427632778599,0.050790883374416465,9,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,1,Australian Grand Prix,2026-03-08,PER,perez,Cadillac F1 Team,18,16,0,0.022822963902238425,0.014184261395814711,15,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,1,Australian Grand Prix,2026-03-08,STR,stroll,Aston Martin,22,17,0,0.06221252650642991,0.03866451096540995,10,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,1,Australian Grand Prix,2026-03-08,ALO,alonso,Aston Martin,17,18,0,0.053591006975927044,0.03330631615891594,11,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,1,Australian Grand Prix,2026-03-08,BOT,bottas,Cadillac F1 Team,19,19,0,0.04976978063481517,0.030931459260089247,12,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,1,Australian Grand Prix,2026-03-08,HAD,hadjar,Red Bull,3,20,0,0.7994274660772187,0.49683679097967354,3,1,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,1,Australian Grand Prix,2026-03-08,PIA,piastri,McLaren,5,21,0,0.3875808897356103,0.24087794537032708,5,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,1,Australian Grand Prix,2026-03-08,HUL,hulkenberg,Audi,11,22,0,0.022264377372962503,0.013837105023953059,22,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,2,Chinese Grand Prix,2026-03-15,ANT,antonelli,Mercedes,1,1,1,0.928365389285394,0.5388151064115159,1,1,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,2,Chinese Grand Prix,2026-03-15,RUS,russell,Mercedes,2,2,1,0.9177534608475252,0.5326560364844443,2,1,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,2,Chinese Grand Prix,2026-03-15,HAM,hamilton,Ferrari,3,3,1,0.8414667163753882,0.4883798809804325,3,1,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,2,Chinese Grand Prix,2026-03-15,LEC,leclerc,Ferrari,4,4,0,0.745763565918454,0.43283461422176617,4,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,2,Chinese Grand Prix,2026-03-15,BEA,bearman,Haas F1 Team,10,5,0,0.04624881860491888,0.02684240753223039,10,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,2,Chinese Grand Prix,2026-03-15,GAS,gasly,Alpine F1 Team,7,6,0,0.1231830297625236,0.07149434700563036,8,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,2,Chinese Grand Prix,2026-03-15,LAW,lawson,RB F1 Team,14,7,0,0.02245767489205583,0.01303423697864548,15,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,2,Chinese Grand Prix,2026-03-15,HAD,hadjar,Red Bull,9,8,0,0.045582888139950324,0.02645590734762,11,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,2,Chinese Grand Prix,2026-03-15,SAI,sainz,Williams,17,9,0,0.022264377372962503,0.012922048798731187,18,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,2,Chinese Grand Prix,2026-03-15,COL,colapinto,Alpine F1 Team,12,10,0,0.03135963226070698,0.018200854737362923,12,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,2,Chinese Grand Prix,2026-03-15,HUL,hulkenberg,Audi,11,11,0,0.02985572959687288,0.017328002858998433,14,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,2,Chinese Grand Prix,2026-03-15,LIN,arvid_lindblad,RB F1 Team,15,12,0,0.07906815476247835,0.045890461572356295,9,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,2,Chinese Grand Prix,2026-03-15,BOT,bottas,Cadillac F1 Team,19,13,0,0.022264377372962503,0.012922048798731187,19,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,2,Chinese Grand Prix,2026-03-15,OCO,ocon,Haas F1 Team,13,14,0,0.02245767489205583,0.01303423697864548,16,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,2,Chinese Grand Prix,2026-03-15,PER,perez,Cadillac F1 Team,21,15,0,0.030243078612750697,0.01755281682084729,13,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,2,Chinese Grand Prix,2026-03-15,VER,max_verstappen,Red Bull,8,16,0,0.2777088211340756,0.16117975717077687,7,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,2,Chinese Grand Prix,2026-03-15,ALO,alonso,Aston Martin,18,17,0,0.022264377372962503,0.012922048798731187,20,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,2,Chinese Grand Prix,2026-03-15,STR,stroll,Aston Martin,20,18,0,0.022264377372962503,0.012922048798731187,21,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,2,Chinese Grand Prix,2026-03-15,PIA,piastri,McLaren,5,19,0,0.43116871368168064,0.25024652903372324,6,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,2,Chinese Grand Prix,2026-03-15,NOR,norris,McLaren,6,20,0,0.46246449094578884,0.26841032289270317,5,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,2,Chinese Grand Prix,2026-03-15,BOR,bortoleto,Audi,16,21,0,0.02245767489205583,0.01303423697864548,17,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,2,Chinese Grand Prix,2026-03-15,ALB,albon,Williams,22,22,0,0.022264377372962503,0.012922048798731187,22,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,3,Japanese Grand Prix,2026-03-29,ANT,antonelli,Mercedes,1,1,1,0.928365389285394,0.5849598593895885,1,1,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,3,Japanese Grand Prix,2026-03-29,PIA,piastri,McLaren,3,2,1,0.7847283740217231,0.49445466690664525,3,1,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,3,Japanese Grand Prix,2026-03-29,LEC,leclerc,Ferrari,4,3,1,0.717492152521252,0.45208935349801277,4,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,3,Japanese Grand Prix,2026-03-29,RUS,russell,Mercedes,2,4,0,0.9204460016028015,0.5799698802728241,2,1,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,3,Japanese Grand Prix,2026-03-29,NOR,norris,McLaren,5,5,0,0.4316565162877244,0.27198529586139486,5,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,3,Japanese Grand Prix,2026-03-29,HAM,hamilton,Ferrari,6,6,0,0.33570464291048147,0.2115263483319916,6,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,3,Japanese Grand Prix,2026-03-29,GAS,gasly,Alpine F1 Team,7,7,0,0.1384766371009474,0.08725365583659389,7,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,3,Japanese Grand Prix,2026-03-29,VER,max_verstappen,Red Bull,11,8,0,0.10284982953477648,0.06480532613265157,8,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,3,Japanese Grand Prix,2026-03-29,LAW,lawson,RB F1 Team,14,9,0,0.02245767489205583,0.014150504207385527,15,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,3,Japanese Grand Prix,2026-03-29,OCO,ocon,Haas F1 Team,12,10,0,0.02245767489205583,0.014150504207385527,16,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,3,Japanese Grand Prix,2026-03-29,HUL,hulkenberg,Audi,13,11,0,0.02245767489205583,0.014150504207385527,17,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,3,Japanese Grand Prix,2026-03-29,HAD,hadjar,Red Bull,8,12,0,0.03375828838276504,0.02127098215155973,10,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,3,Japanese Grand Prix,2026-03-29,BOR,bortoleto,Audi,9,13,0,0.030299192608184127,0.01909141772437713,11,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,3,Japanese Grand Prix,2026-03-29,LIN,arvid_lindblad,RB F1 Team,10,14,0,0.02245767489205583,0.014150504207385527,18,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,3,Japanese Grand Prix,2026-03-29,SAI,sainz,Williams,16,15,0,0.021446560059954923,0.013513404206848293,20,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,3,Japanese Grand Prix,2026-03-29,COL,colapinto,Alpine F1 Team,15,16,0,0.021446560059954923,0.013513404206848293,21,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,3,Japanese Grand Prix,2026-03-29,PER,perez,Cadillac F1 Team,19,17,0,0.029508370613066513,0.018593123487641014,12,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,3,Japanese Grand Prix,2026-03-29,ALO,alonso,Aston Martin,21,18,0,0.022822963902238425,0.01438067156444033,13,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,3,Japanese Grand Prix,2026-03-29,BOT,bottas,Cadillac F1 Team,20,19,0,0.022264377372962503,0.0140287081011388,19,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,3,Japanese Grand Prix,2026-03-29,ALB,albon,Williams,17,20,0,0.021446560059954923,0.013513404206848293,22,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,3,Japanese Grand Prix,2026-03-29,STR,stroll,Aston Martin,22,21,0,0.022822963902238425,0.01438067156444033,14,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,3,Japanese Grand Prix,2026-03-29,BEA,bearman,Haas F1 Team,18,22,0,0.08580876519806775,0.05406780972661326,9,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,4,Miami Grand Prix,2026-05-03,ANT,antonelli,Mercedes,1,1,1,0.9465671018553918,0.5316307076512582,1,1,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,4,Miami Grand Prix,2026-05-03,NOR,norris,McLaren,4,2,1,0.7114498671056728,0.3995792750100931,5,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,4,Miami Grand Prix,2026-05-03,PIA,piastri,McLaren,7,3,1,0.22398268648994957,0.12579781600995593,7,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,4,Miami Grand Prix,2026-05-03,RUS,russell,Mercedes,5,4,0,0.7318920460661419,0.41106043682671,4,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,4,Miami Grand Prix,2026-05-03,VER,max_verstappen,Red Bull,2,5,0,0.9056709027850123,0.5086617335453377,2,1,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,4,Miami Grand Prix,2026-05-03,HAM,hamilton,Ferrari,6,6,0,0.3946700116283352,0.2216627824476794,6,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,4,Miami Grand Prix,2026-05-03,COL,colapinto,Alpine F1 Team,8,7,0,0.05217893182150041,0.02930581719391815,10,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,4,Miami Grand Prix,2026-05-03,LEC,leclerc,Ferrari,3,8,0,0.8752625843327542,0.4915831811367749,3,1,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,4,Miami Grand Prix,2026-05-03,SAI,sainz,Williams,13,9,0,0.022020849559667797,0.012367807640410235,19,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,4,Miami Grand Prix,2026-05-03,ALB,albon,Williams,15,10,0,0.021446560059954923,0.012045263224350775,20,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,4,Miami Grand Prix,2026-05-03,BEA,bearman,Haas F1 Team,12,11,0,0.04998106262529952,0.028071404172579396,11,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,4,Miami Grand Prix,2026-05-03,BOR,bortoleto,Audi,21,12,0,0.047991223273111304,0.026953829199983577,12,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,4,Miami Grand Prix,2026-05-03,OCO,ocon,Haas F1 Team,14,13,0,0.021446560059954923,0.012045263224350775,21,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,4,Miami Grand Prix,2026-05-03,LIN,arvid_lindblad,RB F1 Team,16,14,0,0.021446560059954923,0.012045263224350775,22,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,4,Miami Grand Prix,2026-05-03,ALO,alonso,Aston Martin,17,15,0,0.022264377372962503,0.012504582797143294,17,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,4,Miami Grand Prix,2026-05-03,PER,perez,Cadillac F1 Team,20,16,0,0.022822963902238425,0.012818307784269229,13,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,4,Miami Grand Prix,2026-05-03,STR,stroll,Aston Martin,18,17,0,0.022264377372962503,0.012504582797143294,18,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,4,Miami Grand Prix,2026-05-03,BOT,bottas,Cadillac F1 Team,19,18,0,0.022822963902238425,0.012818307784269229,14,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,4,Miami Grand Prix,2026-05-03,HUL,hulkenberg,Audi,10,19,0,0.02245767489205583,0.012613146571081124,15,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,4,Miami Grand Prix,2026-05-03,LAW,lawson,RB F1 Team,11,20,0,0.02245767489205583,0.012613146571081124,16,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,4,Miami Grand Prix,2026-05-03,GAS,gasly,Alpine F1 Team,9,21,0,0.11905283271333279,0.06686492862388237,8,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,4,Miami Grand Prix,2026-05-03,HAD,hadjar,Red Bull,22,22,0,0.0613424387059742,0.03445241656337756,9,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,5,Canadian Grand Prix,2026-05-24,ANT,antonelli,Mercedes,2,1,1,0.9374523130649797,0.5418224332823621,1,1,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,5,Canadian Grand Prix,2026-05-24,HAM,hamilton,Ferrari,5,2,1,0.5280235206416724,0.30518351152071854,5,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,5,Canadian Grand Prix,2026-05-24,VER,max_verstappen,Red Bull,6,3,1,0.3084453502980948,0.17827318563729452,7,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,5,Canadian Grand Prix,2026-05-24,LEC,leclerc,Ferrari,8,4,0,0.321901940580952,0.18605073590745544,6,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,5,Canadian Grand Prix,2026-05-24,HAD,hadjar,Red Bull,7,5,0,0.1338549387766668,0.07736458444239615,8,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,5,Canadian Grand Prix,2026-05-24,COL,colapinto,Alpine F1 Team,10,6,0,0.02245767489205583,0.012979937097914512,14,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,5,Canadian Grand Prix,2026-05-24,LAW,lawson,RB F1 Team,12,7,0,0.02245767489205583,0.012979937097914512,15,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,5,Canadian Grand Prix,2026-05-24,GAS,gasly,Alpine F1 Team,14,8,0,0.04609678512223237,0.026642712310093686,10,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,5,Canadian Grand Prix,2026-05-24,SAI,sainz,Williams,15,9,0,0.021446560059954923,0.012395539693351464,19,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,5,Canadian Grand Prix,2026-05-24,BEA,bearman,Haas F1 Team,16,10,0,0.04609678512223237,0.026642712310093686,11,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,5,Canadian Grand Prix,2026-05-24,PIA,piastri,McLaren,4,11,0,0.7608054414751344,0.43972525301769233,4,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,5,Canadian Grand Prix,2026-05-24,HUL,hulkenberg,Audi,11,12,0,0.02245767489205583,0.012979937097914512,16,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,5,Canadian Grand Prix,2026-05-24,BOR,bortoleto,Audi,13,13,0,0.021446560059954923,0.012395539693351464,20,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,5,Canadian Grand Prix,2026-05-24,OCO,ocon,Haas F1 Team,17,14,0,0.021446560059954923,0.012395539693351464,21,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,5,Canadian Grand Prix,2026-05-24,STR,stroll,Aston Martin,22,15,0,0.022822963902238425,0.013191064402834522,12,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,5,Canadian Grand Prix,2026-05-24,BOT,bottas,Cadillac F1 Team,21,16,0,0.022822963902238425,0.013191064402834522,13,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,5,Canadian Grand Prix,2026-05-24,PER,perez,Cadillac F1 Team,20,17,0,0.022264377372962503,0.012868216287497855,17,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,5,Canadian Grand Prix,2026-05-24,NOR,norris,McLaren,3,18,0,0.8573632994525424,0.4955331195435127,3,1,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,5,Canadian Grand Prix,2026-05-24,RUS,russell,Mercedes,1,19,0,0.9337913480288783,0.539706493136525,2,1,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,5,Canadian Grand Prix,2026-05-24,ALO,alonso,Aston Martin,19,20,0,0.022264377372962503,0.012868216287497855,18,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,5,Canadian Grand Prix,2026-05-24,ALB,albon,Williams,18,21,0,0.021446560059954923,0.012395539693351464,22,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,5,Canadian Grand Prix,2026-05-24,LIN,arvid_lindblad,RB F1 Team,9,22,0,0.07338526777040313,0.042414727444041664,9,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,6,Monaco Grand Prix,2026-06-07,ANT,antonelli,Mercedes,1,1,1,0.9458446989677055,0.5299791389433713,1,1,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,6,Monaco Grand Prix,2026-06-07,HAM,hamilton,Ferrari,3,2,1,0.882807725978702,0.49465803316060336,3,1,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,6,Monaco Grand Prix,2026-06-07,HAD,hadjar,Red Bull,5,3,1,0.4233680337107617,0.23722311517637285,6,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,6,Monaco Grand Prix,2026-06-07,PIA,piastri,McLaren,7,4,0,0.3353792232174435,0.18792090512773096,7,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,6,Monaco Grand Prix,2026-06-07,LAW,lawson,RB F1 Team,10,5,0,0.04998106262529952,0.028005570642348532,9,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,6,Monaco Grand Prix,2026-06-07,LIN,arvid_lindblad,RB F1 Team,15,6,0,0.021446560059954923,0.012017014470004755,17,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,6,Monaco Grand Prix,2026-06-07,GAS,gasly,Alpine F1 Team,9,7,0,0.042851224764130044,0.024010553982010442,11,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,6,Monaco Grand Prix,2026-06-07,ALB,albon,Williams,11,8,0,0.021446560059954923,0.012017014470004755,18,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,6,Monaco Grand Prix,2026-06-07,OCO,ocon,Haas F1 Team,17,9,0,0.021446560059954923,0.012017014470004755,19,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,6,Monaco Grand Prix,2026-06-07,ALO,alonso,Aston Martin,21,10,0,0.022822963902238425,0.012788246072791021,13,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,6,Monaco Grand Prix,2026-06-07,BOR,bortoleto,Audi,16,11,0,0.021446560059954923,0.012017014470004755,20,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,6,Monaco Grand Prix,2026-06-07,RUS,russell,Mercedes,6,12,0,0.5332688983183221,0.2988031670151321,5,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,6,Monaco Grand Prix,2026-06-07,HUL,hulkenberg,Audi,13,13,0,0.021446560059954923,0.012017014470004755,21,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,6,Monaco Grand Prix,2026-06-07,COL,colapinto,Alpine F1 Team,14,14,0,0.04245071282228983,0.023786137675290454,12,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,6,Monaco Grand Prix,2026-06-07,PER,perez,Cadillac F1 Team,18,15,0,0.022264377372962503,0.012475256838792973,16,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,6,Monaco Grand Prix,2026-06-07,SAI,sainz,Williams,12,16,0,0.021446560059954923,0.012017014470004755,22,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,6,Monaco Grand Prix,2026-06-07,LEC,leclerc,Ferrari,4,17,0,0.7505144382537791,0.4205309774262283,4,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,6,Monaco Grand Prix,2026-06-07,STR,stroll,Aston Martin,22,18,0,0.022822963902238425,0.012788246072791021,14,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,6,Monaco Grand Prix,2026-06-07,NOR,norris,McLaren,8,19,0,0.154244796207895,0.08642700473975706,8,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,6,Monaco Grand Prix,2026-06-07,BEA,bearman,Haas F1 Team,19,20,0,0.04609678512223237,0.025829118156290964,10,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,6,Monaco Grand Prix,2026-06-07,BOT,bottas,Cadillac F1 Team,20,21,0,0.022822963902238425,0.012788246072791021,15,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,6,Monaco Grand Prix,2026-06-07,VER,max_verstappen,Red Bull,2,22,0,0.9278284272047396,0.519884196077669,2,1,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,7,Barcelona Grand Prix,2026-06-14,HAM,hamilton,Ferrari,2,1,1,0.92063492106787,0.5260803142994908,1,1,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,7,Barcelona Grand Prix,2026-06-14,RUS,russell,Mercedes,1,2,1,0.9163878103254103,0.5236533790365243,2,1,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,7,Barcelona Grand Prix,2026-06-14,NOR,norris,McLaren,4,3,1,0.7114498671056728,0.4065452668916207,4,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,7,Barcelona Grand Prix,2026-06-14,VER,max_verstappen,Red Bull,5,4,0,0.379961168466577,0.2171219952167799,6,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,7,Barcelona Grand Prix,2026-06-14,PIA,piastri,McLaren,7,5,0,0.46256058237141373,0.2643219488939735,5,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,7,Barcelona Grand Prix,2026-06-14,HAD,hadjar,Red Bull,6,6,0,0.27232035901889273,0.15561258516745732,7,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,7,Barcelona Grand Prix,2026-06-14,GAS,gasly,Alpine F1 Team,14,7,0,0.03949800542516447,0.02257042681388974,13,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,7,Barcelona Grand Prix,2026-06-14,LAW,lawson,RB F1 Team,8,8,0,0.0933407309725188,0.053337886672828974,9,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,7,Barcelona Grand Prix,2026-06-14,LIN,arvid_lindblad,RB F1 Team,11,9,0,0.04640152160671049,0.026515317323090412,11,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,7,Barcelona Grand Prix,2026-06-14,COL,colapinto,Alpine F1 Team,13,10,0,0.055807384209791734,0.03189012881595363,10,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,7,Barcelona Grand Prix,2026-06-14,BOR,bortoleto,Audi,12,11,0,0.02245767489205583,0.012833035544583187,17,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,7,Barcelona Grand Prix,2026-06-14,SAI,sainz,Williams,16,12,0,0.021446560059954923,0.012255252107857235,20,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,7,Barcelona Grand Prix,2026-06-14,OCO,ocon,Haas F1 Team,17,13,0,0.021446560059954923,0.012255252107857235,21,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,7,Barcelona Grand Prix,2026-06-14,PER,perez,Cadillac F1 Team,19,14,0,0.022264377372962503,0.012722579144037384,18,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,7,Barcelona Grand Prix,2026-06-14,LEC,leclerc,Ferrari,10,15,0,0.20728101910324337,0.11844702083608452,8,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,7,Barcelona Grand Prix,2026-06-14,ANT,antonelli,Mercedes,3,16,0,0.8927532852427179,0.510147853557,3,1,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,7,Barcelona Grand Prix,2026-06-14,BEA,bearman,Haas F1 Team,15,17,0,0.04609678512223237,0.02634118112440395,12,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,7,Barcelona Grand Prix,2026-06-14,ALB,albon,Williams,18,18,0,0.021446560059954923,0.012255252107857235,22,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,7,Barcelona Grand Prix,2026-06-14,ALO,alonso,Aston Martin,22,19,0,0.022822963902238425,0.01304177339808988,15,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,7,Barcelona Grand Prix,2026-06-14,HUL,hulkenberg,Audi,9,20,0,0.02850242292753219,0.016287198398492787,14,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,7,Barcelona Grand Prix,2026-06-14,BOT,bottas,Cadillac F1 Team,20,21,0,0.022264377372962503,0.012722579144037384,19,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,7,Barcelona Grand Prix,2026-06-14,STR,stroll,Aston Martin,21,22,0,0.022822963902238425,0.01304177339808988,16,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,8,Austrian Grand Prix,2026-06-28,RUS,russell,Mercedes,1,1,1,0.9182678263657214,0.5201309129918137,1,1,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,8,Austrian Grand Prix,2026-06-28,VER,max_verstappen,Red Bull,5,2,1,0.3972052212901869,0.2249874257409707,5,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,8,Austrian Grand Prix,2026-06-28,ANT,antonelli,Mercedes,4,3,1,0.6844787222888664,0.38770664998316684,4,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,8,Austrian Grand Prix,2026-06-28,PIA,piastri,McLaren,7,4,0,0.31727907438564634,0.17971516576654847,7,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,8,Austrian Grand Prix,2026-06-28,HAM,hamilton,Ferrari,3,5,0,0.8927532852427179,0.5056788095990618,2,1,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,8,Austrian Grand Prix,2026-06-28,HAD,hadjar,Red Bull,8,6,0,0.23747160197507308,0.13451012612929128,8,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,8,Austrian Grand Prix,2026-06-28,NOR,norris,McLaren,6,7,0,0.373442381087798,0.21152753156318582,6,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,8,Austrian Grand Prix,2026-06-28,LEC,leclerc,Ferrari,2,8,0,0.883656390383126,0.5005260904327631,3,1,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,8,Austrian Grand Prix,2026-06-28,LAW,lawson,RB F1 Team,9,9,0,0.10313956685282058,0.0584209481508851,9,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,8,Austrian Grand Prix,2026-06-28,LIN,arvid_lindblad,RB F1 Team,10,10,0,0.0672515435109597,0.03809303312401225,11,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,8,Austrian Grand Prix,2026-06-28,BOR,bortoleto,Audi,12,11,0,0.02245767489205583,0.012720614411057594,17,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,8,Austrian Grand Prix,2026-06-28,HUL,hulkenberg,Audi,14,12,0,0.021446560059954923,0.012147892525720896,19,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,8,Austrian Grand Prix,2026-06-28,GAS,gasly,Alpine F1 Team,11,13,0,0.08000167874530648,0.04531504318447214,10,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,8,Austrian Grand Prix,2026-06-28,BEA,bearman,Haas F1 Team,13,14,0,0.04609678512223237,0.026110424696579794,14,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,8,Austrian Grand Prix,2026-06-28,COL,colapinto,Alpine F1 Team,16,15,0,0.04245071282228983,0.02404519398746424,15,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,8,Austrian Grand Prix,2026-06-28,OCO,ocon,Haas F1 Team,15,16,0,0.021446560059954923,0.012147892525720896,20,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,8,Austrian Grand Prix,2026-06-28,ALB,albon,Williams,18,17,0,0.021446560059954923,0.012147892525720896,21,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,8,Austrian Grand Prix,2026-06-28,ALO,alonso,Aston Martin,21,18,0,0.04976978063481517,0.028190905417477496,12,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,8,Austrian Grand Prix,2026-06-28,STR,stroll,Aston Martin,22,19,0,0.04976978063481517,0.028190905417477496,13,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,8,Austrian Grand Prix,2026-06-28,SAI,sainz,Williams,17,20,0,0.021446560059954923,0.012147892525720896,22,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,8,Austrian Grand Prix,2026-06-28,PER,perez,Cadillac F1 Team,19,21,0,0.022264377372962503,0.012611125640790019,18,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,8,Austrian Grand Prix,2026-06-28,BOT,bottas,Cadillac F1 Team,20,22,0,0.022822963902238425,0.012927523660098928,16,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,9,British Grand Prix,2026-07-05,LEC,leclerc,Ferrari,2,1,1,0.9021067465486904,0.49853930195837526,2,1,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,9,British Grand Prix,2026-07-05,RUS,russell,Mercedes,4,2,1,0.6942990246304949,0.38369666606964603,4,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,9,British Grand Prix,2026-07-05,HAM,hamilton,Ferrari,3,3,1,0.8902989556596839,0.49201385710387535,3,1,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,9,British Grand Prix,2026-07-05,NOR,norris,McLaren,6,4,0,0.42156370143652544,0.23297251045867307,5,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,9,British Grand Prix,2026-07-05,HAD,hadjar,Red Bull,5,5,0,0.41816912649331145,0.23109653621381807,6,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,9,British Grand Prix,2026-07-05,LAW,lawson,RB F1 Team,10,6,0,0.08881097072679939,0.04908039932278072,10,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,9,British Grand Prix,2026-07-05,LIN,arvid_lindblad,RB F1 Team,9,7,0,0.12343361886560278,0.06821422234439788,9,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,9,British Grand Prix,2026-07-05,BOR,bortoleto,Audi,11,8,0,0.02245767489205583,0.012410985293179322,17,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,9,British Grand Prix,2026-07-05,COL,colapinto,Alpine F1 Team,19,9,0,0.04245071282228983,0.023459916267146053,13,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,9,British Grand Prix,2026-07-05,GAS,gasly,Alpine F1 Team,15,10,0,0.05197606689797541,0.028723997696496435,11,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,9,British Grand Prix,2026-07-05,PIA,piastri,McLaren,8,11,0,0.36222711877012,0.20018080524609203,7,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,9,British Grand Prix,2026-07-05,BEA,bearman,Haas F1 Team,13,12,0,0.04609678512223237,0.02547487774067164,12,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,9,British Grand Prix,2026-07-05,OCO,ocon,Haas F1 Team,17,13,0,0.021446560059954923,0.011852203880088386,20,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,9,British Grand Prix,2026-07-05,PER,perez,Cadillac F1 Team,20,14,0,0.022264377372962503,0.012304161560170172,18,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,9,British Grand Prix,2026-07-05,ANT,antonelli,Mercedes,1,15,0,0.9294769771701381,0.5136651567650933,1,1,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,9,British Grand Prix,2026-07-05,BOT,bottas,Cadillac F1 Team,18,16,0,0.022264377372962503,0.012304161560170172,19,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,9,British Grand Prix,2026-07-05,SAI,sainz,Williams,14,17,0,0.021446560059954923,0.011852203880088386,21,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,9,British Grand Prix,2026-07-05,ALO,alonso,Aston Martin,21,18,0,0.022822963902238425,0.012612858218801731,15,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,9,British Grand Prix,2026-07-05,STR,stroll,Aston Martin,22,19,0,0.022822963902238425,0.012612858218801731,16,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,9,British Grand Prix,2026-07-05,VER,max_verstappen,Red Bull,7,20,0,0.25129063513770916,0.1388729862729926,8,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,9,British Grand Prix,2026-07-05,ALB,albon,Williams,16,21,0,0.021446560059954923,0.011852203880088386,22,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,9,British Grand Prix,2026-07-05,HUL,hulkenberg,Audi,12,22,0,0.02932679791053366,0.016207130048553137,14,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,10,Belgian Grand Prix,2026-07-19,ANT,antonelli,Mercedes,1,1,1,0.9160942261450484,0.4686041102743084,1,1,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,10,Belgian Grand Prix,2026-07-19,LEC,leclerc,Ferrari,4,2,1,0.7094284680247788,0.3628896314093574,4,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,10,Belgian Grand Prix,2026-07-19,VER,max_verstappen,Red Bull,2,3,1,0.9026543564368673,0.4617292954276885,2,1,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,10,Belgian Grand Prix,2026-07-19,HAM,hamilton,Ferrari,5,4,0,0.7093581011413812,0.3628536370652755,5,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,10,Belgian Grand Prix,2026-07-19,PIA,piastri,McLaren,6,5,0,0.4549408667201182,0.232713135824359,6,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,10,Belgian Grand Prix,2026-07-19,HAD,hadjar,Red Bull,21,6,0,0.23946545650171328,0.12249230917830188,8,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,10,Belgian Grand Prix,2026-07-19,NOR,norris,McLaren,13,7,0,0.44565086497523654,0.22796107770864973,7,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,10,Belgian Grand Prix,2026-07-19,BOR,bortoleto,Audi,8,8,0,0.05217893182150041,0.02669077178247224,11,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,10,Belgian Grand Prix,2026-07-19,LIN,arvid_lindblad,RB F1 Team,7,9,0,0.15135060900968428,0.077419456918647,9,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,10,Belgian Grand Prix,2026-07-19,COL,colapinto,Alpine F1 Team,11,10,0,0.046042588717382496,0.023551885499187478,13,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,10,Belgian Grand Prix,2026-07-19,GAS,gasly,Alpine F1 Team,10,11,0,0.042851224764130044,0.021919426497488036,14,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,10,Belgian Grand Prix,2026-07-19,LAW,lawson,RB F1 Team,9,12,0,0.08000167874530648,0.040922772373154996,10,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,10,Belgian Grand Prix,2026-07-19,HUL,hulkenberg,Audi,12,13,0,0.021446560059954923,0.010970428487067502,19,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,10,Belgian Grand Prix,2026-07-19,BEA,bearman,Haas F1 Team,14,14,0,0.04609678512223237,0.023579608256683298,12,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,10,Belgian Grand Prix,2026-07-19,ALB,albon,Williams,15,15,0,0.021446560059954923,0.010970428487067502,20,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,10,Belgian Grand Prix,2026-07-19,SAI,sainz,Williams,19,16,0,0.021446560059954923,0.010970428487067502,21,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,10,Belgian Grand Prix,2026-07-19,OCO,ocon,Haas F1 Team,16,17,0,0.021446560059954923,0.010970428487067502,22,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,10,Belgian Grand Prix,2026-07-19,BOT,bottas,Cadillac F1 Team,17,18,0,0.022264377372962503,0.011388761605420945,17,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,10,Belgian Grand Prix,2026-07-19,ALO,alonso,Aston Martin,22,19,0,0.022822963902238425,0.01167449197691781,15,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,10,Belgian Grand Prix,2026-07-19,STR,stroll,Aston Martin,20,20,0,0.022822963902238425,0.01167449197691781,16,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,10,Belgian Grand Prix,2026-07-19,PER,perez,Cadillac F1 Team,18,21,0,0.022264377372962503,0.011388761605420945,18,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,10,Belgian Grand Prix,2026-07-19,RUS,russell,Mercedes,3,22,0,0.8927532852427179,0.4566646606714791,3,1,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,11,Hungarian Grand Prix,2026-07-26,NOR,norris,McLaren,1,1,1,0.9315512878435614,0.4572799838348541,1,1,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,11,Hungarian Grand Prix,2026-07-26,VER,max_verstappen,Red Bull,4,2,1,0.6860175129405305,0.3367523413059288,5,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,11,Hungarian Grand Prix,2026-07-26,ANT,antonelli,Mercedes,7,3,1,0.6114467782230921,0.3001470520307882,6,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,11,Hungarian Grand Prix,2026-07-26,LEC,leclerc,Ferrari,2,4,0,0.92063492106787,0.4519213566847815,2,1,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,11,Hungarian Grand Prix,2026-07-26,HAM,hamilton,Ferrari,5,5,0,0.7473089756743494,0.3668391003001818,4,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,11,Hungarian Grand Prix,2026-07-26,HAD,hadjar,Red Bull,8,6,0,0.3551783365483383,0.17434997526683635,8,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,11,Hungarian Grand Prix,2026-07-26,RUS,russell,Mercedes,6,7,0,0.49457229622643867,0.24277569531047868,7,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,11,Hungarian Grand Prix,2026-07-26,LAW,lawson,RB F1 Team,11,8,0,0.05526813699219116,0.027130028287412827,11,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,11,Hungarian Grand Prix,2026-07-26,HUL,hulkenberg,Audi,10,9,0,0.022126362598223318,0.010861390954288303,19,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,11,Hungarian Grand Prix,2026-07-26,LIN,arvid_lindblad,RB F1 Team,9,10,0,0.10596449673892598,0.05201586213037558,9,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,11,Hungarian Grand Prix,2026-07-26,BOR,bortoleto,Audi,14,11,0,0.06052813875789834,0.029712058449124994,10,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,11,Hungarian Grand Prix,2026-07-26,GAS,gasly,Alpine F1 Team,12,12,0,0.03949800542516447,0.019388784619834416,13,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,11,Hungarian Grand Prix,2026-07-26,STR,stroll,Aston Martin,20,13,0,0.022822963902238425,0.011203338667952846,15,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,11,Hungarian Grand Prix,2026-07-26,ALO,alonso,Aston Martin,16,14,0,0.022264377372962503,0.010929139659899351,18,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,11,Hungarian Grand Prix,2026-07-26,COL,colapinto,Alpine F1 Team,13,15,0,0.03949800542516447,0.019388784619834416,14,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,11,Hungarian Grand Prix,2026-07-26,OCO,ocon,Haas F1 Team,15,16,0,0.021446560059954923,0.010527689420334257,22,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,11,Hungarian Grand Prix,2026-07-26,ALB,albon,Williams,19,17,0,0.02198508989682252,0.010792042997331034,20,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,11,Hungarian Grand Prix,2026-07-26,SAI,sainz,Williams,18,18,0,0.02198508989682252,0.010792042997331034,21,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,11,Hungarian Grand Prix,2026-07-26,BEA,bearman,Haas F1 Team,17,19,0,0.04609678512223237,0.022627994218470823,12,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,11,Hungarian Grand Prix,2026-07-26,PIA,piastri,McLaren,3,20,0,0.8396320524351623,0.4121586609080549,3,1,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,11,Hungarian Grand Prix,2026-07-26,PER,perez,Cadillac F1 Team,22,21,0,0.022822963902238425,0.011203338667952846,16,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,11,Hungarian Grand Prix,2026-07-26,BOT,bottas,Cadillac F1 Team,21,22,0,0.022822963902238425,0.011203338667952846,17,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,12,Dutch Grand Prix,2026-08-23,NOR,norris,McLaren,1,1,1,0.9299456436127261,0.4549423827997563,1,1,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,12,Dutch Grand Prix,2026-08-23,ANT,antonelli,Mercedes,3,2,1,0.8821393878863594,0.4315548955393233,3,1,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,12,Dutch Grand Prix,2026-08-23,RUS,russell,Mercedes,2,3,1,0.9035615198866198,0.442034901380297,2,1,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,12,Dutch Grand Prix,2026-08-23,HAM,hamilton,Ferrari,5,4,0,0.6278455129887249,0.3071507842109719,6,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,12,Dutch Grand Prix,2026-08-23,LEC,leclerc,Ferrari,6,5,0,0.7743724754674489,0.378833818496191,4,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,12,Dutch Grand Prix,2026-08-23,PIA,piastri,McLaren,4,6,0,0.7740314296476406,0.37866697412311057,5,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,12,Dutch Grand Prix,2026-08-23,LAW,lawson,Red Bull,8,7,0,0.23445074796311866,0.11469657679470276,8,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,12,Dutch Grand Prix,2026-08-23,HUL,hulkenberg,Audi,13,8,0,0.021446560059954923,0.010491956388579244,18,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,12,Dutch Grand Prix,2026-08-23,ALO,alonso,Aston Martin,18,9,0,0.022264377372962503,0.010892044027711737,16,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,12,Dutch Grand Prix,2026-08-23,GAS,gasly,Alpine F1 Team,11,10,0,0.03949800542516447,0.019322975302248215,12,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,12,Dutch Grand Prix,2026-08-23,TSU,tsunoda,RB F1 Team,12,11,0,0.021446560059954923,0.010491956388579244,19,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,12,Dutch Grand Prix,2026-08-23,LIN,arvid_lindblad,RB F1 Team,10,12,0,0.0988938919338713,0.04838027163174004,10,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,12,Dutch Grand Prix,2026-08-23,BOR,bortoleto,Audi,9,13,0,0.1092339065821635,0.0534387510542615,9,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,12,Dutch Grand Prix,2026-08-23,COL,colapinto,Alpine F1 Team,14,14,0,0.03949800542516447,0.019322975302248215,13,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,12,Dutch Grand Prix,2026-08-23,PER,perez,Cadillac F1 Team,22,15,0,0.022822963902238425,0.01116531235083801,14,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,12,Dutch Grand Prix,2026-08-23,SAI,sainz,Williams,17,16,0,0.021446560059954923,0.010491956388579244,20,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,12,Dutch Grand Prix,2026-08-23,ALB,albon,Williams,16,17,0,0.021446560059954923,0.010491956388579244,21,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,12,Dutch Grand Prix,2026-08-23,BOT,bottas,Cadillac F1 Team,21,18,0,0.022822963902238425,0.01116531235083801,15,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,12,Dutch Grand Prix,2026-08-23,OCO,ocon,Haas F1 Team,15,19,0,0.021446560059954923,0.010491956388579244,22,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,12,Dutch Grand Prix,2026-08-23,STR,stroll,Aston Martin,19,20,0,0.022264377372962503,0.010892044027711737,17,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,12,Dutch Grand Prix,2026-08-23,BEA,bearman,Haas F1 Team,20,21,0,0.04609678512223237,0.022551190391564693,11,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,12,Dutch Grand Prix,2026-08-23,VER,max_verstappen,Red Bull,7,22,0,0.475311482141662,0.2325290082735889,7,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,13,Italian Grand Prix,2026-09-06,ANT,antonelli,Mercedes,19,1,1,0.7462185203141363,0.3132017421228718,5,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,13,Italian Grand Prix,2026-09-06,RUS,russell,Mercedes,2,2,1,0.918441832324848,0.38548705786820925,1,1,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,13,Italian Grand Prix,2026-09-06,VER,max_verstappen,Red Bull,5,3,1,0.6616723205406229,0.27771613524221517,6,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,13,Italian Grand Prix,2026-09-06,NOR,norris,McLaren,8,4,0,0.6351640113142184,0.26659010659989923,7,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,13,Italian Grand Prix,2026-09-06,PIA,piastri,McLaren,6,5,0,0.5982514814060196,0.25109723372327375,8,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,13,Italian Grand Prix,2026-09-06,HAM,hamilton,Ferrari,4,6,0,0.791443356903705,0.3321834441598466,4,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,13,Italian Grand Prix,2026-09-06,GAS,gasly,Alpine F1 Team,1,7,0,0.9117027687729361,0.3826585480051104,2,1,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,13,Italian Grand Prix,2026-09-06,LIN,arvid_lindblad,RB F1 Team,9,8,0,0.1115970492476407,0.046839349719461604,12,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,13,Italian Grand Prix,2026-09-06,COL,colapinto,Alpine F1 Team,7,9,0,0.18998157531805893,0.07973878795693089,10,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,13,Italian Grand Prix,2026-09-06,TSU,tsunoda,RB F1 Team,15,10,0,0.021446560059954923,0.009001518711292478,17,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,13,Italian Grand Prix,2026-09-06,BOR,bortoleto,Audi,10,11,0,0.12474327413104948,0.052357063932838885,11,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,13,Italian Grand Prix,2026-09-06,HUL,hulkenberg,Audi,12,12,0,0.04624881860491888,0.019411486265561228,14,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,13,Italian Grand Prix,2026-09-06,SAI,sainz,Williams,13,13,0,0.021446560059954923,0.009001518711292478,18,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,13,Italian Grand Prix,2026-09-06,LAW,lawson,Red Bull,22,14,0,0.24605633889326095,0.10327440542390028,9,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,13,Italian Grand Prix,2026-09-06,BEA,bearman,Haas F1 Team,11,15,0,0.10646922770612643,0.044687107988150294,13,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,13,Italian Grand Prix,2026-09-06,OCO,ocon,Haas F1 Team,14,16,0,0.021446560059954923,0.009001518711292478,19,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,13,Italian Grand Prix,2026-09-06,ALB,albon,Williams,20,17,0,0.021446560059954923,0.009001518711292478,20,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,13,Italian Grand Prix,2026-09-06,PER,perez,Cadillac F1 Team,17,18,0,0.022264377372962503,0.009344771793599244,15,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,13,Italian Grand Prix,2026-09-06,BOT,bottas,Cadillac F1 Team,16,19,0,0.022264377372962503,0.009344771793599244,16,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,13,Italian Grand Prix,2026-09-06,STR,stroll,Aston Martin,18,20,0,0.021446560059954923,0.009001518711292478,21,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,13,Italian Grand Prix,2026-09-06,ALO,alonso,Aston Martin,21,21,0,0.021446560059954923,0.009001518711292478,22,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,13,Italian Grand Prix,2026-09-06,LEC,leclerc,Ferrari,3,22,0,0.8864485280078315,0.3720588751367776,3,1,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,14,Spanish Grand Prix,2026-09-13,ANT,antonelli,Mercedes,2,1,1,0.944063626753736,0.44691416740364953,1,1,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,14,Spanish Grand Prix,2026-09-13,VER,max_verstappen,Red Bull,3,2,1,0.8598713925965173,0.40705805901865655,3,1,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,14,Spanish Grand Prix,2026-09-13,NOR,norris,McLaren,1,3,1,0.9406596701698537,0.4453027543807847,2,1,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,14,Spanish Grand Prix,2026-09-13,LEC,leclerc,Ferrari,5,4,0,0.6128975862849494,0.2901421119465459,6,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,14,Spanish Grand Prix,2026-09-13,RUS,russell,Mercedes,6,5,0,0.7063092758017765,0.3343626562648696,5,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,14,Spanish Grand Prix,2026-09-13,LAW,lawson,Red Bull,8,6,0,0.2915450075965397,0.13801569156809226,8,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,14,Spanish Grand Prix,2026-09-13,COL,colapinto,Alpine F1 Team,9,7,0,0.09403203965052616,0.04451421442237612,10,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,14,Spanish Grand Prix,2026-09-13,PIA,piastri,McLaren,7,8,0,0.4828833361814041,0.22859413076286572,7,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,14,Spanish Grand Prix,2026-09-13,LIN,arvid_lindblad,RB F1 Team,10,9,0,0.09403203965052616,0.04451421442237612,11,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,14,Spanish Grand Prix,2026-09-13,HUL,hulkenberg,Audi,11,10,0,0.02245767489205583,0.010631331185501853,17,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,14,Spanish Grand Prix,2026-09-13,OCO,ocon,Haas F1 Team,13,11,0,0.022020849559667797,0.010424540642796255,18,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,14,Spanish Grand Prix,2026-09-13,GAS,gasly,Alpine F1 Team,14,12,0,0.03980804790268169,0.018844895704293884,15,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,14,Spanish Grand Prix,2026-09-13,BOR,bortoleto,Audi,12,13,0,0.050369077437795944,0.023844424960431765,13,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,14,Spanish Grand Prix,2026-09-13,TSU,tsunoda,RB F1 Team,15,14,0,0.021446560059954923,0.010152675371918928,19,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,14,Spanish Grand Prix,2026-09-13,ALB,albon,Williams,16,15,0,0.021446560059954923,0.010152675371918928,20,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,14,Spanish Grand Prix,2026-09-13,BEA,bearman,Haas F1 Team,22,16,0,0.18494144874177731,0.08755019390702211,9,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,14,Spanish Grand Prix,2026-09-13,ALO,alonso,Aston Martin,17,17,0,0.021446560059954923,0.010152675371918928,21,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,14,Spanish Grand Prix,2026-09-13,BOT,bottas,Cadillac F1 Team,19,18,0,0.04976978063481517,0.023560721379294127,14,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,14,Spanish Grand Prix,2026-09-13,SAI,sainz,Williams,20,19,0,0.021446560059954923,0.010152675371918928,22,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,14,Spanish Grand Prix,2026-09-13,PER,perez,Cadillac F1 Team,18,20,0,0.022822963902238425,0.010804256854091395,16,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,14,Spanish Grand Prix,2026-09-13,STR,stroll,Aston Martin,21,21,0,0.060722851521764695,0.028745840705187937,12,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,14,Spanish Grand Prix,2026-09-13,HAM,hamilton,Ferrari,4,22,0,0.7722214525028741,0.36556509298348844,4,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,15,Azerbaijan Grand Prix,2026-09-26,RUS,russell,Mercedes,1,1,1,0.935307671409637,0.49816974770637995,1,1,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,15,Azerbaijan Grand Prix,2026-09-26,VER,max_verstappen,Red Bull,8,2,1,0.340815474071807,0.1815273881768709,7,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,15,Azerbaijan Grand Prix,2026-09-26,HAD,hadjar,Red Bull,4,3,1,0.6919030047412447,0.3685259469643227,5,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,15,Azerbaijan Grand Prix,2026-09-26,LEC,leclerc,Ferrari,2,4,0,0.8739620904101877,0.46549545929459135,2,1,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,15,Azerbaijan Grand Prix,2026-09-26,ANT,antonelli,Mercedes,16,5,0,0.31017837293270784,0.1652092530738868,8,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,15,Azerbaijan Grand Prix,2026-09-26,HAM,hamilton,Ferrari,6,6,0,0.4563815177342711,0.24308093742552195,6,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,15,Azerbaijan Grand Prix,2026-09-26,LIN,arvid_lindblad,RB F1 Team,15,7,0,0.03980804790268169,0.021202825323215987,13,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,15,Azerbaijan Grand Prix,2026-09-26,OCO,ocon,Haas F1 Team,13,8,0,0.021446560059954923,0.011423008429017988,19,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,15,Azerbaijan Grand Prix,2026-09-26,BEA,bearman,Haas F1 Team,10,9,0,0.04609678512223237,0.024552374065111404,11,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,15,Azerbaijan Grand Prix,2026-09-26,SAI,sainz,Williams,14,10,0,0.029187973351384764,0.015546291092219167,15,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,15,Azerbaijan Grand Prix,2026-09-26,HUL,hulkenberg,Audi,18,11,0,0.021446560059954923,0.011423008429017988,20,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,15,Azerbaijan Grand Prix,2026-09-26,LAW,lawson,RB F1 Team,11,12,0,0.0528882657846679,0.028169697339130047,10,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,15,Azerbaijan Grand Prix,2026-09-26,PIA,piastri,McLaren,3,13,0,0.8346700033103821,0.4445674484210502,3,1,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,15,Azerbaijan Grand Prix,2026-09-26,PER,perez,Cadillac F1 Team,20,14,0,0.022264377372962503,0.011858599686253022,17,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,15,Azerbaijan Grand Prix,2026-09-26,BOR,bortoleto,Audi,17,15,0,0.04609678512223237,0.024552374065111404,12,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,15,Azerbaijan Grand Prix,2026-09-26,BOT,bottas,Cadillac F1 Team,19,16,0,0.022822963902238425,0.012156117731777202,16,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,15,Azerbaijan Grand Prix,2026-09-26,COL,colapinto,Alpine F1 Team,9,17,0,0.03949800542516447,0.0210376884516556,14,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,15,Azerbaijan Grand Prix,2026-09-26,GAS,gasly,Alpine F1 Team,7,18,0,0.06485534259320921,0.03454368080652629,9,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,15,Azerbaijan Grand Prix,2026-09-26,NOR,norris,McLaren,5,19,0,0.7179556763001788,0.3824022929137051,4,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,15,Azerbaijan Grand Prix,2026-09-26,ALB,albon,Williams,12,20,0,0.021446560059954923,0.011423008429017988,21,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,15,Azerbaijan Grand Prix,2026-09-26,ALO,alonso,Aston Martin,21,21,0,0.021446560059954923,0.011423008429017988,22,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,15,Azerbaijan Grand Prix,2026-09-26,STR,stroll,Aston Martin,22,22,0,0.02198508989682252,0.011709843746598943,18,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,16,Bahrain Grand Prix in Malaysia,2026-10-04,VER,max_verstappen,Red Bull,1,1,1,0.9406596701698537,0.463410981353042,1,1,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,16,Bahrain Grand Prix in Malaysia,2026-10-04,ANT,antonelli,Mercedes,3,2,1,0.8968417343609026,0.44182430842762144,3,1,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,16,Bahrain Grand Prix in Malaysia,2026-10-04,HAM,hamilton,Ferrari,2,3,1,0.9030184648846921,0.44486724185440024,2,1,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,16,Bahrain Grand Prix in Malaysia,2026-10-04,LEC,leclerc,Ferrari,4,4,0,0.6575515588989842,0.3239392767254267,5,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,16,Bahrain Grand Prix in Malaysia,2026-10-04,HAD,hadjar,Red Bull,8,5,0,0.4806745883896748,0.23680177834870614,8,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,16,Bahrain Grand Prix in Malaysia,2026-10-04,PIA,piastri,McLaren,6,6,0,0.48883210594387044,0.24082053596644462,7,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,16,Bahrain Grand Prix in Malaysia,2026-10-04,LAW,lawson,RB F1 Team,11,7,0,0.04311503085911994,0.021240390541973277,13,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,16,Bahrain Grand Prix in Malaysia,2026-10-04,ALO,alonso,Aston Martin,12,8,0,0.021446560059954923,0.01056553369853315,17,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,16,Bahrain Grand Prix in Malaysia,2026-10-04,NOR,norris,McLaren,5,9,0,0.5266242849801595,0.25943865188026305,6,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,16,Bahrain Grand Prix in Malaysia,2026-10-04,LIN,arvid_lindblad,RB F1 Team,22,10,0,0.11664312531233019,0.05746361503870192,9,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,16,Bahrain Grand Prix in Malaysia,2026-10-04,HUL,hulkenberg,Audi,15,11,0,0.021446560059954923,0.01056553369853315,18,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,16,Bahrain Grand Prix in Malaysia,2026-10-04,STR,stroll,Aston Martin,14,12,0,0.021446560059954923,0.01056553369853315,19,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,16,Bahrain Grand Prix in Malaysia,2026-10-04,COL,colapinto,Alpine F1 Team,21,13,0,0.03980804790268169,0.01961122298460993,14,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,16,Bahrain Grand Prix in Malaysia,2026-10-04,BEA,bearman,Haas F1 Team,16,14,0,0.043237391904137286,0.021300671059730176,12,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,16,Bahrain Grand Prix in Malaysia,2026-10-04,OCO,ocon,Haas F1 Team,17,15,0,0.021446560059954923,0.01056553369853315,20,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,16,Bahrain Grand Prix in Malaysia,2026-10-04,GAS,gasly,Alpine F1 Team,9,16,0,0.06610116989796301,0.032564389632509724,10,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,16,Bahrain Grand Prix in Malaysia,2026-10-04,SAI,sainz,Williams,13,17,0,0.021446560059954923,0.01056553369853315,21,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,16,Bahrain Grand Prix in Malaysia,2026-10-04,BOR,bortoleto,Audi,10,18,0,0.050369077437795944,0.024814057990900817,11,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,16,Bahrain Grand Prix in Malaysia,2026-10-04,PER,perez,Cadillac F1 Team,20,19,0,0.022264377372962503,0.010968427046262108,15,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,16,Bahrain Grand Prix in Malaysia,2026-10-04,RUS,russell,Mercedes,7,20,0,0.6628972883836336,0.3265728219119467,4,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,16,Bahrain Grand Prix in Malaysia,2026-10-04,ALB,albon,Williams,18,21,0,0.021446560059954923,0.01056553369853315,22,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,16,Bahrain Grand Prix in Malaysia,2026-10-04,BOT,bottas,Cadillac F1 Team,19,22,0,0.022264377372962503,0.010968427046262108,16,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,17,Singapore Grand Prix,2026-10-11,VER,max_verstappen,Red Bull,1,1,1,0.947807186464146,0.4372154186797443,1,1,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,17,Singapore Grand Prix,2026-10-11,LEC,leclerc,Ferrari,2,2,1,0.9319344947362467,0.4298934805698663,2,1,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,17,Singapore Grand Prix,2026-10-11,ANT,antonelli,Mercedes,4,3,1,0.8376155404451489,0.3863849466837098,4,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,17,Singapore Grand Prix,2026-10-11,NOR,norris,McLaren,5,4,0,0.5959222230847026,0.274893868697627,5,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,17,Singapore Grand Prix,2026-10-11,PIA,piastri,McLaren,6,5,0,0.5332688983183221,0.24599242121905035,7,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,17,Singapore Grand Prix,2026-10-11,HAM,hamilton,Ferrari,3,6,0,0.8598887877329591,0.3966594068032056,3,1,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,17,Singapore Grand Prix,2026-10-11,LAW,lawson,RB F1 Team,8,7,0,0.12917027871221964,0.05958515433801127,10,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,17,Singapore Grand Prix,2026-10-11,HUL,hulkenberg,Audi,10,8,0,0.02245767489205583,0.01035953500957676,16,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,17,Singapore Grand Prix,2026-10-11,RUS,russell,Mercedes,19,9,0,0.5268660100936873,0.2430388231709739,8,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,17,Singapore Grand Prix,2026-10-11,HAD,hadjar,Red Bull,22,10,0,0.5921360997761274,0.273147362117837,6,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,17,Singapore Grand Prix,2026-10-11,GAS,gasly,Alpine F1 Team,7,11,0,0.14677619683402235,0.06770661508740859,9,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,17,Singapore Grand Prix,2026-10-11,BEA,bearman,Haas F1 Team,11,12,0,0.04653002526863124,0.021463906129364694,12,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,17,Singapore Grand Prix,2026-10-11,OCO,ocon,Haas F1 Team,12,13,0,0.021446560059954923,0.009893116310748908,18,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,17,Singapore Grand Prix,2026-10-11,SAI,sainz,Williams,13,14,0,0.021446560059954923,0.009893116310748908,19,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,17,Singapore Grand Prix,2026-10-11,LIN,arvid_lindblad,RB F1 Team,9,15,0,0.09519125884586617,0.04391092058102017,11,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,17,Singapore Grand Prix,2026-10-11,ALO,alonso,Aston Martin,20,16,0,0.021446560059954923,0.009893116310748908,20,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,17,Singapore Grand Prix,2026-10-11,PER,perez,Cadillac F1 Team,17,17,0,0.022264377372962503,0.010270368502984399,17,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,17,Singapore Grand Prix,2026-10-11,ALB,albon,Williams,16,18,0,0.021446560059954923,0.009893116310748908,21,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,17,Singapore Grand Prix,2026-10-11,BOT,bottas,Cadillac F1 Team,18,19,0,0.022822963902238425,0.010528039732696557,15,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,17,Singapore Grand Prix,2026-10-11,STR,stroll,Aston Martin,21,20,0,0.021446560059954923,0.009893116310748908,22,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,17,Singapore Grand Prix,2026-10-11,COL,colapinto,Alpine F1 Team,15,21,0,0.03949800542516447,0.01822009499991416,14,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,17,Singapore Grand Prix,2026-10-11,BOR,bortoleto,Audi,14,22,0,0.04609678512223237,0.021264056123264513,13,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting

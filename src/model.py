@@ -9,8 +9,13 @@ entrenamiento y no hay data leakage al validar o testear.
 Este módulo no se ejecuta solo: lo importan el notebook 04_prediccion.ipynb y, más adelante, el pipeline.
 """
 
+import json
+import os
+
+import joblib
 import numpy as np
 import pandas as pd
+import sklearn
 from scipy.stats import loguniform, randint, uniform
 from sklearn.ensemble import HistGradientBoostingClassifier, RandomForestClassifier
 from sklearn.impute import SimpleImputer
@@ -224,3 +229,48 @@ def bootstrap_coeficientes(X, y, n=300, semilla=SEMILLA):
     coefs = np.array(coefs)
     return pd.DataFrame({'IC 2.5 %': np.percentile(coefs, 2.5, axis=0),
                          'IC 97.5 %': np.percentile(coefs, 97.5, axis=0)}, index=X.columns)
+
+
+# ---------------------------------------------------------------------------
+# Guardar modelos y exportar predicciones
+# ---------------------------------------------------------------------------
+
+def reajustar(pipeline, df_train, features, target='Podio'):
+    """Clona el pipeline (con sus hiperparámetros ya elegidos) y lo ajusta de nuevo con df_train."""
+    from sklearn.base import clone
+    return clone(pipeline).fit(df_train[features], df_train[target])
+
+
+def guardar_modelo(modelo, ruta, metadatos):
+    """
+    Guarda el modelo con joblib (formato eficiente para objetos de scikit-learn) y un JSON con sus metadatos.
+    Se guarda la versión de scikit-learn: un modelo serializado solo es seguro de cargar con la misma versión.
+    """
+    os.makedirs(os.path.dirname(ruta), exist_ok=True)
+    joblib.dump(modelo, ruta)
+    meta = dict(metadatos, sklearn=sklearn.__version__)
+    with open(os.path.splitext(ruta)[0] + '.json', 'w', encoding='utf-8') as f:
+        json.dump(meta, f, indent=2, ensure_ascii=False)
+
+
+def cargar_modelo(ruta):
+    """Carga un modelo guardado con guardar_modelo()."""
+    return joblib.load(ruta)
+
+
+def tabla_predicciones(df, proba, conjunto, nombre_modelo):
+    """
+    Una fila por piloto y carrera con la probabilidad de podio.
+    - Proba: probabilidad que devuelve el modelo (con class_weight='balanced' tiende a ser alta).
+    - ProbaNorm: la misma probabilidad reescalada para que sume 3 en cada carrera (siempre hay 3 podios).
+    - PredPodio: 1 para los 3 pilotos con más probabilidad de la carrera.
+    """
+    t = df[['Year', 'Round', 'Event', 'Date', 'Abbreviation', 'DriverId', 'TeamName',
+            'GridAdj', 'Position', 'Podio']].copy()
+    t['Proba'] = np.asarray(proba)
+    t['ProbaNorm'] = (t['Proba'] * 3 / t.groupby(['Year', 'Round'])['Proba'].transform('sum')).clip(upper=1)
+    t['RankProba'] = t.groupby(['Year', 'Round'])['Proba'].rank(ascending=False, method='first').astype(int)
+    t['PredPodio'] = (t['RankProba'] <= 3).astype(int)
+    t['Conjunto'] = conjunto
+    t['Modelo'] = nombre_modelo
+    return t.rename(columns={'Position': 'PosicionReal', 'Podio': 'PodioReal'})

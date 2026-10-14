@@ -1,0 +1,25 @@
+{
+  "modelo": "HistGradientBoostingClassifier",
+  "variables": [
+    "GridAdj",
+    "PuntosPilotoAntes",
+    "PuntosEquipoAntes",
+    "MediaUlt3",
+    "PosCircuitoPrevia",
+    "DifPolePct"
+  ],
+  "objetivo": "Podio (Position <= 3)",
+  "entrenado_con": "2018-2025",
+  "hiperparametros": {
+    "l2_regularization": 7.076022085822011,
+    "learning_rate": 0.023545774516299134,
+    "max_depth": 3.0,
+    "max_iter": 162.0,
+    "min_samples_leaf": 65.0
+  },
+  "metricas_test_2025_modelo_hasta_2024": {
+    "AUC-ROC": 0.9513,
+    "acierto_top3": 0.75
+  },
+  "sklearn": "1.9.1"
+}
