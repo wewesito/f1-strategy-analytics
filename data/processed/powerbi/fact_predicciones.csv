@@ -28,7 +28,7 @@
 202502,antonelli,mercedes,Test 2025,Gradient Boosting,8,0.428,0.2206,7,0,0,6,0,0
 202502,hadjar,rb,Test 2025,Gradient Boosting,7,0.192,0.0989,8,0,0,11,0,0
 202502,albon,williams,Test 2025,Gradient Boosting,10,0.1886,0.0972,9,0,0,7,0,0
-202502,tsunoda,rb,Test 2025,Gradient Boosting,9,0.0975,0.0502,10,0,0,16,0,0
+202502,tsunoda,rb,Test 2025,Gradient Boosting,9,0.0974,0.0502,10,0,0,16,0,0
 202502,sainz,williams,Test 2025,Gradient Boosting,15,0.0684,0.0353,11,0,0,10,0,0
 202502,hulkenberg,sauber,Test 2025,Gradient Boosting,12,0.0655,0.0338,12,0,0,15,0,0
 202502,stroll,aston_martin,Test 2025,Gradient Boosting,14,0.0633,0.0326,13,0,0,9,0,0
@@ -229,8 +229,8 @@
 202512,alonso,aston_martin,Test 2025,Gradient Boosting,7,0.1876,0.0825,9,0,0,9,0,0
 202512,gasly,alpine,Test 2025,Gradient Boosting,8,0.1831,0.0805,10,0,0,6,0,0
 202512,sainz,williams,Test 2025,Gradient Boosting,9,0.1831,0.0805,11,0,0,12,0,0
-202512,ocon,haas,Test 2025,Gradient Boosting,14,0.1159,0.051,12,0,0,13,0,0
-202512,hadjar,rb,Test 2025,Gradient Boosting,12,0.1159,0.051,13,0,0,17,0,0
+202512,ocon,haas,Test 2025,Gradient Boosting,14,0.1158,0.051,12,0,0,13,0,0
+202512,hadjar,rb,Test 2025,Gradient Boosting,12,0.1158,0.051,13,0,0,17,0,0
 202512,albon,williams,Test 2025,Gradient Boosting,13,0.0996,0.0438,14,0,0,8,0,0
 202512,bearman,haas,Test 2025,Gradient Boosting,18,0.0803,0.0353,15,0,0,11,0,0
 202512,lawson,rb,Test 2025,Gradient Boosting,15,0.0554,0.0244,16,0,0,19,0,0
@@ -246,7 +246,7 @@
 202513,hamilton,ferrari,Test 2025,Gradient Boosting,18,0.3561,0.1682,6,0,0,7,0,0
 202513,albon,williams,Test 2025,Gradient Boosting,5,0.3479,0.1643,7,0,0,6,0,0
 202513,tsunoda,red_bull,Test 2025,Gradient Boosting,7,0.3131,0.1479,8,0,0,13,0,0
-202513,lawson,rb,Test 2025,Gradient Boosting,9,0.1831,0.0865,9,0,0,8,0,0
+202513,lawson,rb,Test 2025,Gradient Boosting,9,0.1831,0.0864,9,0,0,8,0,0
 202513,gasly,alpine,Test 2025,Gradient Boosting,13,0.1478,0.0698,10,0,0,10,0,0
 202513,sainz,williams,Test 2025,Gradient Boosting,17,0.1478,0.0698,11,0,0,18,0,0
 202513,ocon,haas,Test 2025,Gradient Boosting,11,0.1447,0.0684,12,0,0,15,0,0
@@ -290,7 +290,7 @@
 202515,alonso,aston_martin,Test 2025,Gradient Boosting,10,0.1493,0.0697,10,0,0,8,0,0
 202515,sainz,williams,Test 2025,Gradient Boosting,9,0.1478,0.069,11,0,0,13,0,0
 202515,bortoleto,sauber,Test 2025,Gradient Boosting,13,0.1228,0.0573,12,0,0,15,0,0
-202515,lawson,rb,Test 2025,Gradient Boosting,8,0.1159,0.0541,13,0,0,12,0,0
+202515,lawson,rb,Test 2025,Gradient Boosting,8,0.1158,0.0541,13,0,0,12,0,0
 202515,albon,williams,Test 2025,Gradient Boosting,15,0.1034,0.0483,14,0,0,5,0,0
 202515,gasly,alpine,Test 2025,Gradient Boosting,14,0.0956,0.0446,15,0,0,17,0,0
 202515,tsunoda,red_bull,Test 2025,Gradient Boosting,12,0.0862,0.0402,16,0,0,9,0,0
@@ -312,7 +312,7 @@
 202516,sainz,williams,Test 2025,Gradient Boosting,13,0.1523,0.0679,12,0,0,11,0,0
 202516,alonso,aston_martin,Test 2025,Gradient Boosting,8,0.1493,0.0665,13,0,0,19,0,0
 202516,hulkenberg,sauber,Test 2025,Gradient Boosting,12,0.1447,0.0645,14,0,0,20,0,0
-202516,ocon,haas,Test 2025,Gradient Boosting,15,0.1159,0.0516,15,0,0,15,0,0
+202516,ocon,haas,Test 2025,Gradient Boosting,15,0.1158,0.0516,15,0,0,15,0,0
 202516,hadjar,rb,Test 2025,Gradient Boosting,19,0.0956,0.0426,16,0,0,10,0,0
 202516,stroll,aston_martin,Test 2025,Gradient Boosting,16,0.0493,0.022,17,0,0,18,0,0
 202516,lawson,rb,Test 2025,Gradient Boosting,18,0.0435,0.0194,18,0,0,14,0,0
@@ -401,7 +401,7 @@
 202521,norris,mclaren,Test 2025,Gradient Boosting,1,0.9452,0.3948,1,1,1,1,1,1
 202521,antonelli,mercedes,Test 2025,Gradient Boosting,2,0.8995,0.3757,2,1,1,2,1,1
 202521,leclerc,ferrari,Test 2025,Gradient Boosting,3,0.8784,0.3669,3,1,1,19,0,0
-202521,piastri,mclaren,Test 2025,Gradient Boosting,4,0.7471,0.3121,4,0,0,5,0,0
+202521,piastri,mclaren,Test 2025,Gradient Boosting,4,0.7471,0.312,4,0,0,5,0,0
 202521,russell,mercedes,Test 2025,Gradient Boosting,6,0.6444,0.2692,5,0,0,4,0,0
 202521,max_verstappen,red_bull,Test 2025,Gradient Boosting,19,0.4497,0.1878,6,0,0,3,1,0
 202521,hamilton,ferrari,Test 2025,Gradient Boosting,13,0.4358,0.182,7,0,0,18,0,0
@@ -449,8 +449,8 @@
 202523,sainz,williams,Test 2025,Gradient Boosting,7,0.1579,0.0749,9,0,0,3,1,0
 202523,hulkenberg,sauber,Test 2025,Gradient Boosting,11,0.1212,0.0575,10,0,0,20,0,0
 202523,bearman,haas,Test 2025,Gradient Boosting,13,0.1196,0.0567,11,0,0,19,0,0
-202523,alonso,aston_martin,Test 2025,Gradient Boosting,8,0.1159,0.0549,12,0,0,7,0,0
-202523,gasly,alpine,Test 2025,Gradient Boosting,9,0.1159,0.0549,13,0,0,16,0,0
+202523,alonso,aston_martin,Test 2025,Gradient Boosting,8,0.1158,0.0549,12,0,0,7,0,0
+202523,gasly,alpine,Test 2025,Gradient Boosting,9,0.1158,0.0549,13,0,0,16,0,0
 202523,lawson,rb,Test 2025,Gradient Boosting,12,0.1111,0.0527,14,0,0,9,0,0
 202523,albon,williams,Test 2025,Gradient Boosting,14,0.0887,0.0421,15,0,0,11,0,0
 202523,bortoleto,sauber,Test 2025,Gradient Boosting,19,0.0781,0.0371,16,0,0,13,0,0
@@ -469,8 +469,8 @@
 202524,sainz,williams,Test 2025,Gradient Boosting,12,0.2674,0.1168,9,0,0,13,0,0
 202524,hamilton,ferrari,Test 2025,Gradient Boosting,16,0.2454,0.1072,10,0,0,8,0,0
 202524,hadjar,rb,Test 2025,Gradient Boosting,9,0.1512,0.0661,11,0,0,17,0,0
-202524,ocon,haas,Test 2025,Gradient Boosting,8,0.1447,0.0633,12,0,0,7,0,0
-202524,bearman,haas,Test 2025,Gradient Boosting,11,0.1447,0.0633,13,0,0,12,0,0
+202524,ocon,haas,Test 2025,Gradient Boosting,8,0.1447,0.0632,12,0,0,7,0,0
+202524,bearman,haas,Test 2025,Gradient Boosting,11,0.1447,0.0632,13,0,0,12,0,0
 202524,bortoleto,sauber,Test 2025,Gradient Boosting,7,0.1279,0.0559,14,0,0,11,0,0
 202524,lawson,rb,Test 2025,Gradient Boosting,13,0.1196,0.0523,15,0,0,18,0,0
 202524,stroll,aston_martin,Test 2025,Gradient Boosting,15,0.0951,0.0415,16,0,0,10,0,0
@@ -483,7 +483,7 @@
 202601,hadjar,red_bull,En vivo 2026,Gradient Boosting,3,0.7994,0.4968,3,1,1,20,0,0
 202601,leclerc,ferrari,En vivo 2026,Gradient Boosting,4,0.677,0.4207,4,0,0,3,1,0
 202601,piastri,mclaren,En vivo 2026,Gradient Boosting,5,0.3876,0.2409,5,0,0,21,0,0
-202601,max_verstappen,red_bull,En vivo 2026,Gradient Boosting,20,0.2928,0.1819,6,0,0,6,0,0
+202601,max_verstappen,red_bull,En vivo 2026,Gradient Boosting,20,0.2928,0.182,6,0,0,6,0,0
 202601,norris,mclaren,En vivo 2026,Gradient Boosting,6,0.2544,0.1581,7,0,0,5,0,0
 202601,hamilton,ferrari,En vivo 2026,Gradient Boosting,7,0.114,0.0708,8,0,0,4,0,0
 202601,sainz,williams,En vivo 2026,Gradient Boosting,21,0.0817,0.0508,9,0,0,15,0,0
@@ -705,7 +705,7 @@
 202611,max_verstappen,red_bull,En vivo 2026,Gradient Boosting,4,0.686,0.3368,5,0,0,2,1,0
 202611,antonelli,mercedes,En vivo 2026,Gradient Boosting,7,0.6114,0.3001,6,0,0,3,1,0
 202611,russell,mercedes,En vivo 2026,Gradient Boosting,6,0.4946,0.2428,7,0,0,7,0,0
-202611,hadjar,red_bull,En vivo 2026,Gradient Boosting,8,0.3552,0.1743,8,0,0,6,0,0
+202611,hadjar,red_bull,En vivo 2026,Gradient Boosting,8,0.3552,0.1744,8,0,0,6,0,0
 202611,arvid_lindblad,rb,En vivo 2026,Gradient Boosting,9,0.106,0.052,9,0,0,10,0,0
 202611,bortoleto,audi,En vivo 2026,Gradient Boosting,14,0.0605,0.0297,10,0,0,11,0,0
 202611,lawson,rb,En vivo 2026,Gradient Boosting,11,0.0553,0.0271,11,0,0,8,0,0

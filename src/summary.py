@@ -52,6 +52,7 @@ Reglas estrictas:
 # Datos
 # ---------------------------------------------------------------------------
 
+
 def leer(nombre):
     return pd.read_csv(os.path.join(STAR, f'{nombre}.csv'), encoding='utf-8-sig')
 
@@ -81,26 +82,45 @@ def paquete_de_datos(carrera_id):
     pts_equipos = hasta.groupby('EquipoId')['Puntos'].sum().sort_values(ascending=False).head(3)
 
     datos = {
-        'carrera': {'gran_premio': carrera['GranPremio'], 'temporada': int(anio), 'ronda': int(carrera['Ronda']),
-                    'fecha': carrera['Fecha'], 'carreras_disputadas_en_la_temporada': int(hasta['CarreraId'].nunique())},
+        'carrera': {
+            'gran_premio': carrera['GranPremio'],
+            'temporada': int(anio),
+            'ronda': int(carrera['Ronda']),
+            'fecha': carrera['Fecha'],
+            'carreras_disputadas_en_la_temporada': int(hasta['CarreraId'].nunique()),
+        },
         'resultado_top10': [
-            {'posicion': int(f.Posicion), 'piloto': f.Piloto, 'equipo': f.Equipo, 'salio': int(f.ParrillaAj),
-             'puntos': float(f.Puntos), 'estado': f.Estado}
-            for f in esta.head(10).itertuples()],
+            {
+                'posicion': int(f.Posicion),
+                'piloto': f.Piloto,
+                'equipo': f.Equipo,
+                'salio': int(f.ParrillaAj),
+                'puntos': float(f.Puntos),
+                'estado': f.Estado,
+            }
+            for f in esta.head(10).itertuples()
+        ],
         'abandonos_o_no_clasificados': [
-            {'piloto': f.Piloto, 'equipo': f.Equipo, 'estado': f.Estado} for f in esta[esta['Abandono'] == 1].itertuples()],
+            {'piloto': f.Piloto, 'equipo': f.Equipo, 'estado': f.Estado}
+            for f in esta[esta['Abandono'] == 1].itertuples()
+        ],
         'clasificacion_pilotos_tras_la_carrera': [
-            {'piloto': pilotos[i], 'puntos': float(p)} for i, p in pts_pilotos.items()],
+            {'piloto': pilotos[i], 'puntos': float(p)} for i, p in pts_pilotos.items()
+        ],
         'clasificacion_constructores_tras_la_carrera': [
-            {'equipo': equipos[i], 'puntos': float(p)} for i, p in pts_equipos.items()],
+            {'equipo': equipos[i], 'puntos': float(p)} for i, p in pts_equipos.items()
+        ],
     }
 
     # Mayores remontadas
     esta['Ganadas'] = esta['PosicionesGanadas']
     remontada = esta.sort_values('Ganadas', ascending=False).iloc[0]
     if remontada['Ganadas'] > 0:
-        datos['mayor_remontada'] = {'piloto': remontada['Piloto'], 'salio': int(remontada['ParrillaAj']),
-                                    'acabo': int(remontada['Posicion'])}
+        datos['mayor_remontada'] = {
+            'piloto': remontada['Piloto'],
+            'salio': int(remontada['ParrillaAj']),
+            'acabo': int(remontada['Posicion']),
+        }
 
     # Predicción del modelo (si existe para esta carrera)
     pred = leer('fact_predicciones')
@@ -109,11 +129,19 @@ def paquete_de_datos(carrera_id):
         pred = pred.assign(Piloto=pred['PilotoId'].map(pilotos))
         datos['prediccion_del_modelo'] = {
             'descripcion': 'Los 3 pilotos con más probabilidad de podio según el modelo (calculada antes de la carrera). '
-                           'Las probabilidades normalizadas suman 3 por carrera.',
-            'top3_predicho': [{'piloto': f.Piloto, 'probabilidad_normalizada': float(f.ProbaPodioNorm),
-                               'acabo_en': int(f.PosicionReal)} for f in pred.head(3).itertuples()],
+            'Las probabilidades normalizadas suman 3 por carrera.',
+            'top3_predicho': [
+                {
+                    'piloto': f.Piloto,
+                    'probabilidad_normalizada': float(f.ProbaPodioNorm),
+                    'acabo_en': int(f.PosicionReal),
+                }
+                for f in pred.head(3).itertuples()
+            ],
             'podios_acertados_de_3': int(pred['Acierto'].sum()),
-            'podio_real_no_predicho': [f.Piloto for f in pred[(pred['PodioReal'] == 1) & (pred['PredPodio'] == 0)].itertuples()],
+            'podio_real_no_predicho': [
+                f.Piloto for f in pred[(pred['PodioReal'] == 1) & (pred['PredPodio'] == 0)].itertuples()
+            ],
         }
 
     # Neumáticos y lluvia, solo si hay vueltas limpias de esa carrera
@@ -123,15 +151,20 @@ def paquete_de_datos(carrera_id):
         datos['lluvia'] = {'porcentaje_de_vueltas_limpias_con_lluvia': round(float(v['Lluvia'].mean() * 100), 1)}
         estrategias = []
         for pid in esta.head(5)['PilotoId']:
-            s = v[(v['PilotoId'] == pid) & (v['Compuesto'] != 'DESCONOCIDO')].dropna(subset=['Stint']).sort_values(['Stint', 'Vuelta'])
+            s = (
+                v[(v['PilotoId'] == pid) & (v['Compuesto'] != 'DESCONOCIDO')]
+                .dropna(subset=['Stint'])
+                .sort_values(['Stint', 'Vuelta'])
+            )
             orden = list(dict.fromkeys(zip(s['Stint'], s['Compuesto'])))
             if orden:
                 estrategias.append({'piloto': pilotos[pid], 'compuestos_en_orden': [c for _, c in orden]})
         if estrategias:
             datos['neumaticos_top5'] = {
                 'descripcion': 'Compuestos usados por cada piloto, en orden (según las vueltas limpias disponibles; '
-                               'no se conocen las vueltas de cada tanda).',
-                'pilotos': estrategias}
+                'no se conocen las vueltas de cada tanda).',
+                'pilotos': estrategias,
+            }
     return datos
 
 
@@ -139,9 +172,11 @@ def paquete_de_datos(carrera_id):
 # Llamada a la API
 # ---------------------------------------------------------------------------
 
+
 def mensaje_usuario(datos):
-    return ('Datos de la carrera (JSON). Escribe el resumen usando solo estos datos:\n\n'
-            + json.dumps(datos, ensure_ascii=False, indent=1))
+    return 'Datos de la carrera (JSON). Escribe el resumen usando solo estos datos:\n\n' + json.dumps(
+        datos, ensure_ascii=False, indent=1
+    )
 
 
 def generar_resumen(cliente, modelo, datos):
@@ -152,7 +187,7 @@ def generar_resumen(cliente, modelo, datos):
         max_tokens=4000,
         system=SISTEMA,
         messages=[{'role': 'user', 'content': mensaje_usuario(datos)}],
-        output_config={'effort': 'low'},   # tarea sencilla: no hace falta razonar a fondo
+        output_config={'effort': 'low'},  # tarea sencilla: no hace falta razonar a fondo
     )
     if respuesta.stop_reason == 'refusal':
         raise RuntimeError('El modelo ha rechazado la petición (stop_reason = refusal).')
@@ -180,12 +215,14 @@ def guardar(texto, datos, modelo, carpeta=SALIDA):
     c = datos['carrera']
     ruta = os.path.join(carpeta, nombre_archivo(datos))
     with open(ruta, 'w', encoding='utf-8') as f:
-        f.write(f"---\ncarrera: {c['gran_premio']} {c['temporada']}\nfecha: {c['fecha']}\nmodelo: {modelo}\n"
-                f"generado: {datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M UTC')}\n"
-                f"palabras: {contar_palabras(texto)}\n---\n\n"
-                f"> Resumen generado por un modelo de lenguaje únicamente a partir de los datos del proyecto "
-                f"(resultados, predicciones del modelo de podios y vueltas limpias). Puede contener errores de redacción.\n\n"
-                f"{texto}\n")
+        f.write(
+            f"---\ncarrera: {c['gran_premio']} {c['temporada']}\nfecha: {c['fecha']}\nmodelo: {modelo}\n"
+            f"generado: {datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M UTC')}\n"
+            f"palabras: {contar_palabras(texto)}\n---\n\n"
+            f"> Resumen generado por un modelo de lenguaje únicamente a partir de los datos del proyecto "
+            f"(resultados, predicciones del modelo de podios y vueltas limpias). Puede contener errores de redacción.\n\n"
+            f"{texto}\n"
+        )
     return ruta
 
 
@@ -202,7 +239,7 @@ def main(argv=None):
         return 0
     datos = paquete_de_datos(carrera_id)
     ruta = os.path.join(SALIDA, nombre_archivo(datos))
-    modelo = os.environ.get('ANTHROPIC_MODEL') or MODELO_POR_DEFECTO     # vacío o ausente -> valor por defecto
+    modelo = os.environ.get('ANTHROPIC_MODEL') or MODELO_POR_DEFECTO  # vacío o ausente -> valor por defecto
 
     if args.dry_run:
         print(f'Modelo: {modelo}\n\n--- SISTEMA ---\n{SISTEMA}\n\n--- USUARIO ---\n{mensaje_usuario(datos)}')
@@ -211,13 +248,15 @@ def main(argv=None):
         print(f'Ya existe {ruta}: no se vuelve a llamar a la API (usa --forzar para regenerarlo).')
         return 0
     if not os.environ.get('ANTHROPIC_API_KEY'):
-        print('AVISO: no hay ANTHROPIC_API_KEY en el entorno; se omite el resumen. '
-              '(En GitHub: Settings -> Secrets and variables -> Actions -> New repository secret.)')
+        print(
+            'AVISO: no hay ANTHROPIC_API_KEY en el entorno; se omite el resumen. '
+            '(En GitHub: Settings -> Secrets and variables -> Actions -> New repository secret.)'
+        )
         return 0
 
-    import anthropic        # import local: el resto del proyecto no necesita el SDK
+    import anthropic  # import local: el resto del proyecto no necesita el SDK
 
-    cliente = anthropic.Anthropic()          # lee ANTHROPIC_API_KEY del entorno
+    cliente = anthropic.Anthropic()  # lee ANTHROPIC_API_KEY del entorno
     try:
         texto = generar_resumen(cliente, modelo, datos)
     except anthropic.RateLimitError:

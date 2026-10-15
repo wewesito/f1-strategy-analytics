@@ -25,6 +25,7 @@ FIG_DIR = os.path.join('reports', 'figures')
 
 # ---------- Carga ----------
 
+
 def cargar_sesion(year, gp, tipo='Q'):
     os.makedirs(CACHE_DIR, exist_ok=True)
     fastf1.Cache.enable_cache(CACHE_DIR)
@@ -48,6 +49,7 @@ def etiqueta_curva(curva):
 
 # ---------- Cálculos ----------
 
+
 def calcular_delta(tel_ref, tel_comp, paso=5):
     """Delta acumulado (s) en una malla común de distancia. Positivo: tel_comp va por detrás."""
     fin = min(tel_ref['Distance'].max(), tel_comp['Distance'].max())
@@ -69,15 +71,18 @@ def tabla_tramos(malla, delta, curvas, p1):
         nombres = [f'Tramo {i + 1}' for i in range(10)]
 
     delta_en = np.interp(limites, malla, delta)
-    return pd.DataFrame({
-        'tramo': nombres,
-        'desde_m': np.round(limites[:-1]),
-        'hasta_m': np.round(limites[1:]),
-        f'gana_{p1}_s': np.round(np.diff(delta_en), 3),
-    })
+    return pd.DataFrame(
+        {
+            'tramo': nombres,
+            'desde_m': np.round(limites[:-1]),
+            'hasta_m': np.round(limites[1:]),
+            f'gana_{p1}_s': np.round(np.diff(delta_en), 3),
+        }
+    )
 
 
 # ---------- Gráficos ----------
+
 
 def marcar_curvas(ax, curvas, con_texto=False):
     if curvas is None:
@@ -85,13 +90,19 @@ def marcar_curvas(ax, curvas, con_texto=False):
     for _, curva in curvas.iterrows():
         ax.axvline(curva['Distance'], color='gray', linestyle=':', linewidth=0.8)
         if con_texto:
-            ax.text(curva['Distance'], ax.get_ylim()[0], etiqueta_curva(curva),
-                    ha='center', va='bottom', fontsize=8, color='gray')
+            ax.text(
+                curva['Distance'],
+                ax.get_ylim()[0],
+                etiqueta_curva(curva),
+                ha='center',
+                va='bottom',
+                fontsize=8,
+                color='gray',
+            )
 
 
 def grafico_telemetria(tels, colores, curvas, titulo, archivo):
-    fig, axes = plt.subplots(4, 1, figsize=(15, 12), sharex=True,
-                             gridspec_kw={'height_ratios': [3, 1, 1, 1]})
+    fig, axes = plt.subplots(4, 1, figsize=(15, 12), sharex=True, gridspec_kw={'height_ratios': [3, 1, 1, 1]})
     for piloto, tel in tels.items():
         c = colores[piloto]
         axes[0].plot(tel['Distance'], tel['Speed'], color=c, label=piloto)
@@ -136,15 +147,16 @@ def mapa_minisectores(tels, p1, p2, colores, titulo, archivo, n=25):
         return pd.cut(tel['Distance'], bordes, labels=False, include_lowest=True)
 
     velocidad = pd.DataFrame({p: t.groupby(minisector(t))['Speed'].mean() for p, t in tels.items()})
-    ganador = (velocidad[p2] > velocidad[p1]).astype(int)        # 0 = p1, 1 = p2
+    ganador = (velocidad[p2] > velocidad[p1]).astype(int)  # 0 = p1, 1 = p2
 
     ref = tels[p1]
     quien = minisector(ref).map(ganador).fillna(0).to_numpy()
     puntos = np.array([ref['X'], ref['Y']]).T.reshape(-1, 1, 2)
     segmentos = np.concatenate([puntos[:-1], puntos[1:]], axis=1)
 
-    lc = LineCollection(segmentos, cmap=ListedColormap([colores[p1], colores[p2]]),
-                        norm=plt.Normalize(0, 1), linewidth=6)
+    lc = LineCollection(
+        segmentos, cmap=ListedColormap([colores[p1], colores[p2]]), norm=plt.Normalize(0, 1), linewidth=6
+    )
     lc.set_array(quien[:-1])
 
     fig, ax = plt.subplots(figsize=(10, 8))
@@ -152,10 +164,13 @@ def mapa_minisectores(tels, p1, p2, colores, titulo, archivo, n=25):
     ax.autoscale()
     ax.set_aspect('equal')
     ax.axis('off')
-    ax.legend(handles=[
-        Line2D([0], [0], color=colores[p1], lw=6, label=f'{p1} más rápido ({(ganador == 0).sum()} minisectores)'),
-        Line2D([0], [0], color=colores[p2], lw=6, label=f'{p2} más rápido ({(ganador == 1).sum()} minisectores)'),
-    ], loc='upper right')
+    ax.legend(
+        handles=[
+            Line2D([0], [0], color=colores[p1], lw=6, label=f'{p1} más rápido ({(ganador == 0).sum()} minisectores)'),
+            Line2D([0], [0], color=colores[p2], lw=6, label=f'{p2} más rápido ({(ganador == 1).sum()} minisectores)'),
+        ],
+        loc='upper right',
+    )
     ax.set_title(titulo)
     plt.tight_layout()
     plt.savefig(archivo, dpi=150)
@@ -164,16 +179,17 @@ def mapa_minisectores(tels, p1, p2, colores, titulo, archivo, n=25):
 
 # ---------- Función principal ----------
 
+
 def comparar_pilotos(year, gp, p1, p2, tipo='Q'):
     """Compara la vuelta más rápida de p1 y p2: 3 gráficos + tabla de tramos."""
     os.makedirs(FIG_DIR, exist_ok=True)
     sesion = cargar_sesion(year, gp, tipo)
 
     vueltas = {p: sesion.laps.pick_drivers(p).pick_fastest() for p in (p1, p2)}
-    tels = {p: v.get_telemetry() for p, v in vueltas.items()}   # incluye X, Y y Distance
+    tels = {p: v.get_telemetry() for p, v in vueltas.items()}  # incluye X, Y y Distance
 
     colores = {p: fastf1.plotting.get_driver_color(p, session=sesion) for p in (p1, p2)}
-    if colores[p1] == colores[p2]:          # compañeros de equipo: diferenciamos al segundo
+    if colores[p1] == colores[p2]:  # compañeros de equipo: diferenciamos al segundo
         colores[p2] = '#888888'
 
     curvas = obtener_curvas(sesion)
@@ -189,5 +205,11 @@ def comparar_pilotos(year, gp, p1, p2, tipo='Q'):
     tramos = tabla_tramos(malla, delta, curvas, p1)
     tramos.to_csv(base + '_tramos.csv', index=False)
 
-    return {'sesion': sesion, 'telemetria': tels, 'malla': malla, 'delta': delta,
-            'tramos': tramos, 'diferencia': diferencia}
+    return {
+        'sesion': sesion,
+        'telemetria': tels,
+        'malla': malla,
+        'delta': delta,
+        'tramos': tramos,
+        'diferencia': diferencia,
+    }

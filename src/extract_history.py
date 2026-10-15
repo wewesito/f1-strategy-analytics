@@ -22,8 +22,8 @@ import requests
 URL_BASE = 'https://api.jolpi.ca/ergast/f1'
 PRIMER_ANIO = 2018
 OUTPUT_DIR = os.path.join('data', 'raw')
-TAM_PAGINA = 100      # máximo de filas por petición que admite la API
-PAUSA = 0.5           # segundos entre peticiones (la API limita el ritmo)
+TAM_PAGINA = 100  # máximo de filas por petición que admite la API
+PAUSA = 0.5  # segundos entre peticiones (la API limita el ritmo)
 
 
 def pedir(url, params):
@@ -47,8 +47,7 @@ def descargar_carreras(year, endpoint, clave):
     """
     carreras, offset = {}, 0
     while True:
-        datos = pedir(f'{URL_BASE}/{year}/{endpoint}.json',
-                      {'limit': TAM_PAGINA, 'offset': offset})
+        datos = pedir(f'{URL_BASE}/{year}/{endpoint}.json', {'limit': TAM_PAGINA, 'offset': offset})
         for carrera in datos['RaceTable']['Races']:
             # una carrera puede quedar partida entre dos páginas: se agrupan por ronda
             entrada = carreras.setdefault(carrera['round'], (carrera, []))
@@ -80,14 +79,16 @@ def tabla_resultados(carreras):
     for carrera, resultados in carreras:
         for r in resultados:
             f = base_fila(carrera, r)
-            f.update({
-                'Position': int(r['position']),              # posición final (incluye abandonos al final)
-                'PositionText': r['positionText'],           # 'R' = retirado, 'D' = descalificado...
-                'Grid': int(r['grid']),                      # 0 = salida desde el pit lane
-                'Points': float(r['points']),
-                'Laps': int(r['laps']),
-                'Status': r['status'],
-            })
+            f.update(
+                {
+                    'Position': int(r['position']),  # posición final (incluye abandonos al final)
+                    'PositionText': r['positionText'],  # 'R' = retirado, 'D' = descalificado...
+                    'Grid': int(r['grid']),  # 0 = salida desde el pit lane
+                    'Points': float(r['points']),
+                    'Laps': int(r['laps']),
+                    'Status': r['status'],
+                }
+            )
             filas.append(f)
     return pd.DataFrame(filas)
 
@@ -97,8 +98,7 @@ def tabla_quali(carreras):
     for carrera, resultados in carreras:
         for r in resultados:
             f = base_fila(carrera, r)
-            f.update({'QualiPosition': int(r['position']),
-                      'Q1': r.get('Q1'), 'Q2': r.get('Q2'), 'Q3': r.get('Q3')})
+            f.update({'QualiPosition': int(r['position']), 'Q1': r.get('Q1'), 'Q2': r.get('Q2'), 'Q3': r.get('Q3')})
             filas.append(f)
     return pd.DataFrame(filas)
 
@@ -108,8 +108,10 @@ def _descargar_rango(primer_anio, ultimo_anio):
     hoy = date.today()
     resultados, quali = [], []
     for year in range(primer_anio, ultimo_anio + 1):
-        for endpoint, clave, destino in (('results', 'Results', resultados),
-                                         ('qualifying', 'QualifyingResults', quali)):
+        for endpoint, clave, destino in (
+            ('results', 'Results', resultados),
+            ('qualifying', 'QualifyingResults', quali),
+        ):
             carreras = descargar_carreras(year, endpoint, clave)
             # solo carreras ya disputadas (evita filas de carreras futuras)
             carreras = [c for c in carreras if date.fromisoformat(c[0]['date']) < hoy]

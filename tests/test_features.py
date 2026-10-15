@@ -19,20 +19,47 @@ def datos_sinteticos():
     A y B (equipo T1) y C (equipo T2). Las posiciones son distintas en cada carrera para poder distinguirlas.
     """
     posiciones = {  # (año, ronda) -> posiciones de A, B, C
-        (2023, 1): (1, 2, 3), (2023, 2): (3, 1, 2), (2023, 3): (2, 3, 1),
-        (2024, 1): (1, 3, 2), (2024, 2): (2, 1, 3), (2024, 3): (3, 2, 1),
+        (2023, 1): (1, 2, 3),
+        (2023, 2): (3, 1, 2),
+        (2023, 3): (2, 3, 1),
+        (2024, 1): (1, 3, 2),
+        (2024, 2): (2, 1, 3),
+        (2024, 3): (3, 2, 1),
     }
     puntos = {1: 25, 2: 18, 3: 15}
     filas, quali = [], []
     for (anio, ronda), pos in posiciones.items():
         for piloto, equipo, p in zip('ABC', ('T1', 'T1', 'T2'), pos):
-            filas.append({'Year': anio, 'Round': ronda, 'Event': f'GP{ronda}', 'Date': f'{anio}-0{ronda}-01',
-                          'CircuitId': f'circuito{ronda}', 'DriverId': piloto, 'Abbreviation': piloto,
-                          'TeamId': equipo, 'TeamName': equipo, 'Position': p, 'PositionText': str(p),
-                          'Grid': 0 if (anio, ronda, piloto) == (2024, 2, 'C') else p,   # C sale del pit lane en 2024 R2
-                          'Points': puntos[p], 'Laps': 50, 'Status': 'Finished'})
-            quali.append({'Year': anio, 'Round': ronda, 'DriverId': piloto, 'QualiPosition': p,
-                          'Q1': '1:20.000', 'Q2': '1:19.500' if p < 3 else None, 'Q3': f'1:19.{p}00' if p < 2 else None})
+            filas.append(
+                {
+                    'Year': anio,
+                    'Round': ronda,
+                    'Event': f'GP{ronda}',
+                    'Date': f'{anio}-0{ronda}-01',
+                    'CircuitId': f'circuito{ronda}',
+                    'DriverId': piloto,
+                    'Abbreviation': piloto,
+                    'TeamId': equipo,
+                    'TeamName': equipo,
+                    'Position': p,
+                    'PositionText': str(p),
+                    'Grid': 0 if (anio, ronda, piloto) == (2024, 2, 'C') else p,  # C sale del pit lane en 2024 R2
+                    'Points': puntos[p],
+                    'Laps': 50,
+                    'Status': 'Finished',
+                }
+            )
+            quali.append(
+                {
+                    'Year': anio,
+                    'Round': ronda,
+                    'DriverId': piloto,
+                    'QualiPosition': p,
+                    'Q1': '1:20.000',
+                    'Q2': '1:19.500' if p < 3 else None,
+                    'Q3': f'1:19.{p}00' if p < 2 else None,
+                }
+            )
     return pd.DataFrame(filas), pd.DataFrame(quali)
 
 
@@ -69,17 +96,17 @@ def test_media_de_las_3_ultimas_carreras_usa_solo_carreras_anteriores():
     r, q = datos_sinteticos()
     d = ft.construir_variables(r, q)
     # A: posiciones 1, 3, 2 en 2023 y 1, 2, 3 en 2024
-    assert fila(d, 2023, 2, 'A')['MediaUlt3'] == 1                     # solo R1
+    assert fila(d, 2023, 2, 'A')['MediaUlt3'] == 1  # solo R1
     assert fila(d, 2023, 3, 'A')['MediaUlt3'] == pytest.approx((1 + 3) / 2)
-    assert fila(d, 2024, 1, 'A')['MediaUlt3'] == pytest.approx((1 + 3 + 2) / 3)   # continúa entre temporadas
-    assert fila(d, 2024, 3, 'A')['MediaUlt3'] == pytest.approx((2 + 1 + 2) / 3)   # ventana de 3: R3-23, R1-24, R2-24
+    assert fila(d, 2024, 1, 'A')['MediaUlt3'] == pytest.approx((1 + 3 + 2) / 3)  # continúa entre temporadas
+    assert fila(d, 2024, 3, 'A')['MediaUlt3'] == pytest.approx((2 + 1 + 2) / 3)  # ventana de 3: R3-23, R1-24, R2-24
 
 
 def test_resultado_en_el_circuito_es_el_de_la_edicion_anterior():
     r, q = datos_sinteticos()
     d = ft.construir_variables(r, q)
     assert np.isnan(fila(d, 2023, 2, 'B')['PosCircuitoPrevia'])
-    assert fila(d, 2024, 2, 'B')['PosCircuitoPrevia'] == 1             # B ganó circuito2 en 2023
+    assert fila(d, 2024, 2, 'B')['PosCircuitoPrevia'] == 1  # B ganó circuito2 en 2023
 
 
 def test_el_pit_lane_cuenta_como_la_posicion_20():
@@ -92,9 +119,9 @@ def test_el_pit_lane_cuenta_como_la_posicion_20():
 def test_diferencia_con_la_pole_se_calcula_con_la_mejor_vuelta():
     r, q = datos_sinteticos()
     d = ft.construir_variables(r, q)
-    pole = fila(d, 2023, 1, 'A')          # Q3 = 1:19.100
+    pole = fila(d, 2023, 1, 'A')  # Q3 = 1:19.100
     assert pole['DifPolePct'] == pytest.approx(0)
-    otro = fila(d, 2023, 1, 'C')          # solo Q1 = 1:20.000 (80 s) frente a 79.1 s
+    otro = fila(d, 2023, 1, 'C')  # solo Q1 = 1:20.000 (80 s) frente a 79.1 s
     assert otro['DifPolePct'] == pytest.approx((80.0 - 79.1) / 79.1 * 100)
 
 
@@ -129,8 +156,10 @@ def test_modificar_una_carrera_no_cambia_las_variables_de_esa_carrera_ni_de_las_
     assert primera > (2023, 2), f'las variables de {primera} cambian al alterar un resultado posterior o propio'
 
 
-@pytest.mark.skipif(not os.path.exists(os.path.join('data', 'raw', 'history_results.parquet')),
-                    reason='no hay histórico en data/raw (se genera con extract_history.py)')
+@pytest.mark.skipif(
+    not os.path.exists(os.path.join('data', 'raw', 'history_results.parquet')),
+    reason='no hay histórico en data/raw (se genera con extract_history.py)',
+)
 def test_invarianza_con_el_historico_real():
     r = pd.read_parquet(os.path.join('data', 'raw', 'history_results.parquet'))
     q = pd.read_parquet(os.path.join('data', 'raw', 'history_quali.parquet'))
