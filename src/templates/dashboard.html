@@ -463,6 +463,8 @@ $('#tema').onclick = () => {
 };
 matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => dibujar[activa]());
 mostrar(location.hash.slice(1) in dibujar ? location.hash.slice(1) : 'resumen');
+// Un enlace con #sección no debe dejar la cabecera fuera de la vista: el navegador salta al ancla después de ejecutar el script
+window.addEventListener('load', () => setTimeout(() => window.scrollTo(0, 0), 0));
 </script>
 </body>
 </html>
