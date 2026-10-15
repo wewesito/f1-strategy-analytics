@@ -18,8 +18,10 @@ Uso (desde la raíz del proyecto):
     python src/powerbi_export.py
 """
 
+import glob
 import os
 import sys
+from datetime import datetime
 
 import numpy as np
 import pandas as pd
@@ -38,11 +40,13 @@ MESES = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto
 
 # Colores oficiales de Pirelli (los mismos que en los notebooks)
 COMPUESTOS = pd.DataFrame({
-    'Compuesto': ['SOFT', 'MEDIUM', 'HARD', 'INTERMEDIATE', 'WET'],
-    'OrdenCompuesto': [1, 2, 3, 4, 5],
-    'TipoNeumatico': ['Seco'] * 3 + ['Mojado'] * 2,
-    'ColorHex': ['#DA291C', '#FFD12E', '#F0F0EC', '#43B02A', '#0067AD'],
+    'Compuesto': ['SOFT', 'MEDIUM', 'HARD', 'INTERMEDIATE', 'WET', 'DESCONOCIDO'],
+    'OrdenCompuesto': [1, 2, 3, 4, 5, 6],
+    'TipoNeumatico': ['Seco'] * 3 + ['Mojado'] * 2 + ['Desconocido'],
+    'ColorHex': ['#DA291C', '#FFD12E', '#F0F0EC', '#43B02A', '#0067AD', '#898781'],
 })
+# 'DESCONOCIDO' es el "miembro desconocido" de la dimensión: FastF1 a veces no trae el compuesto de una vuelta
+# (llega como NaN o como el texto 'None'). Así la vuelta se conserva y la relación con la dimensión no queda rota.
 
 # La telemetría usa el nombre corto del circuito; se traduce al nombre oficial del GP
 GP_CORTO = {'Monaco': 'Monaco Grand Prix', 'Monza': 'Italian Grand Prix', 'Suzuka': 'Japanese Grand Prix'}
@@ -110,40 +114,53 @@ def fact_resultados(datos):
     return f.sort_values(['CarreraId', 'Posicion']).reset_index(drop=True)
 
 
-def mapa_pilotos_2024():
-    """(Ronda, abreviatura FastF1) -> PilotoId y EquipoId, a partir de los resultados de FastF1 2024."""
-    r = pd.read_parquet(os.path.join(RAW, 'results_2024.parquet'))
-    return r[['Round', 'Abbreviation', 'DriverId', 'TeamId']].drop_duplicates(['Round', 'Abbreviation'])
+def mapa_pilotos():
+    """
+    (año, ronda, abreviatura) -> PilotoId y EquipoId, a partir del histórico de Jolpica. Se usa el histórico y no
+    los archivos brutos de FastF1 porque el histórico siempre se regenera (también en GitHub Actions).
+    """
+    h = pd.read_parquet(os.path.join(RAW, 'history_results.parquet'))
+    return (h[['Year', 'Round', 'Abbreviation', 'DriverId', 'TeamId']]
+            .drop_duplicates(['Year', 'Round', 'Abbreviation']))
 
 
 def fact_vueltas():
-    """Vueltas limpias de 2024 con el tiempo corregido por combustible (strategy.corregir_combustible)."""
-    v = st.corregir_combustible(pd.read_parquet(os.path.join(PROC, 'laps_clean_2024.parquet')))
-    v = v.merge(mapa_pilotos_2024(), left_on=['Round', 'Driver'], right_on=['Round', 'Abbreviation'], how='left')
+    """
+    Vueltas limpias de todos los años disponibles (laps_clean_*.parquet), con el tiempo corregido por combustible.
+    La corrección se hace año por año porque 'Round' se repite entre temporadas.
+    """
+    partes = []
+    for ruta in sorted(glob.glob(os.path.join(PROC, 'laps_clean_*.parquet'))):
+        partes.append(st.corregir_combustible(pd.read_parquet(ruta)))
+    v = pd.concat(partes, ignore_index=True)
+    v = v.merge(mapa_pilotos(), left_on=['Year', 'Round', 'Driver'], right_on=['Year', 'Round', 'Abbreviation'], how='left')
     return pd.DataFrame({
         'CarreraId': carrera_id(v['Year'], v['Round']), 'PilotoId': v['DriverId'], 'EquipoId': v['TeamId'],
-        'Vuelta': v['LapNumber'].astype(int), 'Stint': v['Stint'].astype(int), 'Compuesto': v['Compound'],
-        'VidaNeumatico': v['TyreLife'].astype(int), 'TiempoVueltaSeg': v['LapTimeSec'].round(3),
+        'Vuelta': v['LapNumber'].astype(int), 'Stint': v['Stint'].astype('Int64'),
+        'Compuesto': v['Compound'].where(v['Compound'].isin(COMPUESTOS['Compuesto']), 'DESCONOCIDO'),
+        # Int64 admite vacíos (hay vueltas sin dato de neumático)
+        'VidaNeumatico': v['TyreLife'].astype('Int64'), 'TiempoVueltaSeg': v['LapTimeSec'].round(3),
         'TiempoCorregidoSeg': v['LapTimeCorr'].round(3), 'Sector1Seg': v['Sector1Sec'].round(3),
         'Sector2Seg': v['Sector2Sec'].round(3), 'Sector3Seg': v['Sector3Sec'].round(3),
         'Lluvia': v['Lluvia'].astype(int), 'TempPista': v['TrackTemp'], 'TempAire': v['AirTemp'],
     }).reset_index(drop=True)
 
 
-def _gp_a_carrera(nombres):
-    """Convierte el nombre del GP de 2024 en CarreraId."""
-    r = pd.read_parquet(os.path.join(RAW, 'results_2024.parquet'))[['Round', 'Event']].drop_duplicates()
-    m = dict(zip(r['Event'], carrera_id(pd.Series(2024, index=r.index), r['Round'])))
+def _gp_a_carrera(nombres, anio=2024):
+    """Convierte el nombre del GP en CarreraId usando el calendario del histórico."""
+    h = pd.read_parquet(os.path.join(RAW, 'history_results.parquet'))
+    h = h[h['Year'] == anio][['Round', 'Event']].drop_duplicates()
+    m = dict(zip(h['Event'], anio * 100 + h['Round']))
     return nombres.map(m)
 
 
 def fact_estrategias():
     e = pd.read_csv(os.path.join(PROC, 'estrategias_vs_optima_2024.csv'))
-    pil = mapa_pilotos_2024()
-    r = pd.read_parquet(os.path.join(RAW, 'results_2024.parquet'))[['Round', 'Event']].drop_duplicates()
-    e = e.merge(r, left_on='gp', right_on='Event').merge(pil, left_on=['Round', 'piloto'], right_on=['Round', 'Abbreviation'])
+    e['CarreraId'] = _gp_a_carrera(e['gp'])
+    pil = mapa_pilotos().query('Year == 2024').assign(CarreraId=lambda d: d['Year'] * 100 + d['Round'])
+    e = e.merge(pil, left_on=['CarreraId', 'piloto'], right_on=['CarreraId', 'Abbreviation'], how='left')
     return pd.DataFrame({
-        'CarreraId': carrera_id(pd.Series(2024, index=e.index), e['Round']), 'PilotoId': e['DriverId'], 'EquipoId': e['TeamId'],
+        'CarreraId': e['CarreraId'], 'PilotoId': e['DriverId'], 'EquipoId': e['TeamId'],
         'PosicionFinal': e['posicion'], 'Estrategia': e['estrategia_real'], 'Paradas': e['paradas'],
         'VsOptimaSeg': e['vs_optima_s'],
     }).reset_index(drop=True)
@@ -151,9 +168,9 @@ def fact_estrategias():
 
 def fact_degradacion():
     d = pd.read_csv(os.path.join(PROC, 'degradacion_stints_2024.csv'))
-    d = d.merge(mapa_pilotos_2024(), left_on=['Round', 'Driver'], right_on=['Round', 'Abbreviation'], how='left')
+    d = d.merge(mapa_pilotos().query('Year == 2024'), left_on=['Round', 'Driver'], right_on=['Round', 'Abbreviation'], how='left')
     return pd.DataFrame({
-        'CarreraId': carrera_id(pd.Series(2024, index=d.index), d['Round']), 'PilotoId': d['DriverId'], 'EquipoId': d['TeamId'],
+        'CarreraId': 202400 + d['Round'], 'PilotoId': d['DriverId'], 'EquipoId': d['TeamId'],
         'Stint': d['Stint'].astype(int), 'Compuesto': d['Compound'], 'Vueltas': d['vueltas'].astype(int),
         'DegradacionSegVuelta': d['degradacion_s'].round(4),
     }).reset_index(drop=True)
@@ -181,7 +198,7 @@ def fact_telemetria():
     t = pd.read_csv(os.path.join(PROC, 'telemetria_tramos.csv'))
     t['GranPremio'] = t['gp'].map(GP_CORTO)
     t['CarreraId'] = _gp_a_carrera(t['GranPremio'])
-    pil = mapa_pilotos_2024().assign(CarreraId=lambda d: 202400 + d['Round'])
+    pil = mapa_pilotos().query('Year == 2024').assign(CarreraId=lambda d: 202400 + d['Round'])
     for n in (1, 2):
         t = (t.merge(pil[['CarreraId', 'Abbreviation', 'DriverId']].rename(columns={'DriverId': f'Piloto{n}Id'}),
                      left_on=['CarreraId', f'piloto_{n}'], right_on=['CarreraId', 'Abbreviation'])
@@ -206,7 +223,7 @@ def fact_predicciones(hist):
     p = p.merge(equipo, on=['Year', 'Round', 'DriverId'], how='left')
     return pd.DataFrame({
         'CarreraId': carrera_id(p['Year'], p['Round']), 'PilotoId': p['DriverId'], 'EquipoId': p['TeamId'],
-        'Conjunto': np.where(p['Year'] == 2025, 'Test 2025', 'En vivo 2026'), 'Modelo': p['Modelo'],
+        'Conjunto': np.where(p['Year'] == 2025, 'Test 2025', 'En vivo ' + p['Year'].astype(str)), 'Modelo': p['Modelo'],
         'ParrillaAj': p['GridAdj'], 'ProbaPodio': p['Proba'].round(4), 'ProbaPodioNorm': p['ProbaNorm'].round(4),
         'RankProba': p['RankProba'], 'PredPodio': p['PredPodio'], 'PredTrivial': (p['GridAdj'] <= 3).astype(int),
         'PosicionReal': p['PosicionReal'], 'PodioReal': p['PodioReal'],
@@ -281,6 +298,8 @@ def exportar(tablas):
     ruta = os.path.join(SALIDA, 'modelo_f1.xlsx')
     # En el Excel las fechas se guardan como fechas reales: en Power BI web no siempre se puede cambiar el tipo después
     with pd.ExcelWriter(ruta, engine='xlsxwriter', datetime_format='yyyy-mm-dd') as w:
+        # Fecha de creación fija: así el archivo es idéntico byte a byte si los datos no cambian y Git no lo ve modificado
+        w.book.set_properties({'created': datetime(2026, 1, 1)})
         for nombre, df in tablas.items():
             df = df.assign(**{c: pd.to_datetime(df[c]) for c in df.columns if c == 'Fecha'})
             df.to_excel(w, sheet_name=nombre, index=False, startrow=0)

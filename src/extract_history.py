@@ -103,11 +103,9 @@ def tabla_quali(carreras):
     return pd.DataFrame(filas)
 
 
-def descargar_historico(primer_anio=PRIMER_ANIO, ultimo_anio=None):
-    os.makedirs(OUTPUT_DIR, exist_ok=True)
+def _descargar_rango(primer_anio, ultimo_anio):
+    """Descarga resultados y clasificaciones de un rango de años. Devuelve (resultados, clasificaciones)."""
     hoy = date.today()
-    ultimo_anio = ultimo_anio or hoy.year
-
     resultados, quali = [], []
     for year in range(primer_anio, ultimo_anio + 1):
         for endpoint, clave, destino in (('results', 'Results', resultados),
@@ -117,12 +115,36 @@ def descargar_historico(primer_anio=PRIMER_ANIO, ultimo_anio=None):
             carreras = [c for c in carreras if date.fromisoformat(c[0]['date']) < hoy]
             destino.extend(carreras)
             print(f'{year} {endpoint:<11} {len(carreras)} carreras')
+    return tabla_resultados(resultados), tabla_quali(quali)
 
-    for nombre, df in (('history_results', tabla_resultados(resultados)),
-                       ('history_quali', tabla_quali(quali))):
+
+def descargar_historico(primer_anio=PRIMER_ANIO, ultimo_anio=None):
+    os.makedirs(OUTPUT_DIR, exist_ok=True)
+    ultimo_anio = ultimo_anio or date.today().year
+    resultados, quali = _descargar_rango(primer_anio, ultimo_anio)
+    for nombre, df in (('history_results', resultados), ('history_quali', quali)):
         ruta = os.path.join(OUTPUT_DIR, f'{nombre}.parquet')
         df.to_parquet(ruta)
         print(f'Guardado {ruta}: {len(df)} filas')
+
+
+def actualizar_historico(year):
+    """
+    Actualización incremental: si el histórico ya existe, solo se vuelve a descargar `year` y se sustituyen
+    sus filas (así aparecen las carreras nuevas). Si no existe, se descarga todo desde 2018.
+    """
+    rutas = {n: os.path.join(OUTPUT_DIR, f'{n}.parquet') for n in ('history_results', 'history_quali')}
+    if not all(os.path.exists(r) for r in rutas.values()):
+        print('No hay histórico previo: se descarga completo.')
+        return descargar_historico(PRIMER_ANIO, year)
+
+    nuevos = dict(zip(rutas, _descargar_rango(year, year)))
+    for nombre, ruta in rutas.items():
+        previo = pd.read_parquet(ruta)
+        df = pd.concat([previo[previo['Year'] != year], nuevos[nombre]], ignore_index=True)
+        df = df.sort_values(['Year', 'Round']).reset_index(drop=True)
+        df.to_parquet(ruta)
+        print(f'Actualizado {ruta}: {len(df)} filas ({len(nuevos[nombre])} de {year})')
 
 
 if __name__ == '__main__':
