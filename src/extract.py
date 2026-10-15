@@ -27,7 +27,7 @@ def periodos_estado_pista(track_status):
     df = pd.DataFrame(track_status).copy()
     df['Status'] = df['Status'].astype(str)
     df['InicioSec'] = df['Time'].dt.total_seconds()
-    df['FinSec'] = df['InicioSec'].shift(-1)      # el periodo acaba cuando empieza el siguiente
+    df['FinSec'] = df['InicioSec'].shift(-1)  # el periodo acaba cuando empieza el siguiente
     df['DuracionSec'] = df['FinSec'] - df['InicioSec']
     return df.drop(columns=['Time'])
 
@@ -146,7 +146,7 @@ def descargar_temporada(year=YEAR, solo_nuevas=False):
         df = pd.concat(lista, ignore_index=True)
         ruta = ruta_raw(nombre, year)
         if solo_nuevas and os.path.exists(ruta):
-            df = pd.concat([pd.read_parquet(ruta), df], ignore_index=True)   # añade a lo existente
+            df = pd.concat([pd.read_parquet(ruta), df], ignore_index=True)  # añade a lo existente
         df.to_parquet(ruta)
         print(f'Guardado {ruta}: {len(df)} filas')
     return nuevas

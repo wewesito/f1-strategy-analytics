@@ -6,22 +6,26 @@ import extract
 
 
 def calendario():
-    return pd.DataFrame({
-        'RoundNumber': [1, 2, 3, 4],
-        'EventName': ['GP1', 'GP2', 'GP3', 'GP4'],
-        'Session5DateUtc': pd.to_datetime(['2026-03-01 14:00', '2026-03-15 14:00', '2026-03-29 14:00', '2026-04-12 14:00']),
-    })
+    return pd.DataFrame(
+        {
+            'RoundNumber': [1, 2, 3, 4],
+            'EventName': ['GP1', 'GP2', 'GP3', 'GP4'],
+            'Session5DateUtc': pd.to_datetime(
+                ['2026-03-01 14:00', '2026-03-15 14:00', '2026-03-29 14:00', '2026-04-12 14:00']
+            ),
+        }
+    )
 
 
 def test_solo_pide_las_carreras_disputadas_que_faltan():
     ahora = pd.Timestamp('2026-03-30 12:00', tz='UTC')
     pendientes = extract.rondas_pendientes(calendario(), descargadas={1}, ahora=ahora)
-    assert pendientes['RoundNumber'].tolist() == [2, 3]          # la 1 ya está y la 4 aún no se ha corrido
+    assert pendientes['RoundNumber'].tolist() == [2, 3]  # la 1 ya está y la 4 aún no se ha corrido
 
 
 def test_una_carrera_recien_terminada_se_espera_tres_horas():
     cal = calendario()
-    justo_despues = pd.Timestamp('2026-03-01 15:00', tz='UTC')        # 1 h después de la salida simulada
+    justo_despues = pd.Timestamp('2026-03-01 15:00', tz='UTC')  # 1 h después de la salida simulada
     assert extract.rondas_pendientes(cal, set(), ahora=justo_despues).empty
     mas_tarde = pd.Timestamp('2026-03-01 18:00', tz='UTC')
     assert extract.rondas_pendientes(cal, set(), ahora=mas_tarde)['RoundNumber'].tolist() == [1]

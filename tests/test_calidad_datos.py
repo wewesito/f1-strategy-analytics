@@ -73,8 +73,19 @@ def test_resultados_sin_duplicados_y_con_tres_podios():
 
 def test_integridad_referencial_del_modelo_en_estrella():
     """Claves únicas en las dimensiones y sin claves huérfanas en los hechos (misma validación que el exportador)."""
-    nombres = ['dim_calendario', 'dim_carrera', 'dim_piloto', 'dim_equipo', 'dim_compuesto', 'fact_resultados',
-               'fact_vueltas', 'fact_estrategias', 'fact_degradacion', 'fact_telemetria_tramos', 'fact_predicciones']
+    nombres = [
+        'dim_calendario',
+        'dim_carrera',
+        'dim_piloto',
+        'dim_equipo',
+        'dim_compuesto',
+        'fact_resultados',
+        'fact_vueltas',
+        'fact_estrategias',
+        'fact_degradacion',
+        'fact_telemetria_tramos',
+        'fact_predicciones',
+    ]
     errores = powerbi_export.validar({n: leer_estrella(n) for n in nombres})
     assert not errores, '\n'.join(errores)
 

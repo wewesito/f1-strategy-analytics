@@ -20,16 +20,16 @@ import pandas as pd
 RAW_DIR = os.path.join('data', 'raw')
 OUTPUT_DIR = os.path.join('data', 'processed')
 
-GRID_PIT_LANE = 20   # Grid == 0 significa salida desde el pit lane: se trata como la 20ª posición
+GRID_PIT_LANE = 20  # Grid == 0 significa salida desde el pit lane: se trata como la 20ª posición
 
 # Variables que usa el modelo (todas conocidas antes de la salida)
 FEATURES = [
-    'GridAdj',               # posición de salida (pit lane = 20)
-    'PuntosPilotoAntes',     # puntos del piloto en la temporada antes de esta carrera
-    'PuntosEquipoAntes',     # puntos del equipo en la temporada antes de esta carrera
-    'MediaUlt3',             # media de posiciones finales en las 3 últimas carreras
-    'PosCircuitoPrevia',     # posición final la última vez que corrió en este circuito
-    'DifPolePct',            # % de diferencia con la pole en clasificación
+    'GridAdj',  # posición de salida (pit lane = 20)
+    'PuntosPilotoAntes',  # puntos del piloto en la temporada antes de esta carrera
+    'PuntosEquipoAntes',  # puntos del equipo en la temporada antes de esta carrera
+    'MediaUlt3',  # media de posiciones finales en las 3 últimas carreras
+    'PosCircuitoPrevia',  # posición final la última vez que corrió en este circuito
+    'DifPolePct',  # % de diferencia con la pole en clasificación
 ]
 TARGET = 'Podio'
 
@@ -54,7 +54,7 @@ def diferencia_con_pole(quali):
     """
     q = quali.copy()
     tiempos = q[['Q1', 'Q2', 'Q3']].apply(lambda col: col.map(tiempo_a_segundos))
-    q['MejorQuali'] = tiempos.min(axis=1)                       # NaN si no marcó tiempo
+    q['MejorQuali'] = tiempos.min(axis=1)  # NaN si no marcó tiempo
     pole = q.groupby(['Year', 'Round'])['MejorQuali'].transform('min')
     q['DifPolePct'] = (q['MejorQuali'] - pole) / pole * 100
     return q[['Year', 'Round', 'DriverId', 'QualiPosition', 'DifPolePct']]
@@ -76,21 +76,21 @@ def construir_variables(resultados, quali):
 
     # 2) Puntos del piloto antes de la carrera: acumulado de la temporada menos los de hoy
     #    (equivale a cumsum().shift(1) pero sin perder la primera fila del grupo)
-    df['PuntosPilotoAntes'] = (df.groupby(['Year', 'DriverId'])['Points'].cumsum() - df['Points'])
+    df['PuntosPilotoAntes'] = df.groupby(['Year', 'DriverId'])['Points'].cumsum() - df['Points']
 
     # 3) Puntos del equipo antes de la carrera: primero los puntos que suma el equipo en
     #    cada carrera (los dos pilotos), luego el acumulado de la temporada con shift(1)
-    equipo = (df.groupby(['Year', 'Round', 'TeamId'], as_index=False)['Points'].sum()
-              .sort_values(['Year', 'TeamId', 'Round']))
-    equipo['PuntosEquipoAntes'] = (equipo.groupby(['Year', 'TeamId'])['Points'].cumsum()
-                                   - equipo['Points'])
-    df = df.merge(equipo[['Year', 'Round', 'TeamId', 'PuntosEquipoAntes']],
-                  on=['Year', 'Round', 'TeamId'], how='left')
+    equipo = (
+        df.groupby(['Year', 'Round', 'TeamId'], as_index=False)['Points'].sum().sort_values(['Year', 'TeamId', 'Round'])
+    )
+    equipo['PuntosEquipoAntes'] = equipo.groupby(['Year', 'TeamId'])['Points'].cumsum() - equipo['Points']
+    df = df.merge(equipo[['Year', 'Round', 'TeamId', 'PuntosEquipoAntes']], on=['Year', 'Round', 'TeamId'], how='left')
 
     # 4) Media de las 3 últimas posiciones: shift(1) y luego media móvil de 3.
     #    Continúa entre temporadas; para un debutante queda NaN (se imputa en el modelo).
-    df['MediaUlt3'] = (df.groupby('DriverId')['Position']
-                       .transform(lambda s: s.shift(1).rolling(3, min_periods=1).mean()))
+    df['MediaUlt3'] = df.groupby('DriverId')['Position'].transform(
+        lambda s: s.shift(1).rolling(3, min_periods=1).mean()
+    )
 
     # 5) Resultado la última vez que el piloto corrió en ese circuito (normalmente, el año anterior)
     df['PosCircuitoPrevia'] = df.groupby(['DriverId', 'CircuitId'])['Position'].shift(1)

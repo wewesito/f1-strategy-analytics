@@ -29,7 +29,7 @@ def tablas_del_anio(year):
     }
 
 
-TABLAS = tablas_del_anio(YEAR)    # se mantiene por compatibilidad
+TABLAS = tablas_del_anio(YEAR)  # se mantiene por compatibilidad
 
 
 def cargar_en_duckdb(year=YEAR):

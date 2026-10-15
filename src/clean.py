@@ -26,6 +26,7 @@ def convertir_tiempos(df):
         df[f'Sector{s}Sec'] = df[f'Sector{s}Time'].dt.total_seconds()
     return df
 
+
 def anadir_meteorologia(vueltas, meteo):
     """
     Asigna a cada vuelta la última medición meteorológica anterior a su inicio.
@@ -38,13 +39,16 @@ def anadir_meteorologia(vueltas, meteo):
     vueltas = vueltas.dropna(subset=['LapStartTime']).sort_values('LapStartTime')
 
     res = pd.merge_asof(
-        vueltas, meteo,
-        left_on='LapStartTime', right_on='MeteoTime',
-        by='Round',              # solo busca dentro de la misma carrera
-        direction='backward',    # la medición más reciente ANTES del inicio de la vuelta
+        vueltas,
+        meteo,
+        left_on='LapStartTime',
+        right_on='MeteoTime',
+        by='Round',  # solo busca dentro de la misma carrera
+        direction='backward',  # la medición más reciente ANTES del inicio de la vuelta
     )
     res['Lluvia'] = res['Rainfall'].eq(True)
     return res.drop(columns=['MeteoTime']).sort_values(['Round', 'Driver', 'LapNumber'])
+
 
 def limpiar_vueltas(df, verbose=True):
     """
@@ -61,8 +65,10 @@ def limpiar_vueltas(df, verbose=True):
         ('Pista no verde (SC, VSC, banderas)', lambda d: d['TrackStatus'] == '1'),
         ('Vuelta anulada', lambda d: ~d['Deleted'].eq(True)),
         ('Poco fiable (IsAccurate)', lambda d: d['IsAccurate'].eq(True)),
-        ('> 107 % de la mediana (carrera y compuesto)',
-         lambda d: d['LapTimeSec'] <= 1.07 * d.groupby(['Round', 'Compound'])['LapTimeSec'].transform('median')),
+        (
+            '> 107 % de la mediana (carrera y compuesto)',
+            lambda d: d['LapTimeSec'] <= 1.07 * d.groupby(['Round', 'Compound'])['LapTimeSec'].transform('median'),
+        ),
     ]
 
     for nombre, condicion in pasos:
@@ -72,8 +78,7 @@ def limpiar_vueltas(df, verbose=True):
             print(f'{nombre:<42} -{antes - len(df):>6} vueltas')
 
     if verbose:
-        print(f'\nTotal: {inicial} -> {len(df)} vueltas '
-              f'({len(df) / inicial:.1%} conservadas)')
+        print(f'\nTotal: {inicial} -> {len(df)} vueltas ' f'({len(df) / inicial:.1%} conservadas)')
 
     return df.reset_index(drop=True)
 

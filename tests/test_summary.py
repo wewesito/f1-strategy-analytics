@@ -13,9 +13,10 @@ class ClienteFalso:
 
     def __init__(self, texto='Resumen de prueba.', stop_reason='end_turn'):
         self.llamadas = []
-        self._respuesta = SimpleNamespace(stop_reason=stop_reason,
-                                          content=[SimpleNamespace(type='thinking', thinking=''),
-                                                   SimpleNamespace(type='text', text=texto)])
+        self._respuesta = SimpleNamespace(
+            stop_reason=stop_reason,
+            content=[SimpleNamespace(type='thinking', thinking=''), SimpleNamespace(type='text', text=texto)],
+        )
         self.messages = SimpleNamespace(create=self._create)
 
     def _create(self, **kwargs):
@@ -25,7 +26,7 @@ class ClienteFalso:
 
 @pytest.fixture
 def datos():
-    return summary.paquete_de_datos(202517)      # una carrera de 2025 con predicción en el modelo en estrella
+    return summary.paquete_de_datos(202517)  # una carrera de 2025 con predicción en el modelo en estrella
 
 
 def test_la_ultima_carrera_es_la_mas_reciente_del_anio():
@@ -34,8 +35,13 @@ def test_la_ultima_carrera_es_la_mas_reciente_del_anio():
 
 
 def test_el_paquete_de_datos_contiene_solo_lo_esperado(datos):
-    assert set(datos) >= {'carrera', 'resultado_top10', 'abandonos_o_no_clasificados',
-                          'clasificacion_pilotos_tras_la_carrera', 'prediccion_del_modelo'}
+    assert set(datos) >= {
+        'carrera',
+        'resultado_top10',
+        'abandonos_o_no_clasificados',
+        'clasificacion_pilotos_tras_la_carrera',
+        'prediccion_del_modelo',
+    }
     assert len(datos['resultado_top10']) == 10
     assert [r['posicion'] for r in datos['resultado_top10']] == list(range(1, 11))
     assert len(datos['prediccion_del_modelo']['top3_predicho']) == 3
@@ -57,8 +63,8 @@ def test_se_envia_el_modelo_los_datos_y_las_reglas(datos):
     assert 'EXCLUSIVAMENTE' in llamada['system']
     contenido = llamada['messages'][0]['content']
     assert json.dumps(datos['carrera']['gran_premio'], ensure_ascii=False) in contenido
-    assert llamada['max_tokens'] >= 2000                  # margen para el razonamiento adaptativo
-    assert 'temperature' not in llamada                   # Sonnet 5.5 rechaza temperaturas no predeterminadas
+    assert llamada['max_tokens'] >= 2000  # margen para el razonamiento adaptativo
+    assert 'temperature' not in llamada  # Sonnet 5.5 rechaza temperaturas no predeterminadas
 
 
 @pytest.mark.parametrize('stop', ['refusal', 'max_tokens'])
@@ -99,5 +105,6 @@ def test_dry_run_usa_el_modelo_por_defecto_si_la_variable_esta_vacia(monkeypatch
 
 def test_no_hay_ninguna_clave_escrita_en_el_codigo():
     import re
+
     codigo = open('src/summary.py', encoding='utf-8').read()
     assert not re.search(r'sk-ant-[A-Za-z0-9_-]{10,}', codigo)

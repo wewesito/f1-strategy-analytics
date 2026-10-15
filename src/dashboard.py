@@ -24,8 +24,11 @@ PLANTILLA = os.path.join('src', 'templates', 'dashboard.html')
 SALIDA = os.path.join('reports', 'dashboard.html')
 
 # Nombre corto de cada mapa de minisectores generado en la Fase 2 (reports/figures/)
-MAPAS = {'Monza': '2024_monza_q_nor_lec_mapa.png', 'Monaco': '2024_monaco_q_lec_pia_mapa.png',
-         'Suzuka': '2024_suzuka_q_ver_nor_mapa.png'}
+MAPAS = {
+    'Monza': '2024_monza_q_nor_lec_mapa.png',
+    'Monaco': '2024_monaco_q_lec_pia_mapa.png',
+    'Suzuka': '2024_suzuka_q_ver_nor_mapa.png',
+}
 CIRCUITO = {202416: 'Monza', 202408: 'Monaco', 202404: 'Suzuka'}
 
 
@@ -59,11 +62,42 @@ def construir_datos():
         df['GP'] = df['CarreraId'].map(carrera['GranPremio'])
         return df
 
-    res = con_dims(tabla('fact_resultados'))[['Anio', 'Ronda', 'GP', 'Piloto', 'Abrev', 'Equipo', 'Posicion',
-                                              'Parrilla', 'Puntos', 'Podio', 'Victoria', 'Abandono']]
-    pred = con_dims(tabla('fact_predicciones'))[['CarreraId', 'Anio', 'Ronda', 'GP', 'Piloto', 'Abrev', 'Equipo',
-                                                 'Conjunto', 'ParrillaAj', 'ProbaPodioNorm', 'RankProba',
-                                                 'PredPodio', 'PredTrivial', 'PosicionReal', 'PodioReal', 'Acierto']]
+    res = con_dims(tabla('fact_resultados'))[
+        [
+            'Anio',
+            'Ronda',
+            'GP',
+            'Piloto',
+            'Abrev',
+            'Equipo',
+            'Posicion',
+            'Parrilla',
+            'Puntos',
+            'Podio',
+            'Victoria',
+            'Abandono',
+        ]
+    ]
+    pred = con_dims(tabla('fact_predicciones'))[
+        [
+            'CarreraId',
+            'Anio',
+            'Ronda',
+            'GP',
+            'Piloto',
+            'Abrev',
+            'Equipo',
+            'Conjunto',
+            'ParrillaAj',
+            'ProbaPodioNorm',
+            'RankProba',
+            'PredPodio',
+            'PredTrivial',
+            'PosicionReal',
+            'PodioReal',
+            'Acierto',
+        ]
+    ]
 
     # Vueltas: solo los 3 GP con análisis de estrategia (mantiene el HTML ligero)
     est = con_dims(tabla('fact_estrategias'))
@@ -81,11 +115,41 @@ def construir_datos():
     return {
         'resultados': a_columnas(res),
         'predicciones': a_columnas(pred),
-        'estrategias': a_columnas(est[['CarreraId', 'GP', 'Abrev', 'Equipo', 'PosicionFinal', 'Estrategia',
-                                       'Paradas', 'VsOptimaSeg', 'Segmentos']]),
-        'vueltas': a_columnas(vue), 'degradacion': a_columnas(deg),
-        'telemetria': a_columnas(tel[['CarreraId', 'Circuito', 'Duelo', 'OrdenTramo', 'Tramo', 'DesdeM', 'HastaM',
-                                      'LongitudM', 'GanaP1Seg', 'GanaP1CrudoSeg', 'DifOficialSeg', 'Mapa']]),
+        'estrategias': a_columnas(
+            est[
+                [
+                    'CarreraId',
+                    'GP',
+                    'Abrev',
+                    'Equipo',
+                    'PosicionFinal',
+                    'Estrategia',
+                    'Paradas',
+                    'VsOptimaSeg',
+                    'Segmentos',
+                ]
+            ]
+        ),
+        'vueltas': a_columnas(vue),
+        'degradacion': a_columnas(deg),
+        'telemetria': a_columnas(
+            tel[
+                [
+                    'CarreraId',
+                    'Circuito',
+                    'Duelo',
+                    'OrdenTramo',
+                    'Tramo',
+                    'DesdeM',
+                    'HastaM',
+                    'LongitudM',
+                    'GanaP1Seg',
+                    'GanaP1CrudoSeg',
+                    'DifOficialSeg',
+                    'Mapa',
+                ]
+            ]
+        ),
         'compuestos': a_columnas(tabla('dim_compuesto')),
     }
 

@@ -20,8 +20,7 @@ from scipy.stats import loguniform, randint, uniform
 from sklearn.ensemble import HistGradientBoostingClassifier, RandomForestClassifier
 from sklearn.impute import SimpleImputer
 from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import (accuracy_score, confusion_matrix, f1_score,
-                             precision_score, recall_score, roc_auc_score)
+from sklearn.metrics import accuracy_score, confusion_matrix, f1_score, precision_score, recall_score, roc_auc_score
 from sklearn.model_selection import RandomizedSearchCV, TimeSeriesSplit
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
@@ -33,6 +32,7 @@ SEMILLA = 42
 # Modelos
 # ---------------------------------------------------------------------------
 
+
 def pipeline_logistico(C=1.0):
     """
     Regresión logística con imputación, estandarización y class_weight='balanced'.
@@ -40,11 +40,13 @@ def pipeline_logistico(C=1.0):
     - StandardScaler: media 0 y desviación 1, para que los coeficientes sean comparables.
     - class_weight='balanced': pesa más la clase minoritaria (los podios, ~15 %).
     """
-    return Pipeline([
-        ('imputar', SimpleImputer(strategy='median')),
-        ('escalar', StandardScaler()),
-        ('logit', LogisticRegression(C=C, class_weight='balanced', max_iter=2000)),
-    ])
+    return Pipeline(
+        [
+            ('imputar', SimpleImputer(strategy='median')),
+            ('escalar', StandardScaler()),
+            ('logit', LogisticRegression(C=C, class_weight='balanced', max_iter=2000)),
+        ]
+    )
 
 
 def pipeline_random_forest():
@@ -53,10 +55,12 @@ def pipeline_random_forest():
     la predicción es la media de los árboles. No necesita escalar, pero sí rellenar vacíos.
     class_weight='balanced_subsample' reequilibra las clases en cada muestra de cada árbol.
     """
-    return Pipeline([
-        ('imputar', SimpleImputer(strategy='median')),
-        ('rf', RandomForestClassifier(class_weight='balanced_subsample', n_jobs=-1, random_state=SEMILLA)),
-    ])
+    return Pipeline(
+        [
+            ('imputar', SimpleImputer(strategy='median')),
+            ('rf', RandomForestClassifier(class_weight='balanced_subsample', n_jobs=-1, random_state=SEMILLA)),
+        ]
+    )
 
 
 def pipeline_gradient_boosting():
@@ -64,17 +68,19 @@ def pipeline_gradient_boosting():
     HistGradientBoostingClassifier: árboles pequeños entrenados EN SECUENCIA, cada uno corrige
     los errores del anterior. Admite NaN de forma nativa, así que no lleva imputador.
     """
-    return Pipeline([
-        ('hgb', HistGradientBoostingClassifier(class_weight='balanced', random_state=SEMILLA)),
-    ])
+    return Pipeline(
+        [
+            ('hgb', HistGradientBoostingClassifier(class_weight='balanced', random_state=SEMILLA)),
+        ]
+    )
 
 
 # Espacios de búsqueda para RandomizedSearchCV: distribuciones de las que se sortean combinaciones
 ESPACIO_RF = {
     'rf__n_estimators': randint(100, 500),
     'rf__max_depth': randint(3, 12),
-    'rf__min_samples_leaf': randint(5, 60),      # hojas grandes = árboles más simples = menos sobreajuste
-    'rf__max_features': uniform(0.3, 0.7),       # fracción de variables que ve cada nodo
+    'rf__min_samples_leaf': randint(5, 60),  # hojas grandes = árboles más simples = menos sobreajuste
+    'rf__max_features': uniform(0.3, 0.7),  # fracción de variables que ve cada nodo
 }
 ESPACIO_HGB = {
     'hgb__learning_rate': loguniform(0.01, 0.3),
@@ -93,19 +99,25 @@ def cortes_temporales(df, n_splits=5):
     Devuelve una lista de (índices_train, índices_validación) que se pasa como cv= a scikit-learn.
     """
     carrera = (df['Year'] * 100 + df['Round']).to_numpy()
-    orden = np.unique(carrera)                       # carreras en orden cronológico
+    orden = np.unique(carrera)  # carreras en orden cronológico
     cortes = []
     for tr, va in TimeSeriesSplit(n_splits=n_splits).split(orden):
-        cortes.append((np.where(np.isin(carrera, orden[tr]))[0],
-                       np.where(np.isin(carrera, orden[va]))[0]))
+        cortes.append((np.where(np.isin(carrera, orden[tr]))[0], np.where(np.isin(carrera, orden[va]))[0]))
     return cortes
 
 
 def buscar_hiperparametros(pipeline, espacio, X, y, df, n_iter=40, n_splits=5):
     """RandomizedSearchCV con validación cruzada temporal, optimizando el AUC-ROC (no depende del umbral)."""
     busqueda = RandomizedSearchCV(
-        pipeline, espacio, n_iter=n_iter, scoring='roc_auc',
-        cv=cortes_temporales(df, n_splits), random_state=SEMILLA, n_jobs=-1, refit=True)
+        pipeline,
+        espacio,
+        n_iter=n_iter,
+        scoring='roc_auc',
+        cv=cortes_temporales(df, n_splits),
+        random_state=SEMILLA,
+        n_jobs=-1,
+        refit=True,
+    )
     return busqueda.fit(X, y)
 
 
@@ -116,6 +128,7 @@ def probabilidades_fuera_de_muestra(pipeline, X, y, df, n_splits=5):
     entrenamiento (sin pasado) quedan como NaN. Sirve para analizar errores con más muestra que un solo año.
     """
     from sklearn.base import clone
+
     proba = pd.Series(np.nan, index=X.index)
     for idx_tr, idx_va in cortes_temporales(df, n_splits):
         m = clone(pipeline).fit(X.iloc[idx_tr], y.iloc[idx_tr])
@@ -131,6 +144,7 @@ def abandono(df):
 # ---------------------------------------------------------------------------
 # Métricas
 # ---------------------------------------------------------------------------
+
 
 def metricas(y_real, proba, umbral=0.5):
     """Métricas de clasificación a partir de las probabilidades y un umbral de decisión."""
@@ -148,8 +162,7 @@ def matriz_confusion(y_real, proba, umbral=0.5):
     """DataFrame con la matriz de confusión (filas = real, columnas = predicho)."""
     pred = (np.asarray(proba) >= umbral).astype(int)
     cm = confusion_matrix(y_real, pred, labels=[0, 1])
-    return pd.DataFrame(cm, index=['Real: no podio', 'Real: podio'],
-                        columns=['Pred: no podio', 'Pred: podio'])
+    return pd.DataFrame(cm, index=['Real: no podio', 'Real: podio'], columns=['Pred: no podio', 'Pred: podio'])
 
 
 def predecir_top3(df, proba):
@@ -158,8 +171,7 @@ def predecir_top3(df, proba):
     probabilidad. Como siempre hay exactamente 3 podios, es una regla más natural que un umbral fijo.
     Devuelve un array de 0/1 alineado con las filas de df.
     """
-    tmp = pd.DataFrame({'Year': df['Year'].values, 'Round': df['Round'].values,
-                        'proba': np.asarray(proba)})
+    tmp = pd.DataFrame({'Year': df['Year'].values, 'Round': df['Round'].values, 'proba': np.asarray(proba)})
     puesto = tmp.groupby(['Year', 'Round'])['proba'].rank(ascending=False, method='first')
     return (puesto <= 3).astype(int).values
 
@@ -198,6 +210,7 @@ def metricas_trivial(y_real, df):
 # Interpretación de la regresión logística
 # ---------------------------------------------------------------------------
 
+
 def tabla_coeficientes(modelo, features):
     """
     Coeficientes de la regresión logística, al estilo de la salida de un glm en R.
@@ -208,11 +221,14 @@ def tabla_coeficientes(modelo, features):
     logit = modelo.named_steps['logit']
     escala = modelo.named_steps['escalar'].scale_
     coef = logit.coef_[0]
-    return pd.DataFrame({
-        'Coef (std)': coef,
-        'Odds ratio (std)': np.exp(coef),
-        'Odds ratio (unidad)': np.exp(coef / escala),
-    }, index=features).sort_values('Coef (std)', key=abs, ascending=False)
+    return pd.DataFrame(
+        {
+            'Coef (std)': coef,
+            'Odds ratio (std)': np.exp(coef),
+            'Odds ratio (unidad)': np.exp(coef / escala),
+        },
+        index=features,
+    ).sort_values('Coef (std)', key=abs, ascending=False)
 
 
 def bootstrap_coeficientes(X, y, n=300, semilla=SEMILLA):
@@ -227,17 +243,21 @@ def bootstrap_coeficientes(X, y, n=300, semilla=SEMILLA):
         m = pipeline_logistico().fit(X.iloc[idx], y.iloc[idx])
         coefs.append(m.named_steps['logit'].coef_[0])
     coefs = np.array(coefs)
-    return pd.DataFrame({'IC 2.5 %': np.percentile(coefs, 2.5, axis=0),
-                         'IC 97.5 %': np.percentile(coefs, 97.5, axis=0)}, index=X.columns)
+    return pd.DataFrame(
+        {'IC 2.5 %': np.percentile(coefs, 2.5, axis=0), 'IC 97.5 %': np.percentile(coefs, 97.5, axis=0)},
+        index=X.columns,
+    )
 
 
 # ---------------------------------------------------------------------------
 # Guardar modelos y exportar predicciones
 # ---------------------------------------------------------------------------
 
+
 def reajustar(pipeline, df_train, features, target='Podio'):
     """Clona el pipeline (con sus hiperparámetros ya elegidos) y lo ajusta de nuevo con df_train."""
     from sklearn.base import clone
+
     return clone(pipeline).fit(df_train[features], df_train[target])
 
 
@@ -265,10 +285,12 @@ def tabla_predicciones(df, proba, conjunto, nombre_modelo):
     - ProbaNorm: la misma probabilidad reescalada para que sume 3 en cada carrera (siempre hay 3 podios).
     - PredPodio: 1 para los 3 pilotos con más probabilidad de la carrera.
     """
-    t = df[['Year', 'Round', 'Event', 'Date', 'Abbreviation', 'DriverId', 'TeamName',
-            'GridAdj', 'Position', 'Podio']].copy()
-    t['Proba'] = np.asarray(proba)
-    t['ProbaNorm'] = (t['Proba'] * 3 / t.groupby(['Year', 'Round'])['Proba'].transform('sum')).clip(upper=1)
+    t = df[
+        ['Year', 'Round', 'Event', 'Date', 'Abbreviation', 'DriverId', 'TeamName', 'GridAdj', 'Position', 'Podio']
+    ].copy()
+    # Se redondea a 6 decimales para que el CSV sea idéntico se genere desde el notebook o desde el pipeline
+    t['Proba'] = np.asarray(proba).round(6)
+    t['ProbaNorm'] = (t['Proba'] * 3 / t.groupby(['Year', 'Round'])['Proba'].transform('sum')).clip(upper=1).round(6)
     t['RankProba'] = t.groupby(['Year', 'Round'])['Proba'].rank(ascending=False, method='first').astype(int)
     t['PredPodio'] = (t['RankProba'] <= 3).astype(int)
     t['Conjunto'] = conjunto
@@ -276,14 +298,17 @@ def tabla_predicciones(df, proba, conjunto, nombre_modelo):
     return t.rename(columns={'Position': 'PosicionReal', 'Podio': 'PodioReal'})
 
 
-def actualizar_predicciones(ruta_csv=os.path.join('data', 'processed', 'predicciones_podio.csv'),
-                            ruta_modelo=os.path.join('models', 'modelo_podio.joblib'), ultimo_anio_entrenamiento=2025):
+def actualizar_predicciones(
+    ruta_csv=os.path.join('data', 'processed', 'predicciones_podio.csv'),
+    ruta_modelo=os.path.join('models', 'modelo_podio.joblib'),
+    ultimo_anio_entrenamiento=2025,
+):
     """
     Añade (o actualiza) las predicciones de las carreras posteriores al entrenamiento ("en vivo") con el modelo
     guardado. Las filas de años <= ultimo_anio_entrenamiento (test 2025) se conservan tal cual.
     Devuelve el número de carreras en vivo predichas.
     """
-    import features as ft          # import local: evita un ciclo si features importara model algún día
+    import features as ft  # import local: evita un ciclo si features importara model algún día
 
     datos = ft.cargar_datos()
     vivo = datos[datos['Year'] > ultimo_anio_entrenamiento]
@@ -293,7 +318,11 @@ def actualizar_predicciones(ruta_csv=os.path.join('data', 'processed', 'predicci
     nuevas = []
     for year, g in vivo.groupby('Year'):
         proba = modelo.predict_proba(g[ft.FEATURES])[:, 1]
-        nuevas.append(tabla_predicciones(g, proba, f'En vivo {year} (modelo hasta {ultimo_anio_entrenamiento})', 'Gradient Boosting'))
+        nuevas.append(
+            tabla_predicciones(
+                g, proba, f'En vivo {year} (modelo hasta {ultimo_anio_entrenamiento})', 'Gradient Boosting'
+            )
+        )
 
     previas = pd.read_csv(ruta_csv)
     previas = previas[previas['Year'] <= ultimo_anio_entrenamiento]

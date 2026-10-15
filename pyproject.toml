@@ -1,0 +1,7 @@
+[tool.black]
+# Mismo estilo que el resto del proyecto: comillas simples y líneas de hasta 120 caracteres
+line-length = 120
+skip-string-normalization = true
+extend-exclude = '''
+/(\.venv|cache|data|models|reports)/
+'''

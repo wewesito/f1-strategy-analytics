@@ -13,10 +13,10 @@ import numpy as np
 import pandas as pd
 
 # --- Supuestos (documentados en el notebook) ---
-KG_COMBUSTIBLE = 100      # combustible aproximado al inicio
-S_POR_KG = 0.03           # segundos por vuelta que cuesta cada kg
-MIN_VUELTAS_AJUSTE = 6    # vueltas mínimas de un stint para ajustar su recta
-MIN_STINT = 5             # longitud mínima de un stint en el simulador
+KG_COMBUSTIBLE = 100  # combustible aproximado al inicio
+S_POR_KG = 0.03  # segundos por vuelta que cuesta cada kg
+MIN_VUELTAS_AJUSTE = 6  # vueltas mínimas de un stint para ajustar su recta
+MIN_STINT = 5  # longitud mínima de un stint en el simulador
 SECOS = ['SOFT', 'MEDIUM', 'HARD']
 
 
@@ -40,11 +40,13 @@ def ajuste(g):
 def modelo_neumaticos(limpias_gp):
     """Mediana del ritmo base y la degradación de cada compuesto de seco."""
     secos = limpias_gp[limpias_gp['Compound'].isin(SECOS) & ~limpias_gp['Lluvia']]
-    modelo = (secos.groupby(['Driver', 'Stint', 'Compound'])
-              .apply(ajuste, include_groups=False)
-              .dropna()
-              .groupby('Compound')[['base', 'deg']]
-              .median())
+    modelo = (
+        secos.groupby(['Driver', 'Stint', 'Compound'])
+        .apply(ajuste, include_groups=False)
+        .dropna()
+        .groupby('Compound')[['base', 'deg']]
+        .median()
+    )
     # Un neumático no mejora con las vueltas: si la degradación mediana es <= 0 (pocos stints
     # útiles, ajuste poco fiable) el compuesto se excluye. Si no, el simulador lo vería como
     # "gratis" y recomendaría stints absurdos (p. ej. 65 vueltas con blandos en Hungría 2024).
@@ -52,8 +54,9 @@ def modelo_neumaticos(limpias_gp):
 
 
 def stints_carrera(vueltas_gp):
-    return (vueltas_gp.groupby(['Driver', 'Stint', 'Compound'], as_index=False)
-            .agg(inicio=('LapNumber', 'min'), fin=('LapNumber', 'max')))
+    return vueltas_gp.groupby(['Driver', 'Stint', 'Compound'], as_index=False).agg(
+        inicio=('LapNumber', 'min'), fin=('LapNumber', 'max')
+    )
 
 
 def perdida_box(vueltas_gp, limpias_gp, por_defecto=22.0):
@@ -109,25 +112,40 @@ def analizar_carrera(gp, vueltas, limpias, resultados, top=10):
 
     candidatas = generar_candidatas(total, modelo.index.tolist())
     tiempos = [tiempo_estrategia(e, modelo, perdida) for e in candidatas]
-    ranking = pd.DataFrame({
-        'estrategia': [describir(e) for e in candidatas],
-        'paradas': [len(e) - 1 for e in candidatas],
-        'tiempo_s': tiempos,
-    }).sort_values('tiempo_s').reset_index(drop=True)
+    ranking = (
+        pd.DataFrame(
+            {
+                'estrategia': [describir(e) for e in candidatas],
+                'paradas': [len(e) - 1 for e in candidatas],
+                'tiempo_s': tiempos,
+            }
+        )
+        .sort_values('tiempo_s')
+        .reset_index(drop=True)
+    )
     mejor = ranking['tiempo_s'].iloc[0]
 
     stints = stints_carrera(v)
-    pilotos = (resultados[resultados['Event'] == gp]
-               .sort_values('Position')['Abbreviation'].head(top))
+    pilotos = resultados[resultados['Event'] == gp].sort_values('Position')['Abbreviation'].head(top)
     filas = []
     for pos, piloto in enumerate(pilotos, start=1):
         e = estrategia_real(stints, piloto)
         modelable = len(e) > 0 and all(c in modelo.index for c, _ in e)
-        filas.append({
-            'gp': gp, 'posicion': pos, 'piloto': piloto,
-            'estrategia_real': describir(e), 'paradas': len(e) - 1,
-            'vs_optima_s': round(tiempo_estrategia(e, modelo, perdida) - mejor, 1) if modelable else np.nan,
-        })
+        filas.append(
+            {
+                'gp': gp,
+                'posicion': pos,
+                'piloto': piloto,
+                'estrategia_real': describir(e),
+                'paradas': len(e) - 1,
+                'vs_optima_s': round(tiempo_estrategia(e, modelo, perdida) - mejor, 1) if modelable else np.nan,
+            }
+        )
 
-    return {'modelo': modelo, 'perdida_box': perdida, 'ranking': ranking,
-            'optima': ranking.iloc[0]['estrategia'], 'reales': pd.DataFrame(filas)}
+    return {
+        'modelo': modelo,
+        'perdida_box': perdida,
+        'ranking': ranking,
+        'optima': ranking.iloc[0]['estrategia'],
+        'reales': pd.DataFrame(filas),
+    }
