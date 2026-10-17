@@ -9,7 +9,9 @@
 
 Análisis de la estrategia en Fórmula 1 de principio a fin: **datos de carrera y telemetría → degradación de neumáticos y estrategia óptima → predicción de podios → dashboard**, con un pipeline que se actualiza solo cada lunes. Hecho con Python, FastF1, DuckDB, scikit-learn, Plotly y GitHub Actions, más un modelo en estrella listo para Power BI.
 
-> **Pruébalo:** descarga [`reports/dashboard.html`](reports/dashboard.html) y ábrelo en el navegador (es un único archivo, funciona sin conexión). Tiene 4 secciones: resumen de temporada, telemetría, estrategia y predicciones.
+> **Pruébalo en vivo:** [wewesito.github.io/f1-strategy-analytics](https://wewesito.github.io/f1-strategy-analytics/). Se actualiza solo cada lunes. Tiene 4 secciones: resumen de temporada, telemetría, estrategia y predicciones.
+>
+> También puedes descargar [`reports/dashboard.html`](reports/dashboard.html) y abrirlo en el navegador: es un único archivo y funciona sin conexión.
 
 ## La pregunta
 
