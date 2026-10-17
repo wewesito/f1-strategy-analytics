@@ -1,0 +1,53 @@
+name: Publicar dashboard en GitHub Pages
+
+# Publica reports/dashboard.html como página principal del sitio.
+# Los commits que hace el workflow semanal con GITHUB_TOKEN no disparan otros workflows,
+# por eso también se escucha su finalización con workflow_run.
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'reports/dashboard.html'
+      - '.github/workflows/pages.yml'
+  workflow_run:
+    workflows: ['Actualización semanal']
+    types: [completed]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  desplegar:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Descargar el repositorio
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Preparar el sitio
+        run: |
+          mkdir site
+          cp reports/dashboard.html site/index.html
+          touch site/.nojekyll
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+      - name: Desplegar
+        id: deployment
+        uses: actions/deploy-pages@v4
