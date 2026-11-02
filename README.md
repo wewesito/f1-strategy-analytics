@@ -7,7 +7,7 @@
 
 ![Dashboard interactivo: resumen de temporada, telemetría, estrategia y predicciones](reports/figures/dashboard.gif)
 
-Análisis de la estrategia en Fórmula 1 de principio a fin: **datos de carrera y telemetría → degradación de neumáticos y estrategia óptima → predicción de podios → dashboard**, con un pipeline que se actualiza solo cada lunes. Hecho con Python, FastF1, DuckDB, scikit-learn, Plotly y GitHub Actions, más un modelo en estrella listo para Power BI.
+Análisis de la estrategia en Fórmula 1 de principio a fin: **datos de carrera y telemetría → degradación de neumáticos y estrategia óptima → predicción de podios → dashboard**, con un pipeline que se actualiza solo cada lunes. Hecho con Python, FastF1, DuckDB, scikit-learn, Plotly y GitHub Actions, con los resultados organizados en un modelo en estrella.
 
 > **Pruébalo en vivo:** [wewesito.github.io/f1-strategy-analytics](https://wewesito.github.io/f1-strategy-analytics/). Se actualiza solo cada lunes. Tiene 4 secciones: resumen de temporada, telemetría, estrategia y predicciones.
 >
@@ -48,7 +48,7 @@ Análisis de la estrategia en Fórmula 1 de principio a fin: **datos de carrera 
 2. **Telemetría** (`src/telemetry.py`). Compara las vueltas rápidas de dos pilotos: delta de tiempo por distancia con `np.interp`, tiempo ganado en cada tramo entre curvas y mapa de minisectores.
 3. **Estrategia** (`src/strategy.py`). Corrige el efecto del combustible (100 kg, 0,03 s/kg), ajusta una recta de degradación por stint, mide la pérdida por parada y **simula todas las estrategias posibles** para encontrar la óptima.
 4. **Predicción** (`src/features.py`, `src/model.py`). Clasificación binaria `Podio = Position ≤ 3` con seis variables calculadas solo con información anterior a la carrera (`shift(1)` dentro de cada grupo). División **temporal**: entrenamiento ≤ 2023, validación 2024, test 2025, y 2026 como predicciones «en vivo». Regresión logística, Random Forest y Gradient Boosting con `TimeSeriesSplit` y `RandomizedSearchCV`; interpretación con *permutation importance* y análisis de errores.
-5. **Dashboard** (`src/powerbi_export.py`, `src/dashboard.py`). Modelo en estrella (5 dimensiones y 6 tablas de hechos) validado por integridad referencial, guía de Power BI con medidas DAX y un informe HTML interactivo con Plotly.
+5. **Dashboard** (`src/dashboard.py`). Modelo en estrella (5 dimensiones y 6 tablas de hechos) validado por integridad referencial y un informe HTML interactivo con Plotly.
 6. **Automatización** (`src/pipeline.py`, `.github/workflows/update.yml`, `src/summary.py`). Pipeline con `--year`, 43 tests con `pytest`, workflow semanal con commit automático y resumen de la última carrera con la API de Anthropic, a partir solo de los datos del proyecto.
 
 El razonamiento de cada fase está explicado en los notebooks (`notebooks/`) y en [`docs/`](docs).
@@ -58,13 +58,13 @@ El razonamiento de cada fase está explicado en los notebooks (`notebooks/`) y e
 ```
 ├── data/
 │   ├── raw/               # descargas (no se sube a Git)
-│   └── processed/         # datos limpios, predicciones y modelo en estrella (powerbi/)
+│   └── processed/         # datos limpios, predicciones y modelo en estrella
 ├── notebooks/             # 01 exploración · 02 telemetría · 03 estrategia · 04 predicción
 ├── src/                   # código reutilizable (extract, clean, load, features, model, pipeline...)
 ├── sql/                   # consultas DuckDB
 ├── tests/                 # 43 tests (pytest)
 ├── models/                # modelo de podios entrenado (joblib)
-├── docs/                  # guía de Power BI, automatización y aprendizajes
+├── docs/                  # automatización y aprendizajes
 ├── reports/               # dashboard.html, figuras y resúmenes generados
 └── .github/workflows/     # actualización semanal
 ```
@@ -83,7 +83,7 @@ python src/pipeline.py --year 2026          # actualiza todo para un año (solo 
 jupyter lab                                 # notebooks
 ```
 
-Cada notebook empieza subiendo hasta la raíz del proyecto, así que funciona se abra desde donde se abra. La primera ejecución del pipeline descarga toda la temporada y tarda unos minutos; las siguientes solo las carreras nuevas. Para activar la actualización automática y los resúmenes con IA, consulta [`docs/automatizacion.md`](docs/automatizacion.md). Para montar el informe en Power BI: [`docs/powerbi_guia.md`](docs/powerbi_guia.md).
+Cada notebook empieza subiendo hasta la raíz del proyecto, así que funciona se abra desde donde se abra. La primera ejecución del pipeline descarga toda la temporada y tarda unos minutos; las siguientes solo las carreras nuevas. Para activar la actualización automática y los resúmenes con IA, consulta [`docs/automatizacion.md`](docs/automatizacion.md).
 
 ## Limitaciones
 
