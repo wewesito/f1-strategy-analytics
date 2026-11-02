@@ -874,3 +874,25 @@ Year,Round,Event,Date,Abbreviation,DriverId,TeamName,GridAdj,PosicionReal,PodioR
 2026,18,United States Grand Prix,2026-10-25,BOT,bottas,Cadillac F1 Team,19,20,0,0.022264,0.010422,17,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
 2026,18,United States Grand Prix,2026-10-25,COL,colapinto,Alpine F1 Team,20,21,0,0.042232,0.01977,15,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
 2026,18,United States Grand Prix,2026-10-25,BEA,bearman,Haas F1 Team,13,22,0,0.042902,0.020084,14,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,19,Mexico City Grand Prix,2026-11-01,VER,max_verstappen,Red Bull,5,1,1,0.834497,0.3777,5,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,19,Mexico City Grand Prix,2026-11-01,HAM,hamilton,Ferrari,1,2,1,0.932443,0.422031,1,1,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,19,Mexico City Grand Prix,2026-11-01,ANT,antonelli,Mercedes,4,3,1,0.845986,0.3829,4,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,19,Mexico City Grand Prix,2026-11-01,LEC,leclerc,Ferrari,3,4,0,0.902126,0.40831,3,1,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,19,Mexico City Grand Prix,2026-11-01,NOR,norris,McLaren,6,5,0,0.684804,0.309948,6,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,19,Mexico City Grand Prix,2026-11-01,RUS,russell,Mercedes,2,6,0,0.919043,0.415967,2,1,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,19,Mexico City Grand Prix,2026-11-01,PIA,piastri,McLaren,12,7,0,0.223527,0.10117,8,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,19,Mexico City Grand Prix,2026-11-01,COL,colapinto,Alpine F1 Team,11,8,0,0.042232,0.019115,15,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,19,Mexico City Grand Prix,2026-11-01,LAW,lawson,RB F1 Team,22,9,0,0.131512,0.059523,9,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,19,Mexico City Grand Prix,2026-11-01,GAS,gasly,Alpine F1 Team,9,10,0,0.115367,0.052216,11,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,19,Mexico City Grand Prix,2026-11-01,BOR,bortoleto,Audi,13,11,0,0.049264,0.022297,13,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,19,Mexico City Grand Prix,2026-11-01,HAD,hadjar,Red Bull,7,12,0,0.512881,0.232134,7,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,19,Mexico City Grand Prix,2026-11-01,HIR,ryo_hirakawa,Haas F1 Team,18,13,0,0.025072,0.011348,16,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,19,Mexico City Grand Prix,2026-11-01,ALB,albon,Williams,16,14,0,0.021447,0.009707,19,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,19,Mexico City Grand Prix,2026-11-01,SAI,sainz,Williams,15,15,0,0.021447,0.009707,20,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,19,Mexico City Grand Prix,2026-11-01,HUL,hulkenberg,Audi,10,16,0,0.124743,0.05646,10,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,19,Mexico City Grand Prix,2026-11-01,PER,perez,Cadillac F1 Team,20,17,0,0.022264,0.010077,18,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,19,Mexico City Grand Prix,2026-11-01,LIN,arvid_lindblad,RB F1 Team,8,18,0,0.110973,0.050227,12,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,19,Mexico City Grand Prix,2026-11-01,BEA,bearman,Haas F1 Team,14,19,0,0.042902,0.019418,14,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,19,Mexico City Grand Prix,2026-11-01,BOT,bottas,Cadillac F1 Team,21,20,0,0.022823,0.01033,17,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,19,Mexico City Grand Prix,2026-11-01,STR,stroll,Aston Martin,19,21,0,0.021447,0.009707,21,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
+2026,19,Mexico City Grand Prix,2026-11-01,ALO,alonso,Aston Martin,17,22,0,0.021447,0.009707,22,0,En vivo 2026 (modelo hasta 2025),Gradient Boosting
